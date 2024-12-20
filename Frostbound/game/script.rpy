@@ -23,6 +23,7 @@ label start:
     show eileen happy
 
     # These display lines of dialogue.
+    e "Amelia can you see this. Can you see this code!!!"
 
     e "You've created a new Ren'Py game."
 
