@@ -30,15 +30,18 @@ label introduction:
     #[INTERCOM MOMENT]
 
     ## play sound "static"
-    narrate "The crackling sound of an intercom coming to life fills the room."
+    narrate "{i}The crackling sound of an intercom coming to life fills the room.{/i}"
     intercom "Attention all passengers! This is your captain speaking."
     intercom "Due to continued severe weather conditions, our cruise will be delayed for another day."
     intercom "Remain in your rooms. We'll be back on course just as soon as the weather clears."
     intercom "Thank you for your patience."
     narrate "{i}Click...{/i}"
 
-    # cadence_room_bed.png scene
-    narrate "(imagine a REALLY COOL scene transition here)"
+    scene cadence_room_bed
+    with Dissolve(1)
+
+    pause(1)
+
     cadence "Hm..."
     narrate "I sit cross-legged on the narrow bed of my cabin, scribbling a quick tally in my journal."
     cadence "Another pre-recorded announcement, is it?"
@@ -63,7 +66,7 @@ label introduction:
 
 
     #menu:
-       # "Is the captain doing alright?":
+        # "Is the captain doing alright?":
 
         #"How much longer until we can leave our rooms?":
 
