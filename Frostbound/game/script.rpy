@@ -134,6 +134,10 @@ label crew_leaving:
     narrate "He's really busy, I realize. I'll probably only have time to ask a couple questions before he really has to go."
 
     $ questions_asked = 0
+    $ crew_q1_asked = 0
+    $ crew_q2_asked = 0
+    $ crew_q3_asked = 0
+    $ crew_q4_asked = 0
 
     jump crew_questions
 
@@ -158,16 +162,16 @@ label crew_questions:
         menu:
             narrate "The crew member looks increasingly uncomfortable. He's clearly eager to leave."
 
-            "You're afraid of me. Why?":
+            "You're afraid of me. Why?" if crew_q1_asked < 1:
                 jump crew_questions_1
 
-            "Where's the other person who brings our food?":
+            "Where's the other person who brings our food?" if crew_q2_asked < 1:
                 jump crew_questions_2
 
-            "Something's happened to the captain, hasn't it?":
+            "Something's happened to the captain, hasn't it?" if crew_q3_asked < 1:
                 jump crew_questions_3
 
-            "What's the real reason we're locked in here?":
+            "What's the real reason we're locked in here?" if crew_q4_asked < 1:
                 jump crew_questions_4
 
 label crew_questions_1:
@@ -186,6 +190,7 @@ label crew_questions_1:
     crew "I best be getting back to my duties now. If you'd kindly step aside."
 
     $ questions_asked += 1
+    $ crew_q1_asked = 1
     if questions_asked < 2:
         jump crew_questions
     else:
@@ -209,6 +214,7 @@ label crew_questions_2:
     crew "I'm sorry, miss. I'd rather not say - got work to do, you know."
 
     $ questions_asked += 1
+    $ crew_q2_asked = 1
     if questions_asked < 2:
         jump crew_questions
     else:
@@ -235,6 +241,7 @@ label crew_questions_3:
     crew "I really ought to get back to my duties now, miss."
 
     $ questions_asked += 1
+    $ crew_q3_asked = 1
     if questions_asked < 2:
         jump crew_questions
     else:
@@ -257,6 +264,7 @@ label crew_questions_4:
     crew "That's all I can say, miss. With all due respect, kindly step away from the door."
 
     $ questions_asked += 1
+    $ crew_q4_asked = 1
     if questions_asked < 2:
         jump crew_questions
     else:
