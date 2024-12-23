@@ -112,7 +112,6 @@ label rs_thankyou:
 
     jump crew_leaving
 
-
 label crew_leaving:
 
     narrate "The crew member walks to the table in my room and sets the tray down. His steps are hurried - he's eager to leave."
@@ -182,6 +181,115 @@ label crew_questions_end2:
     narrate "I glance at my ruined meal. The coffee has soaked into the toast, making it inedible."
     narrate "I push the tray aside, my appetite gone."
 
+    menu:
+        "Wait.":
+            jump intro_note
 
+label intro_note:
+    narrate "I return to my bed in the corner of the room and pull out my journal once more."
 
+    ## !!!!! ##
+    narrate "{i}(WOW THIS IS A REALLY GOOD SPOT TO INCLUDE A TUTORIAL ABOUT CLUES AND GATHERING INFORMATION){/i}"
+    narrate "{i}(WOW ITD BE SO COOL IF THE PEOPLE WRITING THIS IMPLEMENTED SOMETHING ABOUT THAT WOW){/i}"
+    ###########
+
+    narrate "As words fill the pages, the chaos from earlier fades, sinking to the back of my mind."
+    narrate "Time passes, slipping by me as I work. When I spare a moment to glance at the clock, I find that hours have passed."
+    narrate "The time for supper comes and goes. The crew member that I had scared off before doesn't come back."
+    narrate "I am given my meals by someone who has no time for entertaining my questions, who doesn't even walk into my room all the way."
+    narrate "By the time night falls, I'm writing in my journal just to have something to do."
+
+    ## knock knock knock
+    narrate "A knock rings through the air. I glance up, expecting to hear a crew member declare their business."
+    narrate "I hear nothing."
+    cadence "... Hello?"
+    narrate "Nothing. I frown, setting my pen down."
+    cadence "You can come in."
+    narrate "Still, nothing. I rise from my bed, crossing the room to the door."
+    narrate "There, I notice something that I couldn't see from my bed. A note, slid under the door. I pick it up, unfolding it."
+    narrate "{i}\"When the big bell goes at midnight and the night watch is gone, that's your chance.\"{/i}"
+    narrate "{i}\"Count five doors on your left. The next one's got a knob that don't turn right. That's your door.\"{/i}"
+    narrate "{i}\"Go down the stairs and listen for the creaky boards. One of 'em's loose - there's a hatch underneath.\"{/i}"
+    narrate "{i}\"I'll be waiting for you. Don't get caught, yeah?\"{/i}"
+    narrate "{i}\"- S.\"{/i}"
+    narrate "I blink at the note, reading it over again. Could it be?"
+    narrate "I touch the handle of the door, attempting to turn it."
+    narrate "In previous days, it had been locked - to ensure that I, and the other passengers, stayed in our rooms."
+    narrate "Now, it turns easily in my hand. I hold back from opening it, glancing at the note once more."
+    narrate "Who could have written this? Why did they give it to me?"
+
+    cadence "Let's think..."
+    narrate "Ultimately, I have two choices. Stay in my room, or sneak out."
+    narrate "This note is obviously suspicious. Any sane person would be wary of sneaking out of their room at midnight to meet a stranger."
+    narrate "I'm not familiar enough with the layout of the ship to have any idea of where these instructions would be leading me."
+    narrate "It could be dangerous. A trap."
+    narrate "But... it's a mystery. I'm already itching to solve it."
+    narrate "Of course, I could also just try to sneak out without following the note's instructions."
+    narrate "That's an option too - though I wouldn't get far, since I have no idea where I'm going, nor do I know the crew's schedule."
+    
+    menu:
+        narrate "Sneak out, or stay in?"
+
+        "Sneak out.":
+            jump intro_sneak_out
+        
+        "Stay in.":
+            jump intro_stay_in
+
+label intro_stay_in:
+    narrate "I've always been scolded for being reckless. Do I really need to prove them right?"
+    narrate "All of is suspicious. Father would stop at nothing to make sure I knew the depths of my idiocy if he found out about this."
+    narrate "I should stay in my room. A mystery isn't worth whatever ill fate I might meet, going out to meet a stranger in the dead of night."
+    scene cadence_room_bed
+    with Dissolve(1)
+
+    narrate "I set the note down on the table, turning back to my bed."
+    narrate "I lay down, waiting for sleep to come." 
+
+    scene black
+    with Dissolve(1)
+    narrate "The midnight bell rings - I ignore it."
+
+    scene cadence_room_bed
+    with Dissolve(1)
+    narrate "When I wake up the next day, it's cold. Another pre-recorded announcement plays over the intercom. I can see my breath in the air."
+    narrate "When I look out my window, the blizzard is worse than ever. I can't see a thing."
+    narrate "I didn't pack a coat - it's summer, definitely not the season for such weather. Why would I need one?"
+    narrate "I shiver, pulling the blankets up to my chin."
+
+    ##play a knocking noise
+    narrate "There is a knock at the door."
+    crew "Breakfast, madam."
+    cadence "Come in."
+    narrate "A crew member enters. I don't recognize them. They set a tray down on the table, and leave without a word."
+    narrate "I eat my breakfast in silence. When I'm done, I try the door - it's been locked once again."
+    narrate "I'm stuck in my room for another day."
+
+    narrate "..."
+
+    narrate "It's cold. I spend the rest of the day huddled up in bed, trying to keep warm. I hear the complaints of my neighbors through the walls."
+
+    man "Excuse me!? What's wrong with the heating in this place? It's freezing in here!"
+    man "I'll have you know that this entire trip has been utterly unacceptable! Do you know who I am!?"
+    man "I'll have everyone on this ship fired the moment we dock, do you hear me!? {i}EVERYONE!{/i}"
+
+    woman "Can't you do something about the heating? My child has been shivering all night - at least give us some extra blankets!"
+
+    narrate "I lay in bed, pulling the blankets over my head. I wish they would shut up - the cold is making me miserable."
+    narrate "I close my eyes. It's too cold to think."
+    scene black
+    with Dissolve(1)
+    stop music
+
+    narrate "At some point, I drift off to sleep. I dream of a great white blanket, swallowing me whole."
+    narrate "It grows larger and larger, until it eventually wraps around the entire earth."
+    narrate "I'm freezing. I can't move. I can't breathe."
+    narrate "..."
+    narrate "I don't wake up."
+    jump ending1
+
+label intro_sneak_out:
+    narrate "just kidding im not done lol B) u should look at the stay in part though"
+
+label continuing:
     return
