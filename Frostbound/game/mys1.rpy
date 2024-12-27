@@ -118,5 +118,48 @@ label note_1_6:
 
     jump bad_end_1
 
+label sneak_1:
+    narrate "I move right, towards the upper deck gate."
+    narrate "I hear the conversation of two watchmen - I startle, but they haven't seen me yet."
+    watchman1 "Shit, man... I didn't dress for this weather."
+    watchman2 "None of us did. Who dresses for a blizzard in the middle of the damn summer?"
+    narrate "It looks like they're taking a break. When I look, they seem weary."
+    narrate "One of them takes a swig from something that does not seem to be water."
+    narrate "If I can get past them, I'll be able to get to the upper gate - whatever might be over there. Assuming that it isn't locked."
+
+    $ key_spotted = 0
+    $ looked_around = 0
+
+    menu sneak_menu:
+        "Look around first" if looked_around == 0:
+            jump sneak_1_look
+
+        "Try to distract them":
+            jump sneak_1_distract
+
+        "Go straight for the door":
+            jump sneak_1_door
+
+        "Keep listening":
+            jump sneak_1_eavesdrop
+
+label sneak_1_look:
+    narrate "My eyes have been slowly adjusting to the dim light. I squint, looking around."
+    narrate "(this is a part where i might describe my surroundings)"
+    narrate "When I look closely, I spot a key on the gate."
+    narrate "That's not the key to the gate, is it? That's... not a good security measure."
+    $ looked_around = 1
+    jump sneak_menu
+
+label sneak_1_distract:
+    narrate "sh"
+
+label sneak_1_door:
+    narrate "shhhhhh"
+
+label sneak_1_eavesdrop:
+    narrate "shshshshshhhhh"
+
+
 label sera_hatch:
     narrate "yo this is a problem for later me"

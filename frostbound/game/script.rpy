@@ -14,6 +14,9 @@ define watchman1= Character("Watchman 1")
 define watchman2= Character("Watchman 2")
 define watchman = Character("Watchman")
 
+default looked_around = 0
+default watchman_eavesdrop = 0
+
 
 # The game starts here.
 
