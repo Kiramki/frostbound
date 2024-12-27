@@ -10,6 +10,9 @@ define crew = Character("Crew Member")
 define man = Character("Man")
 define woman = Character("Woman")
 define stranger = Character("???")
+define watchman1= Character("Watchman 1")
+define watchman2= Character("Watchman 2")
+define watchman = Character("Watchman")
 
 
 # The game starts here.
@@ -46,15 +49,28 @@ label introduction:
     pause(1)
 
     cadence "Hm..."
-    narrate "I sit cross-legged on the narrow bed of my cabin, scribbling a quick tally in my journal."
+    narrate "I swirl my pen in a pot of ink, hastily scribbling into my journal."
     cadence "Another pre-recorded announcement, is it?"
+    narrate "I am currently aboard the SS Nimbus, a luxurious steamship taking me on a journey across the sea."
+    narrate "Or, at least, it was supposed to be luxurious. The weather has been anything but kind to us."
+    narrate "Somewhere above me, the essential crew of the SS Nimbus is putting on a show of monitoring the weather and preparing breakfast for the passengers."
 
     play music "audio/hope_chords.mp3"
 
     ## zoom in on the window of cadence_room_bed.png
     narrate "The luxury of first class on a cargo ship grants me one of the few cabins with a window."
     narrate "It's useless now, though. Frost creeps up the sides of my window, and everything outside is a blur of white. I can't see a thing."
-    narrate "I boarded this ship a week ago, courtesy of my father. It was a gift for finishing women's boarding school."
+    
+    scene black
+    with Dissolve(1)
+    narrate "My name is Cadence. I am the daughter of a world-renowned detective, nicknamed the Seer."
+    narrate "I've always been fascinated by the mysteries he solves, and the way he pieces together clues to find the truth. I wanted to be like him."
+    narrate "Being the daughter of a man like him comes with its perks. I've learned a lot from him."
+    narrate "For example - I've learned enough to know that the captain of this ship is dead."
+
+    scene cadence_room_bed
+    with Dissolve(1)
+    narrate "I boarded the SS Nimbus a week ago, courtesy of my father. It was a gift for finishing women's boarding school."
     narrate "He's probably not too pleased with me right now. I've been stuck in this cabin for days - I've barely seen a soul outside of the crew providing room service."
 
     ## knock knock
@@ -66,11 +82,17 @@ label introduction:
     scene cadence_room_main
     with Dissolve(1)
 
-    narrate "The door creaks open, and a crew member steps inside with a tray of food."
-    narrate "It's not the usual crew member who delivers my meals. I don't recognize him."
+    narrate "The devil that enters is not one that I recognize."
+    narrate "He's a crew member, awkwardly balancing a tray of food in his hands. He's not my usual steward."
+
     crew "Good morning, Miss Cadence."
     crew "Today's breakfast is eggs, bacon, and toast. Got some coffee too, if you'd like."
 
+    narrate "This boy can't be older than 15; he looks one wobble away from sending the expensive cutlery crashing to the floor."
+    narrate "I snap my journal shut. A twinge of guilt settles in my stomach for what I'm about to do, but I push it aside."
+    narrate "I need to get information."
+    narrate "I may not have my father's knack for deducing the details, but I've learned a thing or two from him."
+    narrate "Ask the right questions, and {b}people will reveal what I need to know on their own.{/b}"
 
     menu:
         "Is the captain doing alright?":
@@ -85,7 +107,7 @@ label introduction:
 label rs_captain:
 
     cadence "Is the captain doing alright?"
-    narrate "It's been a while since I've heard anything from the captain that wasn't pre-recorded. Just what is going on out there?"
+    narrate "I test the waters. I'm certain that something has happened to him - but what, exactly?"
     narrate "The crew member stiffens, his eyes darting to the door."
     ## play sound "lie"
     crew "{b}Captain's keeping busy, but he's managing just fine. No need to worry, miss.{/b}"
@@ -163,7 +185,7 @@ label crew_questions_end2:
     narrate "My fingers brush against his arm."
 
     ## SLAM
-    ## SHAKE
+    show cadence_room_main with vpunch
     ## AUGHGHGHGHGHGH
     crew "{i}DON'T TOUCH ME!{/i}"
     narrate "With startling force - likely more than he intended to use - he shoves me aside. My body hits the wall, breath knocked out of me."
@@ -244,12 +266,19 @@ label intro_stay_in:
     with Dissolve(1)
 
     narrate "I set the note down on the table, turning back to my bed."
-    narrate "I lay down, waiting for sleep to come." 
+    narrate "The clock ticks on, minutes and hours passing by in silence."
+    narrate "I scribble in my journal just for something to do."
+    narrate "Meals arrive, and I eat them in silence. The crew member that I had scared off before doesn't come back."
+    narrate "Then, when the night falls, I lay in bed, waiting for sleep to come to me."
 
     scene black
     with Dissolve(1)
+    ## bell sound effect
     narrate "The midnight bell rings - I ignore it."
 
+    jump bad_end_1
+
+label bad_end_1:
     scene cadence_room_bed
     with Dissolve(1)
     narrate "When I wake up the next day, it's cold. Another pre-recorded announcement plays over the intercom. I can see my breath in the air."
@@ -289,7 +318,33 @@ label intro_stay_in:
     jump ending1
 
 label intro_sneak_out:
-    narrate "just kidding im not done lol B) u should look at the stay in part though"
+    narrate "How could I live with myself if I didn't take this opportunity? It might be dangerous, but it's a mystery to solve - something to do, if nothing else."
+    narrate "I hide the note in my pocket, then turn back to my bed."
+    scene cadence_room_bed
+    with Dissolve(1)
+    narrate "I sit down, waiting for the night to fall."
+    narrate "The clock ticks on, minutes and hours passing by in silence."
+
+    scene black
+    with Dissolve(1)
+
+    narrate "I scribble in my journal just for something to do."
+    narrate "Meals arrive, and I eat them in silence. The crew member that I had scared off before doesn't come back."
+    narrate "I take a short nap, to prepare myself for the midnight bell."
+
+    ## bell sound effect
+    narrate "The midnight bell rings."
+    scene cadence_room_bed
+    with Dissolve(1)
+    narrate "It's time to go."
+
+    scene cadence_room_main
+    with Dissolve(1)
+    narrate "I listen for the sound of footsteps when I approach my door."
+    narrate "I hear none. Cautiously, I turn the handle."
+    jump hallway_start
+
+    
 
 label continuing:
     return

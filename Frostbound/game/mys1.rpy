@@ -1,0 +1,122 @@
+default recent_menu = None
+
+label hallway_start:
+    stop music fadeout 1
+    scene black
+    with Dissolve(1)
+
+    narrate "The door creaks as I carefully push it ajar..."
+    cadence "!!"
+
+    scene dim_corridor
+    with Dissolve(1.5)
+
+    play music "audio/hope_in_the_cold.mp3"
+
+    narrate "My breath clouds the air almost immediately. Frost clings to the walls, weaving icy spiderwebs over gaslit fixtures."
+    narrate "I had thought that my room was cold - but this corridor is a different kind of chill."
+    cadence "This place is... different."
+    narrate "I pull the door shut behind me, cutting off the light from my cabin."
+    narrate "The empty corridor beckons before me like a headmaster's door left ajar— there will be consequences if I'm caught sneaking around like this."
+    narrate "The note I hid in my pocket is crumpled, but the words are still clear - if I feel the need to check it again."
+
+    menu note_intersection:
+        "Move left, past the other cabin doors":
+            jump note_1
+
+        "Move right, towards the upper deck gate":
+            jump sneak_1
+
+        "Check the note in my pocket":
+            $ _return_point = "note_intersection"
+            jump seras_note
+
+        "Give up and return to my cabin":
+            jump give_up
+
+label seras_note:
+    narrate "{i}\"When the big bell goes at midnight and the night watch is gone, that's your chance.\"{/i}"
+    narrate "{i}\"Count five doors on your left. The next one's got a knob that don't turn right. That's your door.\"{/i}"
+    narrate "{i}\"Go down the stairs and listen for the creaky boards. One of 'em's loose - there's a hatch underneath.\"{/i}"
+    narrate "{i}\"I'll be waiting for you. Don't get caught, yeah?\"{/i}"
+    narrate "{i}\"- S.\"{/i}"
+
+    jump expression _return_point
+
+label give_up:
+    narrate "Nope. Nope nope nope. I'm not doing this."
+    narrate "It's cold out here, and this was a stupid idea. I'm going back to my cabin."
+    narrate "I turn on my heel and head back to my room, the door shutting behind me with a satisfying click."
+
+    screen black
+    with Dissolve(1)
+    narrate "I waste no time in getting back into bed, pulling the covers up to my chin."
+    jump bad_end_1
+
+label note_1:
+    narrate "I move left, past the other cabin doors."
+    narrate "I cautiously count the doors under my breath."
+    narrate "A looming figure appears at the other end of the corridor holding a lantern. I need to hurry."
+    narrate "Which door is it?"
+    $ read_note = false
+
+    menu door_1:
+        "Fifth door":
+            jump note_1_5
+
+        "Sixth door":
+            jump note_1_6
+
+        "Fourth door":
+            jump note_1_4
+    
+label note_1_4:
+    narrate "I try the fourth door, my fingers trembling as I twist the knob."
+    narrate "I hear a voice from inside."
+    stranger "Who's there?"
+    stranger "Go away! I'm trying to sleep!"
+    stranger "I'll call the watchman if you don't leave me alone!"
+    narrate "I quickly back away from the door, my heart pounding. Then-"
+    watchman "Hey!"
+    narrate "A rough hand grabs my arm, yanking me backward. The sudden light of a lantern blinds me."
+    watchman "What are you doing out of your room? You're not supposed to be here."
+    narrate "I try to explain, but come up short. The watchman drags me back to my room."
+
+    screen black
+    with Dissolve(1)
+    narrate "I hear the door lock behind me. I'm not going anywhere tonight."
+    narrate "With nothing left to do, I crawl back into bed and pull the covers up to my chin."
+
+    jump bad_end_1
+
+label note_1_5:
+    narrate "I try the fifth door, my fingers trembling as I twist the knob."
+    narrate "The door creaks open, revealing a dark room. Thank god."
+    narrate "I slip inside, pulling the door shut just as the beam of the lantern sweeps by."
+    narrate "I press my ear against the door, holding my breath. I can hear the watchman mutter something before he moves on."
+    watchman "... must've been a flicker... probably nothing..."
+    narrate "I let out a sigh of relief, my heart pounding in my chest. I rest my forehead against the door for a moment."
+    narrate "((emily ur notes didnt include the staircase part D:))"
+    narrate "I crouch down, running my fingers over the uneven floor until they catch on something — the edge of a hatch."
+    narrate "I open it. A ladder leads down into darkness."
+
+    jump sera_hatch
+
+label note_1_6:
+    narrate "I try the sixth door, my fingers trembling as I twist the knob."
+    narrate "Nothing. The door doesn't budge."
+    narrate "I try again, but the knob refuses to turn."
+    watchman "Hey!"
+    narrate "A rough hand grabs my arm, yanking me backward. The sudden light of a lantern blinds me."
+    watchman "What are you doing out of your room? You're not supposed to be here."
+    narrate "I try to explain, but come up short. The watchman drags me back to my room."
+
+    screen black
+    with Dissolve(1)
+    narrate "I hear the door lock behind me. I'm not going anywhere tonight."
+    narrate "With nothing left to do, I crawl back into bed and pull the covers up to my chin."
+
+    jump bad_end_1
+
+label sera_hatch:
+    narrate "yo this is a problem for later me"
