@@ -23,7 +23,6 @@ label hallway_start:
     ## play door shutting sound
     narrate "I pull the door shut behind me, cutting off the light from my cabin."
     narrate "The empty corridor beckons before me like a headmaster's door left ajar— there will be consequences if I'm caught sneaking around like this."
-    narrate "The note I hid in my pocket is crumpled, but the words are still clear - if I feel the need to check it again."
 
     menu note_intersection:
         "Move left, past the other cabin doors":
@@ -143,7 +142,7 @@ label sneak_1_look:
     narrate "My eyes have been slowly adjusting to the dim light. I squint, looking around."
     narrate "(this is a part where i might describe my surroundings)"
     narrate "When I look closely, I spot a key on the gate."
-    narrate "That's not the key to the gate, is it? That's... not a good security measure."
+    narrate "That's not the key {i}to{/i} the gate, is it? That's... not a good security measure."
     $ looked_around = 1
     jump sneak_menu
 
