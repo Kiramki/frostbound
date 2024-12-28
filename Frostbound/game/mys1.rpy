@@ -35,10 +35,11 @@ label hallway_start:
             jump give_up
 
 label seras_note:
-    narrate "{i}\"When the big bell goes at midnight and the night watch is gone, that's your chance.\"{/i}"
-    narrate "{i}\"Count five doors on your left. The next one's got a knob that don't turn right. That's your door.\"{/i}"
-    narrate "{i}\"Go down the stairs and listen for the creaky boards. One of 'em's loose - there's a hatch underneath.\"{/i}"
-    narrate "{i}\"I'll be waiting for you. Don't get caught, yeah?\"{/i}"
+    narrate "{i}\"I know why they're locking people in their rooms. We don't have much time left.\"{/i}"
+    narrate "{i}\"When the big bell tolls at midnight and the night watch is gone, that's your chance.\"{/i}"
+    narrate "{i}\"Count five doors to your left—there's a hidden staircase there.\"{/i}"
+    narrate "{i}\"I'll be waiting for you at the bottom.\"{/i}"
+    narrate "{i}\"Don't get caught.\"{/i}"
     narrate "{i}\"- S.\"{/i}"
 
     jump expression _return_point
