@@ -58,7 +58,8 @@ label crew_questions_2:
     
     cadence "Where's the other person who brings our food?"
     narrate "The crew member hesitates. He shifts uncomfortably."
-    crew "I've taken over his duties for the day, miss. It's just the usual shift rotation."
+    # play lie sound
+    crew "{b}I've taken over his duties for the day, miss. It's just the usual shift rotation.{/b}"
     crew "No need to worry. He's just fine."
     cadence "What? That doesn't make any sense."
     cadence "The same person has been delivering my meals every day until now. Why the sudden change?"
@@ -82,7 +83,9 @@ label crew_questions_3:
     cadence "Something's happened to the captain, hasn't it?"
     narrate "The crew member startles, his eyes widening."
     crew "How-"
-    crew "No, miss. The captain's-"
+    
+    ## lie
+    crew "{b}No, miss. The captain's-{/b}"
     cadence "The captain always made his own quips on the intercom each day, some silly joke or another."
     cadence "Now, all of his announcements have been pre-recorded, ever since the blizzard started. Or, at least, completely absent of his usual charm."
     cadence "What's going on?"

@@ -66,27 +66,26 @@ label introduction:
     
     scene black
     with Dissolve(1)
-    narrate "My name is Cadence. I am the daughter of a world-renowned detective, nicknamed the Seer."
+    narrate "My name is Cadence Daycott. I am the only daughter of Yusri Daycott, a world-renowned detective known as the Seer."
     narrate "I've always been fascinated by the mysteries he solves, and the way he pieces together clues to find the truth. I wanted to be like him."
-    narrate "Being the daughter of a man like him comes with its perks. I've learned a lot from him."
+    narrate "Being the daughter of a man like the Seer comes with its perks. I've learned a lot from him."
     narrate "For example - I've learned enough to know that the captain of this ship is dead."
 
     scene cadence_room_bed
     with Dissolve(1)
     narrate "I boarded the SS Nimbus a week ago, courtesy of my father. It was a gift for finishing women's boarding school."
-    narrate "He's probably not too pleased with me right now. I've been stuck in this cabin for days - I've barely seen a soul outside of the crew providing room service."
+    narrate "He's probably not too pleased with me right now. This day marks the third day since I have been locked in my cabin, under the pretense of the captain's orders."
 
     ## knock knock
-    crew "Room service!"
-    narrate "Speak of the devil."
+    crew "Breakfast!"
     cadence "Come in!"
 
     ## play sound "door opening"
     scene cadence_room_main
     with Dissolve(1)
 
-    narrate "The devil that enters is not one that I recognize."
-    narrate "He's a crew member, awkwardly balancing a tray of food in his hands. He's not my usual steward."
+    narrate "A crew member I don't recognize steps in, awkwardly balancing a tray of food."
+    narrate "He's not my usual steward. "
 
     crew "Good morning, Miss Cadence."
     crew "Today's breakfast is eggs, bacon, and toast. Got some coffee too, if you'd like."
@@ -191,7 +190,7 @@ label crew_questions_end2:
     show cadence_room_main with vpunch
     ## AUGHGHGHGHGHGH
     crew "{i}DON'T TOUCH ME!{/i}"
-    narrate "With startling force - likely more than he intended to use - he shoves me aside. My body hits the wall, breath knocked out of me."
+    narrate "With startling force - likely more than he intended to use - he shoves me aside. My body hits the wall, knocking the breath out of me."
 
     ## lock click
     narrate "The door locks with a sharp click as he bolts, his footsteps retreating frantically down the corridor."
@@ -232,12 +231,16 @@ label intro_note:
     cadence "You can come in."
     narrate "Still, nothing. I rise from my bed, crossing the room to the door."
     narrate "There, I notice something that I couldn't see from my bed. A note, slid under the door. I pick it up, unfolding it."
+
     narrate "{i}\"I know why they're locking people in their rooms. We don't have much time left.\"{/i}"
     narrate "{i}\"When the big bell tolls at midnight and the night watch is gone, that's your chance.\"{/i}"
     narrate "{i}\"Count five doors to your left—there's a hidden staircase there.\"{/i}"
     narrate "{i}\"I'll be waiting for you at the bottom.\"{/i}"
     narrate "{i}\"Don't get caught.\"{/i}"
     narrate "{i}\"- S.\"{/i}"
+    narrate "The note is written in a hasty scrawl, words aggressively scribbled out - hinting that whoever was writing it was in a rush."
+    narrate "The penmanship style doesn't match that of a crew member."
+
     narrate "I blink at the note, reading it over again. Could it be?"
     narrate "I touch the handle of the door, attempting to turn it."
     narrate "In previous days, it had been locked - to ensure that I, and the other passengers, stayed in our rooms."
@@ -264,16 +267,13 @@ label intro_note:
 
 label intro_stay_in:
     narrate "I've always been scolded for being reckless. Do I really need to prove them right?"
-    narrate "All of is suspicious. Father would stop at nothing to make sure I knew the depths of my idiocy if he found out about this."
+    narrate "All of this is suspicious. Father would stop at nothing to make sure I knew the depths of my idiocy if he found out about this."
     narrate "I should stay in my room. A mystery isn't worth whatever ill fate I might meet, going out to meet a stranger in the dead of night."
     scene cadence_room_bed
     with Dissolve(1)
 
     narrate "I set the note down on the table, turning back to my bed."
-    narrate "The clock ticks on, minutes and hours passing by in silence."
-    narrate "I scribble in my journal just for something to do."
-    narrate "Meals arrive, and I eat them in silence. The crew member that I had scared off before doesn't come back."
-    narrate "Then, when the night falls, I lay in bed, waiting for sleep to come to me."
+    narrate "I lay down, waiting for sleep to come to me."
 
     scene black
     with Dissolve(1)
@@ -327,14 +327,10 @@ label intro_sneak_out:
     scene cadence_room_bed
     with Dissolve(1)
     narrate "I sit down, waiting for the night to fall."
-    narrate "The clock ticks on, minutes and hours passing by in silence."
 
     scene black
     with Dissolve(1)
-
-    narrate "I scribble in my journal just for something to do."
-    narrate "Meals arrive, and I eat them in silence. The crew member that I had scared off before doesn't come back."
-    narrate "I take a short nap, to prepare myself for the midnight bell."
+    narrate "I rest my head on my hands. I close my eyes, intending to take a short nap in preparation for the midnight bell."
 
     ## bell sound effect
     narrate "The midnight bell rings."
@@ -349,6 +345,5 @@ label intro_sneak_out:
     jump hallway_start
 
     
-
 label continuing:
     return

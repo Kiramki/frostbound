@@ -8,14 +8,19 @@ label hallway_start:
     narrate "The door creaks as I carefully push it ajar..."
     cadence "!!"
 
-    scene dim_corridor
+    scene main_deck_hall
     with Dissolve(1.5)
 
     play music "audio/hope_in_the_cold.mp3"
 
+    narrate "I'm hit with a burst of cold air that makes my body recoil like a startled housecat."
     narrate "My breath clouds the air almost immediately. Frost clings to the walls, weaving icy spiderwebs over gaslit fixtures."
     narrate "I had thought that my room was cold - but this corridor is a different kind of chill."
-    cadence "This place is... different."
+
+    cadence "What in the world happened here?"
+    narrate "This hallway was all but spotless three days ago - now, it's like a blizzard moved in and redecorated."
+
+    ## play door shutting sound
     narrate "I pull the door shut behind me, cutting off the light from my cabin."
     narrate "The empty corridor beckons before me like a headmaster's door left ajar— there will be consequences if I'm caught sneaking around like this."
     narrate "The note I hid in my pocket is crumpled, but the words are still clear - if I feel the need to check it again."
@@ -27,39 +32,26 @@ label hallway_start:
         "Move right, towards the upper deck gate":
             jump sneak_1
 
-        "Check the note in my pocket":
-            $ _return_point = "note_intersection"
-            jump seras_note
-
         "Give up and return to my cabin":
             jump give_up
-
-label seras_note:
-    narrate "{i}\"I know why they're locking people in their rooms. We don't have much time left.\"{/i}"
-    narrate "{i}\"When the big bell tolls at midnight and the night watch is gone, that's your chance.\"{/i}"
-    narrate "{i}\"Count five doors to your left—there's a hidden staircase there.\"{/i}"
-    narrate "{i}\"I'll be waiting for you at the bottom.\"{/i}"
-    narrate "{i}\"Don't get caught.\"{/i}"
-    narrate "{i}\"- S.\"{/i}"
-
-    jump expression _return_point
 
 label give_up:
     narrate "Nope. Nope nope nope. I'm not doing this."
     narrate "It's cold out here, and this was a stupid idea. I'm going back to my cabin."
     narrate "I turn on my heel and head back to my room, the door shutting behind me with a satisfying click."
 
-    screen black
+    scene black
     with Dissolve(1)
+
     narrate "I waste no time in getting back into bed, pulling the covers up to my chin."
     jump bad_end_1
 
 label note_1:
+    scene main_deck_left
     narrate "I move left, past the other cabin doors."
     narrate "I cautiously count the doors under my breath."
     narrate "A looming figure appears at the other end of the corridor holding a lantern. I need to hurry."
     narrate "Which door is it?"
-    $ read_note = false
 
     menu door_1:
         "Fifth door":
@@ -83,7 +75,7 @@ label note_1_4:
     watchman "What are you doing out of your room? You're not supposed to be here."
     narrate "I try to explain, but come up short. The watchman drags me back to my room."
 
-    screen black
+    scene black
     with Dissolve(1)
     narrate "I hear the door lock behind me. I'm not going anywhere tonight."
     narrate "With nothing left to do, I crawl back into bed and pull the covers up to my chin."
@@ -96,12 +88,13 @@ label note_1_5:
     narrate "I slip inside, pulling the door shut just as the beam of the lantern sweeps by."
     narrate "I press my ear against the door, holding my breath. I can hear the watchman mutter something before he moves on."
     watchman "... must've been a flicker... probably nothing..."
+    narrate "The light from his lantern sweeps faintly under the door before it recedes again."
     narrate "I let out a sigh of relief, my heart pounding in my chest. I rest my forehead against the door for a moment."
-    narrate "((emily ur notes didnt include the staircase part D:))"
-    narrate "I crouch down, running my fingers over the uneven floor until they catch on something — the edge of a hatch."
-    narrate "I open it. A ladder leads down into darkness."
+    narrate "The air is colder here, stabbing through my clothes like a thousand tiny needles."
+    narrate "I scan the room until I find the hidden staircase mentioned in the note."
+    narrate "I descend."
 
-    jump sera_hatch
+    jump sera_stairs
 
 label note_1_6:
     narrate "I try the sixth door, my fingers trembling as I twist the knob."
@@ -112,7 +105,7 @@ label note_1_6:
     watchman "What are you doing out of your room? You're not supposed to be here."
     narrate "I try to explain, but come up short. The watchman drags me back to my room."
 
-    screen black
+    scene black
     with Dissolve(1)
     narrate "I hear the door lock behind me. I'm not going anywhere tonight."
     narrate "With nothing left to do, I crawl back into bed and pull the covers up to my chin."
@@ -121,14 +114,16 @@ label note_1_6:
 
 label sneak_1:
     narrate "I move right, towards the upper deck gate."
+
+    scene main_deck_right
+    with Dissolve(1)
     narrate "I hear the conversation of two watchmen - I startle, but they haven't seen me yet."
     watchman1 "Shit, man... I didn't dress for this weather."
     watchman2 "None of us did. Who dresses for a blizzard in the middle of the damn summer?"
     narrate "It looks like they're taking a break. When I look, they seem weary."
-    narrate "One of them takes a swig from something that does not seem to be water."
+    narrate "One of them takes a swig from something that seems suspiciously distinct from water."
     narrate "If I can get past them, I'll be able to get to the upper gate - whatever might be over there. Assuming that it isn't locked."
 
-    $ key_spotted = 0
     $ looked_around = 0
 
     menu sneak_menu:
@@ -162,5 +157,5 @@ label sneak_1_eavesdrop:
     narrate "shshshshshhhhh"
 
 
-label sera_hatch:
+label sera_stairs:
     narrate "yo this is a problem for later me"
