@@ -1534,11 +1534,6 @@ define bubble.expand_area = {
 default current_clue = {"description":"", "name":""}
 
 screen clues():
-    modal True
-
-    # Back button to close the screen
-    textbutton _("Back") action Hide("clues")
-
     frame:
         # Put frame in the middle
         xpadding 10
@@ -1583,7 +1578,10 @@ screen clue_button():
         xalign 1.0
         idle "gui/journal_icon_static.png"
         hover "gui/journal_icon_hover2.png"
-        action Show("clues")
+
+        # When clicked, open the clues screen
+        # When clicked again, close the clues screen
+        action ToggleScreen("clues")
 
 
 
