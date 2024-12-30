@@ -35,8 +35,8 @@ label crew_questions_1:
     
     cadence "You're afraid of me. Why?"
     narrate "The crew member's eyes widen, and he laughs nervously."
-    crew "Sorry, miss. It's just... I don't usually get the chance to talk to lasses while I'm on duty."
-    crew "Apologies if I've given offense, miss. It's not you."
+    crew "Sorry, Miss. It's just... I don't usually get the chance to talk to lasses while I'm on duty."
+    crew "Apologies if I've given offense. It's not you."
     
     play sound "audio/banging.mp3"
     narrate "The sound of banging on the wall startles us both. It's coming from the room next door."
@@ -57,19 +57,40 @@ label crew_questions_1:
 label crew_questions_2:
     
     cadence "Where's the other person who brings our food?"
-    narrate "The crew member hesitates. He shifts uncomfortably."
-    # play lie sound
+    narrate "For a split second, I swear I see something flash dangerously behind his eyes. But it's gone so quickly, I wonder if I imagined it."
+    play sound "audio/lying.wav"
     crew "{b}I've taken over his duties for the day, miss. It's just the usual shift rotation.{/b}"
-    crew "No need to worry. He's just fine."
-    cadence "What? That doesn't make any sense."
-    cadence "The same person has been delivering my meals every day until now. Why the sudden change?"
+    narrate "A muscle in his jaw twitches and the air in the room goes still. He's uncomfortable with this line of questioning."
+    menu:
+        "PRESS":
+            jump crew_questions_2_press
+        "Let it go":
+            $ questions_asked += 1
+            $ crew_q2_asked = 1
+            if questions_asked < 2:
+                jump crew_questions
+            else:
+                jump crew_questions_end
 
-    ## SLAM
-
-    crew "Enough!"
-    narrate "He answers with uncharacteristic anger. I blink at him, startled."
-    narrate "He looks down at his feet and runs a shaky hand through his hair, taking a deep breath."
-    crew "I'm sorry, miss. I'd rather not say - got work to do, you know."
+label crew_questions_2_press:
+    play sound "audio/press.wav"
+    cadence "The {b}same steward has been delivering my meals until today{/b}. Why the sudden change?"
+    narrate "I rather liked my steward. He had this windswept look about him, and always wore a smile."
+    narrate "The crew member hesitates, then his lips tug upwards slightly."
+    crew "He ain't on duty today, Miss. Looks like you'll have to put up with me. Sorry to disappoint."
+    narrate "Fair enough. My gentle steward never struck me as the type meant for braving the gritty storm." 
+    cadence "I see. Do crew members get to choose to be off duty? Or is it decided for them?"
+    crew "His smile fades, replaced by something harder to read."
+    crew "I wouldn't know."
+    cadence "But you said you're taking over for him. Surely you were told why."
+    play sound "audio/slam.mp3"
+    show cadence_room_main with vpunch
+    crew "That's enough! I'm done talking about him, alright?"
+    narrate "His voice cracks with barely controlled anger. I recoil slightly, startled by the force of it."
+    narrate "He takes a sharp breath, looking almost ashamed of himself, and runs a hand through his hair."
+    crew "I'm sorry, miss. I'd rather not say. Just... please, don't ask about him again."
+    play sound "audio/clue.mp3"
+    narrate "{color=#49D5FF}Clue Added:  The steward's sudden absence and the crew's refusal to discuss him may connect to the ship's conditions.{/color}"
 
     $ questions_asked += 1
     $ crew_q2_asked = 1
@@ -79,18 +100,19 @@ label crew_questions_2:
         jump crew_questions_end
 
 
+
 label crew_questions_3:
     cadence "Something's happened to the captain, hasn't it?"
     narrate "The crew member startles, his eyes widening."
-    crew "How-"
-    
-    ## lie
-    crew "{b}No, miss. The captain's-{/b}"
-    cadence "The captain always made his own quips on the intercom each day, some silly joke or another."
-    cadence "Now, all of his announcements have been pre-recorded, ever since the blizzard started. Or, at least, completely absent of his usual charm."
-    cadence "What's going on?"
-    narrate "The crew member shifts uncomfortably on his feet, glancing once again at the corridor behind me."
-    crew "It's been a rough spell for the ship, miss. The captain's been... occupied with matters."
+    crew "How... how do you mean, Miss?"
+    cadence "The prerecorded announcements, the hushed reactions when his name comes up... it doesn't add up. What's really going on?"
+    narrate "He shifts on his feet, glancing over his shoulder like he expects someone to be listening."
+    crew "It's been a rough spell for the ship, miss. The captain's been... tied up with other matters."
+    cadence "Tied up with what, exactly?"
+    narrate "His jaw tightens, and he rubs the back of his neck—a gesture that seems more about buying time than easing discomfort."
+    play sound "audio/lying.wav"
+    crew "{b}Ship's upkeep. Been workin' with the engineers. That's all I know, miss.{/b}"
+    cadence "He seems adamant about not sharing the captains state. But why? To avoid panic?"
     crew "That's about all I can say, miss. With all due respect, it would be best to leave this to the crew."
     play sound "audio/banging.mp3"
     man "Hey, bastard! Don't think I can't hear you through these walls!"
@@ -107,12 +129,14 @@ label crew_questions_3:
 
 label crew_questions_4:
     cadence "What's the real reason we're locked in here?"
-    narrate "The crew member stiffens."
-
-    crew "We told ya: it's the weather. Not safe to be out in it, miss. Please step aside, yeah?"
-    ## lyink
-    crew "{b}We ain't locking nobody in here, Miss. You're our passenger, it's just a temporary thing.{/b}"
-
+    narrate "The crew member stiffens as if my words were a pitch and he's bracing to swing back."
+    crew "It's as the captain says. It's not safe for you all to be out with the storm, Miss. Please step aside, yeah?"
+    narrate "His face betrays his emotions. There's some guilt hidden in his words. I press him harder."
+    cadence "The weather? You expect me to believe this storm requires locking passengers in their rooms?"
+    cadence "If news gets out about this, the entire crew could land themselves in some serious trouble."
+    narrate "His eyes widen at that. For a moment, it looks like he's about to say something, but then he swallows it down."
+    play sound "audio/lying.wav"
+    crew "{b}We ain't locking nobody in here, Miss. {/b} You're our passenger, we're doing what's best for everyone."
     play sound "audio/banging.mp3"
     man "You're full of shit!! All of you!"
     narrate "The angry voice of my neighbor comes through the wall, muffled but clear."

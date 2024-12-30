@@ -38,7 +38,6 @@ label introduction:
     #[INTERCOM MOMENT]
 
     play music "audio/film_static.wav" fadein 1.0
-    play sound "audio/intercom_buzz.wav"
     narrate "{i}The crackling sound of an intercom coming to life fills the room.{/i}"
     intercom "Attention all passengers! This is your captain speaking."
     intercom "Due to continued severe weather conditions, our cruise will be delayed for another day."
@@ -53,25 +52,22 @@ label introduction:
 
     pause(1)
     play music "audio/hope_chords.mp3" fadein 1.0
-    cadence "Hm..."
+    narrate "..."
+    narrate "Another prerecorded announcement."
+    narrate "I flip open a new page in my journal and dip my pen into the inkpot."
     play sound "audio/writing.wav"
-    narrate "I swirl my pen in a pot of ink, hastily scribbling into my journal."
-    cadence "Another pre-recorded announcement…"
-    narrate "My name is Cadence Daycott, daughter of Yusri Daycott, the world-renowned detective known as the Seer."
-    narrate "I'm aboard the SS Nimbus, a first-class journey my father arranged to celebrate my completion of boarding school and bring me home."
-    narrate "It was meant to be a luxurious escape, but instead, I've spent the past three days locked in my cabin under the pretense of {i}weather conditions{/i}."
-    narrate "But, being a Daycott has its advantages."
-    narrate "For instance? I already know the captain of this ship is dead."
-    narrate "My father once said the most obvious lies are the ones dressed in predictability."
-    narrate "The news delivers the same optimistic message every day, yet the conditions on the ship continue to deteriorate."
+    narrate "{i}Cadence Daycott. Daughter of Yusri Daycott, the world-renowned detective.{/i}"
+    narrate "{i}Day 3 locked in my cabin aboard the SS Nimbus. Father would be horrified to know his gift has transformed into solitary confinement.{/i}"
+    narrate "{i}Each morning, the intercom blares with cheerful news, but I know better.{/i}"
+    narrate "{i}The captain of this ship is already dead.{/i}"
+    narrate "I blow on the fresh ink."
+    narrate "Lies are easy to spot when you have spent your life around them. My father once said the most obvious lies dress in the mundane."
     narrate "Somewhere above me, the essential crew is putting on a show of monitoring the weather, preparing breakfast, and keeping us complacent."
-    narrate " At some point, they locked us in our rooms. We aren't allowed to leave anymore."
-    narrate "Interacting with them feels akin to winding a violin string that's already been tuned too tightly."
+    narrate "Interacting with them feels like tightening a violin string that's already on the verge of snapping."
     scene cadence_room_bed
     play sound "audio/door_knock.mp3"
     crew "Miss Cadence Daycott? I have your meal."
     narrate "Speak of the devil."
-    cadence "Come in!"
     play sound "audio/door_open.mp3"
     scene cadence_room_main
     with Dissolve(1)
@@ -110,7 +106,7 @@ label rs_captain:
     narrate "{color=#49D5FF}(Tutorial: Did you catch that? Cadence can sense when someone isn't being truthful. What part of his words felt off?) {/color}"
     narrate "{color=#49D5FF}(Tutorial: in moments like these Cadence can {b}PRESS{/b} for more information. Not everyone appreciates being pressed, though.) {/color}"
     menu:
-        "PRESS: prerecorded announcements":
+        "PRESS":
             jump rs_captain_press
         "Let it go":
             jump crew_leaving
@@ -139,7 +135,7 @@ label rs_leave:
     narrate "{color=#49D5FF}(Tutorial: Did you catch that? Cadence can sense when someone isn't being truthful. What part of his words felt off?) {/color}"
     narrate "{color=#49D5FF}(Tutorial: in moments like these Cadence can {b}PRESS{/b} for more information. Not everyone appreciates being pressed, though.) {/color}"
     menu:
-        "PRESS: prerecorded announcements":
+        "PRESS":
             jump rs_leave_press
         "Let it go":
             jump crew_leaving
@@ -174,7 +170,7 @@ label rs_thankyou:
     narrate "{color=#49D5FF}(Tutorial: Did you catch that? Cadence can sense when someone isn't being truthful. What part of his words felt off?) {/color}"
     narrate "{color=#49D5FF}(Tutorial: in moments like these Cadence can {b}PRESS{/b} for more information. Not everyone appreciates being pressed, though.) {/color}"
     menu:
-        "PRESS: prerecorded announcements":
+        "PRESS":
             jump rs_thankyou_press
         "Let it go":
             jump crew_leaving

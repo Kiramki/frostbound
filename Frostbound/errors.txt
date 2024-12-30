@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 174: end of line expected.
-    jump rs_thankyou_press:
-                          ^
+File "game/questions.rpy", line 64: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/questions.rpy", line 65: expected statement.
+    "PRESS":
+           ^
+
+File "game/questions.rpy", line 67: expected statement.
+    "Let it go":
+               ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Mon Dec 30 01:23:24 2024
+Mon Dec 30 02:46:48 2024
