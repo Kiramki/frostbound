@@ -24,8 +24,7 @@ label start:
 
     # Warning message with a black screen. Play howling wind noise - on loop?
     scene black
-
-    ## play music "howling wind lol"
+    play music "audio/ocean_sounds.wav" fadeout 1.0 fadein 1.0
     narrate "{i}A word of warning to those who embark on this journey:{/i}"
     narrate "{i}Within this tale, you may encounter unsettling scenes, including themes of death, murder, and other forms of distress. The story you are about to experience is not for the faint of heart.{/i}"
     narrate "{i}Proceed with caution, for once you step further, there is no turning back.{/i}"
@@ -38,19 +37,22 @@ label start:
 label introduction:
     #[INTERCOM MOMENT]
 
-    ## play sound "static"
+    play music "audio/film_static.wav" fadein 1.0
+    play sound "audio/intercom_buzz.wav"
     narrate "{i}The crackling sound of an intercom coming to life fills the room.{/i}"
     intercom "Attention all passengers! This is your captain speaking."
     intercom "Due to continued severe weather conditions, our cruise will be delayed for another day."
     intercom "Remain in your rooms. We'll be back on course just as soon as the weather clears."
     intercom "Thank you for your patience."
+    play sound "audio/intercom_click.wav"
+    stop music
     narrate "{i}Click...{/i}"
 
     scene cadence_room_bed
     with Dissolve(1)
 
     pause(1)
-
+    play music "audio/hope_chords.mp3" fadein 1.0
     cadence "Hm..."
     narrate "I swirl my pen in a pot of ink, hastily scribbling into my journal."
     cadence "Another pre-recorded announcement, is it?"
@@ -58,7 +60,6 @@ label introduction:
     narrate "Or, at least, it was supposed to be luxurious. The weather has been anything but kind to us."
     narrate "Somewhere above me, the essential crew of the SS Nimbus is putting on a show of monitoring the weather and preparing breakfast for the passengers."
 
-    play music "audio/hope_chords.mp3"
 
     ## zoom in on the window of cadence_room_bed.png
     narrate "The luxury of first class on a cargo ship grants me one of the few cabins with a window."
