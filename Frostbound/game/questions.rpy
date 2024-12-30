@@ -57,10 +57,10 @@ label crew_questions_1:
 label crew_questions_2:
     
     cadence "Where's the other person who brings our food?"
-    narrate "For a split second, I swear I see something flash dangerously behind his eyes. But it's gone so quickly, I wonder if I imagined it."
+    narrate "For a split second, I swear I see something flash dangerously behind his eyes."
     play sound "audio/lying.wav"
     crew "{b}I've taken over his duties for the day, miss. It's just the usual shift rotation.{/b}"
-    narrate "A muscle in his jaw twitches and the air in the room goes still. He's uncomfortable with this line of questioning."
+    narrate "A muscle in his jaw twitches. He's uncomfortable with this line of questioning."
     menu:
         "PRESS":
             jump crew_questions_2_press
@@ -78,7 +78,7 @@ label crew_questions_2_press:
     narrate "I rather liked my steward. He had this windswept look about him, and always wore a smile."
     narrate "The crew member hesitates, then his lips tug upwards slightly."
     crew "He ain't on duty today, Miss. Looks like you'll have to put up with me. Sorry to disappoint."
-    narrate "Fair enough. My gentle steward never struck me as the type meant for braving the gritty storm." 
+    narrate "Fair enough. My steward never struck me as the type built for braving the storm." 
     cadence "I see. Do crew members get to choose to be off duty? Or is it decided for them?"
     crew "His smile fades, replaced by something harder to read."
     crew "I wouldn't know."

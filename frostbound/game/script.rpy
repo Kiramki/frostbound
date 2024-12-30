@@ -61,9 +61,9 @@ label introduction:
     narrate "{i}Each morning, the intercom blares with cheerful news, but I know better.{/i}"
     narrate "{i}The captain of this ship is already dead.{/i}"
     narrate "I blow on the fresh ink."
-    narrate "Lies are easy to spot when you have spent your life around them. My father once said the most obvious lies dress in the mundane."
-    narrate "Somewhere above me, the essential crew is putting on a show of monitoring the weather, preparing breakfast, and keeping us complacent."
-    narrate "Interacting with them feels like tightening a violin string that's already on the verge of snapping."
+    narrate "Lies are easy to spot when you have spent your life around them. The most obvious ones dress in the mundane."
+    narrate "Somewhere above me, the essential crew is putting on a show of monitoring the weather and preparing breakfast."
+    narrate "Interacting with them feels like tightening a violin string on the verge of snapping."
     scene cadence_room_bed
     play sound "audio/door_knock.mp3"
     crew "Miss Cadence Daycott? I have your meal."
@@ -74,16 +74,14 @@ label introduction:
 
     narrate "A crew member I don't recognize steps in, awkwardly balancing a tray of food."
     narrate "He's not my usual steward. "
-    narrate "His hands shake just enough to be noticeable, and he can't meet my eyes."
+    narrate "This boy can't be older than 15; he looks one wobble away from sending the expensive cutlery crashing to the floor."
 
     crew "Good morning, Miss Cadence."
     crew "Today's breakfast is eggs, bacon, and toast. Got some coffee too, if you'd like."
-
-    narrate "This boy can't be older than 15; he looks one wobble away from sending the expensive cutlery crashing to the floor."
     play sound "audio/book_shut.wav"
-    narrate "I snap my journal shut. A twinge of guilt settles in my stomach for what I'm about to do, but I push it aside."
+    narrate "I snap my journal shut. A twinge of guilt settles in my stomach for what I'm about to do."
     narrate "I need information, and he's just the kind of person who will give it to me."
-    narrate "I may not have my father's knack for deducing the details, but I've learned a thing or two from him."
+    narrate  "I may lack my father's skill for details, but I've learned:"
     narrate "Ask the right questions, and {b}people will reveal what I need to know on their own.{/b}"
 
     menu:
@@ -157,14 +155,13 @@ label rs_leave_press:
 
 label rs_thankyou:
     cadence "Thank you, I'd love some coffee."
-    narrate "He nods and pours my coffee into a delicate porcelain cup, handling it with all the grace of an elderly woman."
-    cadence "You know, I didn't expect it aboard a ship, but the coffee here is always splendid."
-    narrate "Something flickers across his face, a brief shift in his expression before he catches himself."
-    crew "Well, that's probably because we brew it fresh before servin', Miss. Can't guarantee it'll taste as good now that it's my turn."
+    narrate "He nods and pours my coffee into a porcelain cup, handling it with all the grace of an elderly woman."
+    cadence "You know, I didn't expect it aboard a ship, but the brew here is splendid."
+    narrate "Something flickers across his face."
+    crew "Well, that's probably because we make it fresh before servin', Miss. Can't guarantee it'll taste as good now that it's my turn."
     cadence "Oh? I didn't think coffee was part of the crew's usual duties."
     narrate "He pauses, eyes darting around briefly, before he sighs."
     crew "Yeah, we've been up to a lot... more than usual, that's for sure."
-    narrate "The words are tinged with some frustration." 
     play sound "audio/lying.wav"
     crew "But you know, we're just doing our jobs—It's worth it in the end. {b}Coffee's gotta be served, after all.{/b}"
     narrate "{color=#49D5FF}(Tutorial: Did you catch that? Cadence can sense when someone isn't being truthful. What part of his words felt off?) {/color}"
