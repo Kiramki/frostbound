@@ -54,46 +54,39 @@ label introduction:
     pause(1)
     play music "audio/hope_chords.mp3" fadein 1.0
     cadence "Hm..."
+    play sound "audio/writing.wav"
     narrate "I swirl my pen in a pot of ink, hastily scribbling into my journal."
-    cadence "Another pre-recorded announcement, is it?"
-    narrate "I am currently aboard the SS Nimbus, a luxurious steamship taking me on a journey across the sea."
-    narrate "Or, at least, it was supposed to be luxurious. The weather has been anything but kind to us."
-    narrate "Somewhere above me, the essential crew of the SS Nimbus is putting on a show of monitoring the weather and preparing breakfast for the passengers."
-
-
-    ## zoom in on the window of cadence_room_bed.png
-    narrate "The luxury of first class on a cargo ship grants me one of the few cabins with a window."
-    narrate "It's useless now, though. Frost creeps up the sides of my window, and everything outside is a blur of white. I can't see a thing."
-    
-    scene black
-    with Dissolve(1)
-    narrate "My name is Cadence Daycott. I am the only daughter of Yusri Daycott, a world-renowned detective known as the Seer."
-    narrate "I've always been fascinated by the mysteries he solves, and the way he pieces together clues to find the truth. I wanted to be like him."
-    narrate "Being the daughter of a man like the Seer comes with its perks. I've learned a lot from him."
-    narrate "For example - I've learned enough to know that the captain of this ship is dead."
-
+    cadence "Another pre-recorded announcement…"
+    narrate "My name is Cadence Daycott, daughter of Yusri Daycott, the world-renowned detective known as the Seer."
+    narrate "I'm aboard the SS Nimbus, a first-class journey my father arranged to celebrate my completion of boarding school and bring me home."
+    narrate "It was meant to be a luxurious escape, but instead, I've spent the past three days locked in my cabin under the pretense of {i}weather conditions{/i}."
+    narrate "But, being a Daycott has its advantages."
+    narrate "For instance? I already know the captain of this ship is dead."
+    narrate "My father once said the most obvious lies are the ones dressed in predictability."
+    narrate "The news delivers the same optimistic message every day, yet the conditions on the ship continue to deteriorate."
+    narrate "Somewhere above me, the essential crew is putting on a show of monitoring the weather, preparing breakfast, and keeping us complacent."
+    narrate " At some point, they locked us in our rooms. We aren't allowed to leave anymore."
+    narrate "Interacting with them feels akin to winding a violin string that's already been tuned too tightly."
     scene cadence_room_bed
-    with Dissolve(1)
-    narrate "I boarded the SS Nimbus a week ago, courtesy of my father. It was a gift for finishing women's boarding school."
-    narrate "He's probably not too pleased with me right now. This day marks the third day since I have been locked in my cabin, under the pretense of the captain's orders."
-
-    ## knock knock
-    crew "Breakfast!"
+    play sound "audio/door_knock.mp3"
+    crew "Miss Cadence Daycott? I have your meal."
+    narrate "Speak of the devil."
     cadence "Come in!"
-
-    ## play sound "door opening"
+    play sound "audio/door_open.mp3"
     scene cadence_room_main
     with Dissolve(1)
 
     narrate "A crew member I don't recognize steps in, awkwardly balancing a tray of food."
     narrate "He's not my usual steward. "
+    narrate "His hands shake just enough to be noticeable, and he can't meet my eyes."
 
     crew "Good morning, Miss Cadence."
     crew "Today's breakfast is eggs, bacon, and toast. Got some coffee too, if you'd like."
 
     narrate "This boy can't be older than 15; he looks one wobble away from sending the expensive cutlery crashing to the floor."
+    play sound "audio/book_shut.wav"
     narrate "I snap my journal shut. A twinge of guilt settles in my stomach for what I'm about to do, but I push it aside."
-    narrate "I need to get information."
+    narrate "I need information, and he's just the kind of person who will give it to me."
     narrate "I may not have my father's knack for deducing the details, but I've learned a thing or two from him."
     narrate "Ask the right questions, and {b}people will reveal what I need to know on their own.{/b}"
 
@@ -110,52 +103,113 @@ label introduction:
 label rs_captain:
 
     cadence "Is the captain doing alright?"
-    narrate "I test the waters. I'm certain that something has happened to him - but what, exactly?"
-    narrate "The crew member stiffens, his eyes darting to the door."
-    ## play sound "lie"
-    crew "{b}Captain's keeping busy, but he's managing just fine. No need to worry, miss.{/b}"
-    crew "Just hang tight 'til the weather clears, alright? Won't be long now."
-
+    narrate "I test the waters, watching his reaction closely. If something's happened to the captain, he'll slip up."
+    narrate "The crew member stiffens, his fingers tightening around the tray. "
+    play sound "audio/lying.wav"
+    crew "The captain? Uh, yeah, he's {b}up on the bridge, overseeing things. Busy as ever, y'know?{/b}"
+    narrate "{color=#49D5FF}(Tutorial: Did you catch that? Cadence can sense when someone isn't being truthful. What part of his words felt off?) {/color}"
+    narrate "{color=#49D5FF}(Tutorial: in moments like these Cadence can {b}PRESS{/b} for more information. Not everyone appreciates being pressed, though.) {/color}"
+    menu:
+        "PRESS: prerecorded announcements":
+            jump rs_captain_press
+        "Let it go":
+            jump crew_leaving
+label rs_captain_press:
+    play sound "audio/press.wav"
+    cadence "If the captain's overseeing things, {b}why have the announcements been prerecorded{/b}? Isn't he the one who usually makes them?"
+    narrate "His eyes flicker with wary recognition at the mention of the announcements. He thinks for a moment."
+    crew "I don't report to him directly, Miss, so I can't help much. I'm just following orders, that's all I can say."
+    narrate "His tone is clipped now, clearly eager to close the conversation."
+    crew "Look, just sit tight 'til the storm blows through, alright? We're all workin' hard to keep you folks safe."
+    play sound "audio/clue.mp3"
+    narrate "{color=#49D5FF}Clue Added: The crew member has been reporting to someone other than the captain. {/color}"
+    narrate "{color=#49D5FF}(Tutorial: you can view your clues by clicking your {b}JOURNAL{/b} in the top right corner.){/color}"
     jump crew_leaving
 
 label rs_leave:
-    
     cadence "How much longer until we can leave our rooms?"
-    narrate "I'm going to lose my mind if I have to stay in this room for another day without any answers."
-    crew "Just a bit longer 'til the weather clears up, miss. Ain't safe for you lot out in that cold."
-    narrate "He offers me a polite smile."
-    ## lie moment
-    crew "{b}No need to fret, miss. The captain's got it all in hand. You're in good company.{/b}"
-    crew "We'll be back on course soon enough. Just hang tight, alright?"
+    narrate "He offers me a barely perceptible smile, stiff and polite."
+    crew "Just a bit longer 'til the weather clears up, Miss. Ain't safe for you lot out in that cold."
+    narrate "A tight frustration coils in my stomach. The weather's not improving, and my first-class cabin feels more like a gilded cage than a sanctuary."
+    cadence "Surely we can be let out for some fresh air, or even just a trip to the kitchens?"
+    narrate "His smile remains with the carefulness of someone trying not to flub a performance on stage."
+    crew "Apologies, Miss. You'll have to wait. We've run into some... unexpected issues on deck."
+    play sound "audio/lying.wav"
+    crew "{b}We'll have you all out on deck once the weather passes, and you'll be free to stretch your legs.{/b}"
+    narrate "{color=#49D5FF}(Tutorial: Did you catch that? Cadence can sense when someone isn't being truthful. What part of his words felt off?) {/color}"
+    narrate "{color=#49D5FF}(Tutorial: in moments like these Cadence can {b}PRESS{/b} for more information. Not everyone appreciates being pressed, though.) {/color}"
+    menu:
+        "PRESS: prerecorded announcements":
+            jump rs_leave_press
+        "Let it go":
+            jump crew_leaving
 
+label rs_leave_press:
+    cadence "Strange. We used to get announcements from the captain about issues, but I haven't heard anything."
+    play sound "audio/press.wav"
+    cadence "Is there a reason that the {b}announcements have been the same{/b} these past few days?"
+    narrate "His eyes flicker with wary recognition at the mention of the announcements. His hands tighten around the silver tray."
+    crew "Well.. my guess is 'cause the prerecorded ones are easier to manage for the crew."
+    cadence "I see. But it seems odd. You'd think the captain would want to keep everyone in the loop?"
+    narrate "His face takes on the expression of someone trying to close a book during a tense scene."
+    crew "I don't report to him directly, Miss, so I can't help much. I'm just followin' orders. That's all I can say."
+    crew "Just sit tight 'til the storm blows through, alright? We're all workin' hard to keep you folks safe."
+    play sound "audio/clue.mp3"
+    narrate "{color=#49D5FF}Clue Added: The crew member has been reporting to someone other than the captain. {/color}"
+    narrate "{color=#49D5FF}(Tutorial: you can view your clues by clicking your {b}JOURNAL{/b} in the top right corner.){/color}"
     jump crew_leaving
 
 label rs_thankyou:
+    cadence "Thank you, I'd love some coffee."
+    narrate "He nods and pours my coffee into a delicate porcelain cup, handling it with all the grace of an elderly woman."
+    cadence "You know, I didn't expect it aboard a ship, but the coffee here is always splendid."
+    narrate "Something flickers across his face, a brief shift in his expression before he catches himself."
+    crew "Well, that's probably because we brew it fresh before servin', Miss. Can't guarantee it'll taste as good now that it's my turn."
+    cadence "Oh? I didn't think coffee was part of the crew's usual duties."
+    narrate "He pauses, eyes darting around briefly, before he sighs."
+    crew "Yeah, we've been up to a lot... more than usual, that's for sure."
+    narrate "The words are tinged with some frustration." 
+    play sound "audio/lying.wav"
+    crew "But you know, we're just doing our jobs—It's worth it in the end. {b}Coffee's gotta be served, after all.{/b}"
+    narrate "{color=#49D5FF}(Tutorial: Did you catch that? Cadence can sense when someone isn't being truthful. What part of his words felt off?) {/color}"
+    narrate "{color=#49D5FF}(Tutorial: in moments like these Cadence can {b}PRESS{/b} for more information. Not everyone appreciates being pressed, though.) {/color}"
+    menu:
+        "PRESS: prerecorded announcements":
+            jump rs_thankyou_press
+        "Let it go":
+            jump crew_leaving
 
-    cadence "Thank you. I'd love some coffee."
-    narrate "The crew member nods, adding a cup of coffee to the tray."
-
+label rs_thankyou_press:
+    cadence "You're doing an impressive job managing all of this. I'm sure the crew really appreciates someone so young stepping up—very brave of you."
+    narrate "The crew member straightens up a bit at the sudden compliment."
+    crew "Ah, well... thanks, Miss. Appreciate it, but I'm just keepin' things moving along. Same as the rest."
+    narrate "He offers a casual shrug, but his face betrays a flush of warmth."
+    play sound "audio/press.wav"
+    cadence "Has the captain mentioned why {b}the announcements are prerecorded{/b}? Is that part of your duties as well?"
+    narrate "At the mention of the announcements, his eyes flicker with a hint of unease, and the lightheartedness from the compliment quickly fades."
+    crew "Oh, I don't know nothin' 'bout that, sorry, Miss. I get my orders from someone else. You probably know as much as I do on that."
+    play sound "audio/clue.mp3"
+    narrate "{color=#49D5FF}Clue Added: The crew member has been reporting to someone other than the captain. {/color}"
+    narrate "{color=#49D5FF}(Tutorial: you can view your clues by clicking your {b}JOURNAL{/b} in the top right corner.){/color}"
     jump crew_leaving
+
 
 label crew_leaving:
 
-    narrate "The crew member walks to the table in my room and sets the tray down. His steps are hurried - he's eager to leave."
-    crew "If you need anything else, just give us a call. Enjoy your breakfast."
-
-    cadence "Ah - wait!"
-    narrate "I jump up from my bed, hurrying to the door. I plant myself in front of it, blocking his exit."
-    narrate "The crew member startles - bad. His arm knocks against the tray, and coffee spills onto my toast."
-    narrate "It would have spilled onto the floor too, if he hadn't hurried to catch it."
-    cadence "Oh, I do beg your pardon. It's just..."
-
-    cadence "I have a few questions. If you could spare a moment, that would be most appreciated."
+    narrate "The crew member hurries toward the table, setting the tray down with a quick, almost nervous motion. He's eager to leave."
+    crew "That'll be all, Miss. Stay in your room for now. I'll bring your supper later and see to anything else you need."
+    cadence "Wait—!"
+    narrate "I spring from my bed, rushing to the door and standing in front of it, blocking his way."
+    narrate "The crew member jumps back. His arm knocks the tray, sending coffee spilling over my toast."
+    narrate "He only just manages to stop the rest of it from splashing onto the floor."
+    cadence "Oh, my apologies! I didn't mean to startle you, it's just..."
+    cadence "I have a few questions. If you could spare a moment."
+    narrate "His gaze flicks nervously to the corridor behind me."
     crew "Apologies, miss, but I've got to get back to my duties now."
     crew "Plenty of work to do, you know. Other passengers to attend to."
-    narrate "His eyes dart nervously to the corridor behind me."
-
-    narrate "I need answers - if he leaves now, I'll be stuck in this room for another day with nothing to do but twiddle my thumbs."
+    narrate " I'm not going to let him get away that easily. If he leaves, I'll be stuck in this room for who knows how long with no leads."
     cadence "Please, just for a moment. I promise I won't keep you long."
-    narrate "He's really busy, I realize. I'll probably only have time to ask a couple questions before he really has to go."
+    narrate " He's clearly in a rush. I'll only have time for a few questions before he's gone."
 
     $ questions_asked = 0
     $ crew_q1_asked = 0
@@ -196,11 +250,10 @@ label crew_questions_end2:
     ## lock click
     narrate "The door locks with a sharp click as he bolts, his footsteps retreating frantically down the corridor."
     narrate "My neighbors are not amused."
-
+    play sound "audio/banging.wav"
     woman "Excuse me! You forgot our food! Oh, dear god, my baby needs food - she's starving! Please, we need it now!"
+    play sound "audio/banging.wav"
     man "Those bastards! I'm kicking down this door! I'M KICKING DOWN THIS DOOR, YOU HEAR ME?!"
-
-    stranger "Will you all shut up?! The doors are metal, ain't no way we're gettin' out 'less someone unlocks 'em for us."
 
     narrate "... Is that all we can do? Just wait for the blizzard to pass?"
     narrate "I glance at my ruined meal. The coffee has soaked into the toast, making it inedible."

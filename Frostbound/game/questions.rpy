@@ -38,7 +38,7 @@ label crew_questions_1:
     crew "Sorry, miss. It's just... I don't usually get the chance to talk to lasses while I'm on duty."
     crew "Apologies if I've given offense, miss. It's not you."
     
-    ## play banging
+    play sound "audio/banging.mp3"
     narrate "The sound of banging on the wall startles us both. It's coming from the room next door."
     woman "Excuse me! Is that a crew member?"
     woman "Please, my child is suffering dreadfully from motion sickness! She's so pale, she can barely sit up!"
@@ -92,9 +92,7 @@ label crew_questions_3:
     narrate "The crew member shifts uncomfortably on his feet, glancing once again at the corridor behind me."
     crew "It's been a rough spell for the ship, miss. The captain's been... occupied with matters."
     crew "That's about all I can say, miss. With all due respect, it would be best to leave this to the crew."
-
-    ## BANG BANG
-
+    play sound "audio/banging.mp3"
     man "Hey, bastard! Don't think I can't hear you through these walls!"
     man "I demand a refund, do you hear me!? This is unacceptable!"
     narrate "The angry voice of one of my neighbors comes through the wall, muffled but clear."
@@ -115,7 +113,7 @@ label crew_questions_4:
     ## lyink
     crew "{b}We ain't locking nobody in here, Miss. You're our passenger, it's just a temporary thing.{/b}"
 
-    ##BANGBANG
+    play sound "audio/banging.mp3"
     man "You're full of shit!! All of you!"
     narrate "The angry voice of my neighbor comes through the wall, muffled but clear."
     man "Three days — {i}THREE DAYS{/i} — you've kept us locked in our rooms like animals! What kind of treatment is this!? This is outrageous!"

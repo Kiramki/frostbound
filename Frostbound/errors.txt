@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/gui.rpy", line 91: invalid syntax
-    Movie(play="gui/main_menu.webm") with dissolve
-                                      ^
+File "game/script.rpy", line 174: end of line expected.
+    jump rs_thankyou_press:
+                          ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Sun Dec 29 20:04:00 2024
+Mon Dec 30 01:23:24 2024
