@@ -1,18 +1,19 @@
-2024-12-30 09:14:52 UTC
-macOS-14.6.1-arm64-arm-64bit
+2024-12-30 20:58:58 UTC
+macOS-15.2-arm64-arm-64bit
 Ren'Py 8.3.4.24120703
 
-Early init took 0.03s
-Loading error handling took 0.02s
-Loading script took 0.12s
+Early init took 0.04s
+Loading error handling took 0.03s
+Loading script took 0.63s
 Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
-Running init code took 0.03s
+Running init code took 0.04s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.01s
 Index archives took 0.00s
-Dump and make backups took 0.02s
+Backing up script files to '/Users/kiramki/Library/RenPy/backups/Frostbound':
+Dump and make backups took 0.03s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc took 0.02s
@@ -21,31 +22,31 @@ Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
 Save bytecode. took 0.02s
 Running _start took 0.00s
-Interface start took 0.32s
+Interface start took 0.21s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
+primary display bounds: (0, 0, 1512, 982)
 swap interval: 1 frames
 Windowed mode.
 Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
+Renderer: b'Apple M2 Pro'
+Version: b'2.1 Metal - 89.3'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
+Screen sizes: virtual=(1920, 1080) physical=(1512, 840) drawable=(3024, 1680)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
+Screen sizes: virtual=(1920, 1080) physical=(1512, 840) drawable=(3024, 1680)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 75.22s
+Early init took 50.90s
 Loading error handling took 0.02s
-Loading script took 0.10s
+Loading script took 0.13s
 Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
 Running init code took 0.02s
@@ -53,602 +54,7 @@ Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.01s
 Index archives took 0.00s
-Backing up script files to '/Users/emilylin/Library/RenPy/backups/Frostbound':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.02s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.01s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 146.88s
-Loading error handling took 0.01s
-Loading script took 0.08s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.01s
-Index archives took 0.00s
-Backing up script files to '/Users/emilylin/Library/RenPy/backups/Frostbound':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.02s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.00s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.04s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 161.08s
-Loading error handling took 0.01s
-Loading script took 0.08s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.01s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.01s
-Index archives took 0.00s
-Backing up script files to '/Users/emilylin/Library/RenPy/backups/Frostbound':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.02s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.00s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 167.43s
-Loading error handling took 0.01s
-Loading script took 0.07s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.01s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.01s
-Index archives took 0.00s
-Backing up script files to '/Users/emilylin/Library/RenPy/backups/Frostbound':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.02s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.01s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 252.44s
-Loading error handling took 0.01s
-Loading script took 0.08s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.01s
-Index archives took 0.00s
-Backing up script files to '/Users/emilylin/Library/RenPy/backups/Frostbound':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.02s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.00s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Resetting cache.
-Early init took 318.07s
-Loading error handling took 0.01s
-Loading script took 0.08s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.01s
-Index archives took 0.00s
-Backing up script files to '/Users/emilylin/Library/RenPy/backups/Frostbound':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.02s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 334.97s
-Loading error handling took 0.01s
-Loading script took 0.08s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.01s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.01s
-Index archives took 0.00s
-Backing up script files to '/Users/emilylin/Library/RenPy/backups/Frostbound':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.02s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 373.09s
-Loading error handling took 0.01s
-Loading script took 0.08s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.01s
-Index archives took 0.00s
-Backing up script files to '/Users/emilylin/Library/RenPy/backups/Frostbound':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.02s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.07s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 450.45s
-Loading error handling took 0.01s
-Loading script took 0.08s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.01s
-Index archives took 0.00s
-Backing up script files to '/Users/emilylin/Library/RenPy/backups/Frostbound':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.02s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.00s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.07s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 506.86s
-Loading error handling took 0.01s
-Loading script took 0.08s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.01s
-Index archives took 0.00s
-Backing up script files to '/Users/emilylin/Library/RenPy/backups/Frostbound':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.02s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.04s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 534.56s
-Loading error handling took 0.01s
-Loading script took 0.08s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.01s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.01s
-Index archives took 0.00s
-Backing up script files to '/Users/emilylin/Library/RenPy/backups/Frostbound':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.02s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.00s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.04s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 551.55s
-Loading error handling took 0.01s
-Loading script took 0.08s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.01s
-Index archives took 0.00s
-Backing up script files to '/Users/emilylin/Library/RenPy/backups/Frostbound':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.02s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.00s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.04s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 574.49s
-Loading error handling took 0.01s
-Loading script took 0.08s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.01s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.01s
-Index archives took 0.00s
-Backing up script files to '/Users/emilylin/Library/RenPy/backups/Frostbound':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.02s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.00s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.04s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 682.52s
-Loading error handling took 0.02s
-Loading script took 0.07s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.01s
-Index archives took 0.00s
-Backing up script files to '/Users/emilylin/Library/RenPy/backups/Frostbound':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.02s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.04s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 708.71s
-Loading error handling took 0.01s
-Loading script took 0.07s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.01s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.01s
-Index archives took 0.00s
-Backing up script files to '/Users/emilylin/Library/RenPy/backups/Frostbound':
+Backing up script files to '/Users/kiramki/Library/RenPy/backups/Frostbound':
 Dump and make backups took 0.02s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
@@ -661,28 +67,102 @@ Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.01s
-Prepare screens took 0.04s
-Save pyanalysis. took 0.00s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
 Save bytecode. took 0.01s
 Running _start took 0.00s
-Interface start took 0.07s
+Interface start took 0.05s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
+primary display bounds: (0, 0, 1512, 982)
 swap interval: 1 frames
 Windowed mode.
 Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
+Renderer: b'Apple M2 Pro'
+Version: b'2.1 Metal - 89.3'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
+Screen sizes: virtual=(1920, 1080) physical=(1512, 840) drawable=(3024, 1680)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
+Screen sizes: virtual=(1920, 1080) physical=(1512, 840) drawable=(3024, 1680)
 Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 51, in script
+    narrate "{i}The crackling sound of an intercom coming to life fills the room.{/i}"
+  File "/Users/kiramki/Downloads/renpy/renpy/ast.py", line 2579, in execute
+    Say.execute(self)
+  File "/Users/kiramki/Downloads/renpy/renpy/ast.py", line 621, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/Users/kiramki/Downloads/renpy/renpy/exports/sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "/Users/kiramki/Downloads/renpy/renpy/character.py", line 1455, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "/Users/kiramki/Downloads/renpy/renpy/character.py", line 1106, in do_display
+    display_say(who,
+  File "/Users/kiramki/Downloads/renpy/renpy/character.py", line 803, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "/Users/kiramki/Downloads/renpy/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Users/kiramki/Downloads/renpy/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Users/kiramki/Downloads/renpy/renpy/display/core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Users/kiramki/Downloads/renpy/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Users/kiramki/Downloads/renpy/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Users/kiramki/Downloads/renpy/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Users/kiramki/Downloads/renpy/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Users/kiramki/Downloads/renpy/renpy/display/core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Users/kiramki/Downloads/renpy/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Users/kiramki/Downloads/renpy/renpy/display/screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 1533, in execute
+    screen clues():
+  File "game/screens.rpy", line 1533, in execute
+    screen clues():
+  File "game/screens.rpy", line 1539, in execute
+    frame:
+  File "game/screens.rpy", line 1546, in execute
+    hbox:
+  File "game/screens.rpy", line 1547, in execute
+    viewport:
+  File "game/screens.rpy", line 1555, in execute
+    vbox:
+  File "game/screens.rpy", line 1561, in execute
+    $ print(f"The current clue is: {current_clue}")
+  File "game/screens.rpy", line 1561, in <module>
+    $ print(f"The current clue is: {current_clue}")
+NameError: name 'current_clue' is not defined
+
+While running game code:
+  File "game/script.rpy", line 51, in script
+    narrate "{i}The crackling sound of an intercom coming to life fills the room.{/i}"
+  File "game/screens.rpy", line 1533, in execute
+    screen clues():
+  File "game/screens.rpy", line 1533, in execute
+    screen clues():
+  File "game/screens.rpy", line 1539, in execute
+    frame:
+  File "game/screens.rpy", line 1546, in execute
+    hbox:
+  File "game/screens.rpy", line 1547, in execute
+    viewport:
+  File "game/screens.rpy", line 1555, in execute
+    vbox:
+  File "game/screens.rpy", line 1561, in execute
+    $ print(f"The current clue is: {current_clue}")
+  File "game/screens.rpy", line 1561, in <module>
+    $ print(f"The current clue is: {current_clue}")
+NameError: name 'current_clue' is not defined
 Resetting cache.
-Early init took 766.48s
+Early init took 93.44s
 Loading error handling took 0.01s
-Loading script took 0.06s
+Loading script took 0.14s
 Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
 Running init code took 0.02s
@@ -690,95 +170,174 @@ Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.01s
 Index archives took 0.00s
-Backing up script files to '/Users/emilylin/Library/RenPy/backups/Frostbound':
-Dump and make backups took 0.02s
+Backing up script files to '/Users/kiramki/Library/RenPy/backups/Frostbound':
+Dump and make backups took 0.03s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.02s
+Initial gc took 0.03s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.02s
+Init translation took 0.03s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.01s
 Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
+Save pyanalysis. took 0.01s
 Save bytecode. took 0.01s
 Running _start took 0.00s
-Interface start took 0.05s
+Interface start took 0.07s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
+primary display bounds: (0, 0, 1512, 982)
 swap interval: 1 frames
 Windowed mode.
 Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
+Renderer: b'Apple M2 Pro'
+Version: b'2.1 Metal - 89.3'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
+Screen sizes: virtual=(1920, 1080) physical=(1512, 840) drawable=(3024, 1680)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
+Screen sizes: virtual=(1920, 1080) physical=(1512, 840) drawable=(3024, 1680)
 Maximum texture size: 4096x4096
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
 Resetting cache.
-Early init took 774.36s
+Early init took 125.39s
 Loading error handling took 0.01s
-Loading script took 0.05s
+Loading script took 0.14s
 Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
-Running init code took 0.01s
+Running init code took 0.02s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.01s
 Index archives took 0.00s
-Backing up script files to '/Users/emilylin/Library/RenPy/backups/Frostbound':
+Backing up script files to '/Users/kiramki/Library/RenPy/backups/Frostbound':
 Dump and make backups took 0.02s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.02s
+Initial gc took 0.03s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.00s
+Analyze screens took 0.01s
 Save screen analysis took 0.01s
 Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
+Save pyanalysis. took 0.01s
 Save bytecode. took 0.01s
 Running _start took 0.00s
 Interface start took 0.05s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
+primary display bounds: (0, 0, 1512, 982)
 swap interval: 1 frames
 Windowed mode.
 Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
+Renderer: b'Apple M2 Pro'
+Version: b'2.1 Metal - 89.3'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
+Screen sizes: virtual=(1920, 1080) physical=(1512, 840) drawable=(3024, 1680)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
+Screen sizes: virtual=(1920, 1080) physical=(1512, 840) drawable=(3024, 1680)
 Maximum texture size: 4096x4096
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
 Resetting cache.
-Early init took 779.22s
+Early init took 161.90s
 Loading error handling took 0.01s
-Loading script took 0.05s
-Loading save slot metadata took 0.01s
+Loading script took 0.13s
+Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
-Running init code took 0.01s
+Running init code took 0.02s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.01s
 Index archives took 0.00s
-Backing up script files to '/Users/emilylin/Library/RenPy/backups/Frostbound':
+Backing up script files to '/Users/kiramki/Library/RenPy/backups/Frostbound':
 Dump and make backups took 0.02s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.02s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2 Pro'
+Version: b'2.1 Metal - 89.3'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1512, 840) drawable=(3024, 1680)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1512, 840) drawable=(3024, 1680)
+Maximum texture size: 4096x4096
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+Resetting cache.
+Early init took 406.56s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to '/Users/kiramki/Library/RenPy/backups/Frostbound':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
@@ -791,17 +350,38 @@ Prepare screens took 0.03s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.01s
 Running _start took 0.00s
-Interface start took 0.04s
+Interface start took 0.05s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
+primary display bounds: (0, 0, 1512, 982)
 swap interval: 1 frames
 Windowed mode.
 Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
+Renderer: b'Apple M2 Pro'
+Version: b'2.1 Metal - 89.3'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
+Screen sizes: virtual=(1920, 1080) physical=(1512, 840) drawable=(3024, 1680)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
+Screen sizes: virtual=(1920, 1080) physical=(1512, 840) drawable=(3024, 1680)
 Maximum texture size: 4096x4096
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}

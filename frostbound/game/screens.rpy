@@ -4,7 +4,6 @@
 
 init offset = -1
 
-
 ################################################################################
 ## Styles
 ################################################################################
@@ -1524,6 +1523,68 @@ define bubble.expand_area = {
     "top_right" : (0, 22, 0, 0),
     "thought" : (0, 0, 0, 0),
 }
+
+## Clues #######################################################################
+## 
+## A screen to display all of the clues that the player has obtained.
+##
+################################################################################
+
+# Initialize the current clue to be empty
+default current_clue = {"description":"", "name":""}
+
+screen clues():
+    modal True
+
+    # Back button to close the screen
+    textbutton _("Back") action Hide("clues")
+
+    frame:
+        # Put frame in the middle
+        xpadding 10
+        ypadding 10
+        xalign 0.5
+        yalign 0.5
+
+        hbox:
+            viewport:
+                # Set size of the viewport
+                scrollbars "vertical"
+                draggable True
+                mousewheel True
+                xsize 500
+                ysize 750
+
+                vbox:
+                    xsize 500
+                    ysize 100
+                    # For all clues in dictionary, bring up button with clue name. On click, set the current clue to the clue key-value pair
+                    for clue in player_clues:
+                        textbutton player_clues[clue]['name'] action SetScreenVariable("current_clue", player_clues[clue])
+                    $ print(f"The current clue is: {current_clue}")
+            
+            vbox:
+                xsize 500
+                text current_clue['name'] size 40
+                text '' size 10
+                viewport:
+                    scrollbars "vertical"
+                    draggable True
+                    mousewheel True
+                    xsize 500
+                    ysize 700
+
+                    text current_clue['description'] size 20
+
+
+# clue button :)
+screen clue_button():
+    imagebutton:
+        xalign 1.0
+        idle "gui/journal_icon_static.png"
+        hover "gui/journal_icon_hover2.png"
+        action Show("clues")
+
 
 
 

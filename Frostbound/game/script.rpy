@@ -1,5 +1,10 @@
 ﻿# The script of the game goes in this file.
 
+# Python initialization
+init python:
+    import clues # Import the clues module
+    selected_clue = None # Create a variable to store the selected clue
+
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
@@ -16,6 +21,7 @@ define watchman = Character("Watchman")
 
 default looked_around = 0
 default watchman_eavesdrop = 0
+default player_clues = {}
 
 
 # The game starts here.
@@ -38,6 +44,10 @@ label introduction:
     #[INTERCOM MOMENT]
 
     play music "audio/film_static.wav" fadein 1.0
+
+    # Enable clues.
+    show screen clue_button
+
     narrate "{i}The crackling sound of an intercom coming to life fills the room.{/i}"
     intercom "Attention all passengers! This is your captain speaking."
     intercom "Due to continued severe weather conditions, our cruise will be delayed for another day."
@@ -101,13 +111,16 @@ label rs_captain:
     narrate "The crew member stiffens, his fingers tightening around the tray. "
     play sound "audio/lying.wav"
     crew "The captain? Uh, yeah, he's {b}up on the bridge, overseeing things. Busy as ever, y'know?{/b}"
+
     narrate "{color=#49D5FF}(Tutorial: Did you catch that? Cadence can sense when someone isn't being truthful. What part of his words felt off?) {/color}"
     narrate "{color=#49D5FF}(Tutorial: in moments like these Cadence can {b}PRESS{/b} for more information. Not everyone appreciates being pressed, though.) {/color}"
+
     menu:
         "PRESS":
             jump rs_captain_press
         "Let it go":
             jump crew_leaving
+
 label rs_captain_press:
     play sound "audio/press.wav"
     cadence "If the captain's overseeing things, {b}why have the announcements been prerecorded{/b}? Isn't he the one who usually makes them?"
@@ -116,8 +129,10 @@ label rs_captain_press:
     narrate "His tone is clipped now, clearly eager to close the conversation."
     crew "Look, just sit tight 'til the storm blows through, alright? We're all workin' hard to keep you folks safe."
     play sound "audio/clue.mp3"
+
     narrate "{color=#49D5FF}Clue Added: The crew member has been reporting to someone other than the captain. {/color}"
     narrate "{color=#49D5FF}(Tutorial: you can view your clues by clicking your {b}JOURNAL{/b} in the top right corner.){/color}"
+
     jump crew_leaving
 
 label rs_leave:
