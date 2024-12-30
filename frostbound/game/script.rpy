@@ -217,6 +217,7 @@ label crew_leaving:
     narrate " I'm not going to let him get away that easily. If he leaves, I'll be stuck in this room with no leads."
     cadence "Please, just for a moment. I promise I won't keep you long."
     narrate " He's clearly in a rush. I'll only have time for a few questions before he's gone."
+    play music "audio/hope_in_the_cold.mp3" fadein 1.0
 
     $ questions_asked = 0
     $ crew_q1_asked = 0
@@ -246,19 +247,18 @@ label crew_questions_end2:
 
     narrate "I try to soften my words and reach out in an attempt to comfort him."
     narrate "My fingers brush against his arm."
-
+    stop music
     play sound "audio/slam.mp3"
     show cadence_room_main with vpunch
     crew "{i}GET OFF ME!{/i}"
     narrate "He shoves me aside with startling force. My body hits the wall, the breath knocked out of me."
-    play sound "audio/door_close.wav"
-    narrate "The door locks with a sharp click as he bolts, his footsteps retreat frantically down the corridor."
+    play sound "audio/door_shut.mp3"
+    narrate "The door locks with a sharp click as he bolts."
     narrate "My neighbors are not amused."
     play sound "audio/banging.mp3"
     woman "Excuse me! You forgot our food! Oh, dear god, my baby needs food - she's starving! Please, we need it now!"
     play sound "audio/banging.mp3"
     man "Those bastards! I'm kicking down this door! I'M KICKING DOWN THIS DOOR, YOU HEAR ME?!"
-
     narrate "... Is that all we can do? Just wait for the blizzard to pass?"
     narrate "I glance at my ruined meal and push the tray aside, my appetite gone."
 
@@ -267,6 +267,7 @@ label crew_questions_end2:
             jump intro_note
 
 label intro_note:
+    play music "audio/hope_chords.mp3" fadein 1.0 fadeout 1.0
     narrate "I return to my bed in the corner of the room and pull out my journal once more."
     ## !!!!! ##
     narrate "{color=#49D5FF}(Tutorial: solve the mystery alongside Cadence by viewing clues in your {b}JOURNAL{/b} in the top right corner.){/color}"
@@ -277,7 +278,7 @@ label intro_note:
     narrate "Time passes as I work. When I spare a moment to glance at the clock, I find that hours have passed."
     
     play sound "audio/door_knock.mp3"
-    narrate "The crew member must have been shaken if he's this late with my supper. I should apologize."
+    narrate "A knock at the door. The crew member must have been shaken if he's this late with my supper."
     narrate "..."
     cadence "... Hello? You can come in."
     narrate "..."
@@ -309,28 +310,35 @@ label intro_note:
             jump intro_stay_in
 
 label intro_stay_in:
+    play sound "audio/paper_rustle.wav"
+    play music "audio/its_snowing.mp3" fadein 3.0 fadeout 1.0
     narrate "I shake my head and set the note down on the table, turning back to my bed."
-    narrate "By now my father is waiting at the dock for me, him marking each day this trip is delayed."
-    narrate "Sending me off to boarding school was hard on him. It's time to stop chasing adventures, I'm not a child anymore."
+    narrate "By now my father is waiting at the dock for me, anxiously marking each day this trip is delayed."
+    narrate "I should let the crew to sort this out. It's time to stop chasing adventures, I'm not a child anymore."
+    narrate "The storm will pass — like all storms do."
     scene cadence_room_bed
     with Dissolve(1)
     scene black
     with Dissolve(1)
-    ## bell sound effect
+    stop music
+    play sound "audio/bell.wav"
     narrate "The midnight bell rings - I ignore it."
-    narrate "Yes, I'll temper myself and allow the crew to sort this out. The storm will pass — ike all storms do."
     jump bad_end_1
 
 label bad_end_1:
     scene cadence_room_bed
+    play music "audio/its_snowing.mp3" fadein 3.0
     with Dissolve(1)
     narrate "When I wake the next day, a cold chill hangs in the air. The same placating announcement plays over the intercom."
     narrate "Outside my window, the storm has frosted everything, painting the world in a blur of white."
     play sound "audio/door_knock.mp3"
     crew "Breakfast, madam."
-    narrate "A crew member enters, their face unfamiliar. They set a tray on the table and leave without a word."
-    narrate "..."
-    narrate "I spend the rest of the day huddled beneath the blankets, trying to stave off the chill. The frantic banging of my neighbors' fists against the wall reminds me of trapped creatures, pacing endlessly."
+    play sound "audio/door_open.mp3"
+    narrate "A crew member enters, their face unfamiliar."
+    play sound "audio/door_shut.mp3"
+    narrate "They set a tray on the table and leave without a word."
+    narrate "I spend the rest of the day huddled beneath the blankets, trying to stave off the chill. "
+    narrate "Meanwhile, my neighbors bang frantically against the walls like trapped creatures, pacing endlessly."
     play sound "audio/banging.mp3"
     man "Excuse me!? What's wrong with the heating in here? It's freezing!"
     man "This whole trip has been a disaster! Do you know who I am?"
@@ -338,10 +346,7 @@ label bad_end_1:
     play sound "audio/banging.mp3"
     woman "Can't you do something about the heating? My child's been shivering all night—please, some extra blankets!"
 
-    narrate "I pull the blankets tighter around me, trying to block out the noise."
-
-    narrate "I think of my father's face the day I was accepted to that prestigious boarding school, the way he lifted me off my feet."
-    narrate "There was this strange mix of pride and fear in his eyes—like I was a ring cast into the water."
+    narrate "I think of my father's face the day I left home. The way he cradled me in his arms like a keepsake being cast to water."
     narrate "I close my eyes."
 
     scene black
@@ -350,23 +355,23 @@ label bad_end_1:
 
     narrate "At some point, I drift off to sleep. I dream of a great white blanket, swallowing me whole."
     narrate "It grows larger and larger, until it eventually wraps around the entire earth."
-    narrate "I'm freezing. I can't move. I can't breathe."
     narrate "..."
     narrate "I don't wake up."
     jump ending1
 
 label intro_sneak_out:
-    narrate "How could I live with myself if I didn't take this opportunity? It might be dangerous, but it's a mystery to solve - something to do, if nothing else."
-    narrate "I hide the note in my pocket, then turn back to my bed."
+    narrate "If there's one thing about being a Daycott, it's that we don't let others decide our fates."
+    narrate "I'd rather take control of the situation than wait around... and the captain's fate does intrigue me. Father doesn't need to know."
+    narrate "I fold the note carefully and slip it into my pocket, its weight feeling heavier than paper should."
+
     scene cadence_room_bed
     with Dissolve(1)
     narrate "I sit down, waiting for the night to fall."
 
     scene black
     with Dissolve(1)
-    narrate "I rest my head on my hands. I close my eyes, intending to take a short nap in preparation for the midnight bell."
-
-    ## bell sound effect
+    stop music
+    play sound "audio/bell.wav"
     narrate "The midnight bell rings."
     scene cadence_room_bed
     with Dissolve(1)
@@ -376,6 +381,7 @@ label intro_sneak_out:
     with Dissolve(1)
     narrate "I listen for the sound of footsteps when I approach my door."
     narrate "I hear none. Cautiously, I turn the handle."
+    play sound "audio/door_open.mp3"
     jump hallway_start
 
     
