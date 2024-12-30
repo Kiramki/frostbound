@@ -1542,6 +1542,7 @@ screen clues():
         yalign 0.5
 
         hbox:
+            spacing 10
             viewport:
                 # Set size of the viewport
                 scrollbars "vertical"

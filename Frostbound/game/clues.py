@@ -1,8 +1,45 @@
 ## Dict of all clues
-clue_dict = {}
+clue_dict = {
+    # Severe Weather
+    "severe_weather": {
+        "id":"severe_weather",
+        "name": "Severe Weather",
+        "description": "The SS Nimbus has been experiencing severe weather conditions for the past few days.\
+        This has caused the ship's journey to be delayed significantly. \n \n\
+When I look out the window, I can see frost creeping up the glass. The ship has been getting colder by the day. This is highly unusual weather for the season."
+    },
+
+    # Lockdown
+
+
+    # Pre-recorded Announcements
+
+
+    # Captain's Whereabouts
+    "captains_whereabouts": {
+        "id":"captains_whereabouts",
+        "name": "Captain's Whereabouts",
+        "description": "The crew member that served me breakfast this morning has been reporting to someone other than the captain."
+    },
+
+    # Missing Steward
+    "missing_steward": {
+        "id":"missing_steward",
+        "name": "Missing Steward",
+        "description": "The steward that usually serves my meals failed to show up this morning. Allegedly, he has been 'moved'. The crew is reluctant to discuss him."
+
+    },
+
+
+
+}
 
 ## Dict of all possible updates for clues
 clue_updates = {
+    # Captain's Whereabouts
+    "captains_whereabouts": {
+        "first_mate": "The first mate of the ship has taken over command. The crew now reports to him, indicating a shift of leadership.",
+    },
 }
 
 # get a new clue

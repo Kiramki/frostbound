@@ -48,6 +48,10 @@ label introduction:
     # Enable clues.
     show screen clue_button
 
+    # Add starter clues to the player_clues dictionary.
+
+    $ player_clues["severe_weather"] = clues.get_clue("severe_weather")
+
     narrate "{i}The crackling sound of an intercom coming to life fills the room.{/i}"
     intercom "Attention all passengers! This is your captain speaking."
     intercom "Due to continued severe weather conditions, our cruise will be delayed for another day."
