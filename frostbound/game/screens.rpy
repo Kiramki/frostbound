@@ -157,9 +157,14 @@ style say_dialogue:
 
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
-    ypos gui.dialogue_ypos
+    ypos gui.dialogue_ypos - 17
+    # properties gui.text_properties("dialogue")
 
-    adjust_spacing False
+    # xpos gui.dialogue_xpos
+    # xsize gui.dialogue_width
+    # ypos gui.dialogue_ypos
+
+    # adjust_spacing False
 
 ## Input screen ################################################################
 ##
@@ -240,22 +245,38 @@ screen quick_menu():
     ## Ensure this appears on top of other screens.
     zorder 100
 
-    if quick_menu:
+    if quick_menu and not renpy.get_screen('choice'):
 
         hbox:
             style_prefix "quick"
 
             xalign 0.5
             yalign 1.0
+            imagemap:
+                ground "gui/textbox_ground.png"
+                idle "gui/textbox_ground.png"
+                hover "gui/textbox_hover.png"
+                selected_hover "gui/textbox_selected_hover.png"
+                selected_idle "gui/textbox_hover.png"
 
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+                hotspot (1307, 282, 52, 52) action Preference("auto-forward", "toggle")
+                hotspot (1392, 282, 52, 52) action Skip() alternate Skip(fast=True, confirm=True)
+                hotspot (1475, 282, 52, 52) action Rollback()
+
+                hotspot (517, 282, 52, 52) action ShowMenu('history')
+                hotspot (355, 282, 52, 52) action ShowMenu('save')
+                hotspot (435, 282, 52, 52) action ShowMenu('load')
+                hotspot (597, 282, 52, 52) action ShowMenu('preferences')
+            
+            # OLD
+            # textbutton _("Back") action Rollback()
+            # textbutton _("History") action ShowMenu('history')
+            # textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+            # textbutton _("Auto") action Preference("auto-forward", "toggle")
+            # textbutton _("Save") action ShowMenu('save')
+            # textbutton _("Q.Save") action QuickSave()
+            # textbutton _("Q.Load") action QuickLoad()
+            # textbutton _("Prefs") action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
