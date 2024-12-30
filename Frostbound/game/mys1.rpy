@@ -4,25 +4,20 @@ label hallway_start:
     stop music fadeout 1
     scene black
     with Dissolve(1)
-
-    narrate "The door creaks as I carefully push it ajar..."
     cadence "!!"
 
     scene main_deck_hall
     with Dissolve(1.5)
 
-    play music "audio/hope_in_the_cold.mp3"
-
+    play music "audio/main_theme.mp3"
     narrate "I'm hit with a burst of cold air that makes my body recoil like a startled housecat."
-    narrate "My breath clouds the air almost immediately. Frost clings to the walls, weaving icy spiderwebs over gaslit fixtures."
-    narrate "I had thought that my room was cold - but this corridor is a different kind of chill."
-
     cadence "What in the world happened here?"
-    narrate "This hallway was all but spotless three days ago - now, it's like a blizzard moved in and redecorated."
+    narrate "Frost clings to the walls, weaving icy spiderwebs over gaslit fixtures."
+    narrate "This hallway was all but spotless three days ago - now, it looks like the blizzard moved in and redecorated."
 
-    ## play door shutting sound
+    play sound "audio/door_shut.mp3"
     narrate "I pull the door shut behind me, cutting off the light from my cabin."
-    narrate "The empty corridor beckons before me like a headmaster's door left ajar— there will be consequences if I'm caught sneaking around like this."
+    narrate "There will be consequences if I'm caught sneaking around like this."
 
     menu note_intersection:
         "Move left, past the other cabin doors":
@@ -38,6 +33,7 @@ label give_up:
     narrate "Nope. Nope nope nope. I'm not doing this."
     narrate "It's cold out here, and this was a stupid idea. I'm going back to my cabin."
     narrate "I turn on my heel and head back to my room, the door shutting behind me with a satisfying click."
+    play sound "audio/door_shut.mp3"
 
     scene black
     with Dissolve(1)
@@ -46,11 +42,18 @@ label give_up:
     jump bad_end_1
 
 label note_1:
+    play sound "audio/footsteps_soft.mp3"
     scene main_deck_left
     narrate "I move left, past the other cabin doors."
     narrate "I cautiously count the doors under my breath."
-    narrate "A looming figure appears at the other end of the corridor holding a lantern. I need to hurry."
-    narrate "Which door is it?"
+    stop music
+    narrate "Wait."
+    narrate "A looming figure flickers at the of the corridor holding a lantern. The watchman."
+    play music "intense_theme.mp3"
+    narrate "I can sense him coming closer, if he catches sight of me it's over."
+    play sound "audio/footsteps_near.mp3"
+    narrate "I hasten my steps. Hopefully my memory doesn't fail me here, this may be my only chance."
+    narrate "Which door did S tell me to go through?"
 
     menu door_1:
         "Fifth door":
@@ -64,16 +67,20 @@ label note_1:
     
 label note_1_4:
     narrate "I try the fourth door, my fingers trembling as I twist the knob."
+    play sound "audio/door_rattle.mp3"
+    narrate "Nothing. The door doesn't budge."
     narrate "I hear a voice from inside."
     stranger "Who's there?"
     stranger "Go away! I'm trying to sleep!"
     stranger "I'll call the watchman if you don't leave me alone!"
     narrate "I quickly back away from the door, my heart pounding. Then-"
+    stop music
+    play sound "audio/slam.mp3"
+    show main_deck_left with vpunch
     watchman "Hey!"
     narrate "A rough hand grabs my arm, yanking me backward. The sudden light of a lantern blinds me."
     watchman "What are you doing out of your room? You're not supposed to be here."
     narrate "I try to explain, but come up short. The watchman drags me back to my room."
-
     scene black
     with Dissolve(1)
     narrate "I hear the door lock behind me. I'm not going anywhere tonight."
@@ -83,22 +90,30 @@ label note_1_4:
 
 label note_1_5:
     narrate "I try the fifth door, my fingers trembling as I twist the knob."
+    play sound "audio/door_open.mp3"
     narrate "The door creaks open, revealing a dark room. Thank god."
     narrate "I slip inside, pulling the door shut just as the beam of the lantern sweeps by."
-    narrate "I press my ear against the door, holding my breath. I can hear the watchman mutter something before he moves on."
+    play sound "audio/door_shut.mp3"
+    scene black
+    with Dissolve(1)
+    narrate "I press my ear against the door, holding my breath."
     watchman "... must've been a flicker... probably nothing..."
     narrate "The light from his lantern sweeps faintly under the door before it recedes again."
     narrate "I let out a sigh of relief, my heart pounding in my chest. I rest my forehead against the door for a moment."
     narrate "The air is colder here, stabbing through my clothes like a thousand tiny needles."
-    narrate "I scan the room until I find the hidden staircase mentioned in the note."
+    play sound "audio/footsteps_soft.mp3"
     narrate "I descend."
-
     jump sera_stairs
 
 label note_1_6:
     narrate "I try the sixth door, my fingers trembling as I twist the knob."
+    play sound "audio/door_rattle.mp3"
     narrate "Nothing. The door doesn't budge."
+    play sound "audio/door_rattle.mp3"
     narrate "I try again, but the knob refuses to turn."
+    stop music
+    play sound "audio/slam.mp3"
+    show main_deck_left with vpunch
     watchman "Hey!"
     narrate "A rough hand grabs my arm, yanking me backward. The sudden light of a lantern blinds me."
     watchman "What are you doing out of your room? You're not supposed to be here."
@@ -106,12 +121,14 @@ label note_1_6:
 
     scene black
     with Dissolve(1)
+    play sound "audio/door_shut.mp3"
     narrate "I hear the door lock behind me. I'm not going anywhere tonight."
     narrate "With nothing left to do, I crawl back into bed and pull the covers up to my chin."
 
     jump bad_end_1
 
 label sneak_1:
+    play sound "audio/footsteps_soft.mp3"
     narrate "I move right, towards the upper deck gate."
 
     scene main_deck_right
