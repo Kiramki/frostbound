@@ -1575,7 +1575,8 @@ screen clues():
 # clue button :)
 screen clue_button():
     imagebutton:
-        xalign 1.0
+        xalign 0.95
+        yalign 0.05
         idle "gui/journal_icon_static.png"
         hover "gui/journal_icon_hover2.png"
 
