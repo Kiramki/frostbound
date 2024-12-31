@@ -51,8 +51,6 @@ label introduction:
     # Add starter clues to the player_clues dictionary.
 
     $ player_clues["severe_weather"] = clues.get_clue("severe_weather")
-    $ player_clues["lockdown"] = clues.get_clue("lockdown")
-    $ player_clues["pre_recorded_announcements"] = clues.get_clue("pre_recorded_announcements")
 
     narrate "{i}The crackling sound of an intercom coming to life fills the room.{/i}"
     intercom "Attention all passengers! This is your captain speaking."
@@ -136,9 +134,6 @@ label rs_captain_press:
     crew "Look, just sit tight 'til the storm blows through, alright? We're all workin' hard to keep you folks safe."
     play sound "audio/clue.mp3"
 
-    # CLUE GET: Captain's Whereabouts
-    $ player_clues["captains_whereabouts"] = clues.get_clue("captains_whereabouts")
-
     narrate "{color=#49D5FF}Clue Added: The crew member has been reporting to someone other than the captain. {/color}"
     narrate "{color=#49D5FF}(Tutorial: you can view your clues by clicking your {b}JOURNAL{/b} in the top right corner.){/color}"
 
@@ -154,7 +149,6 @@ label rs_leave:
     crew "Apologies, Miss. You'll have to wait. We've run into some... unexpected issues on deck."
     play sound "audio/lying.wav"
     crew "{b}We'll have you all out once the weather passes, and you'll be free to stretch your legs.{/b}"
-
     narrate "{color=#49D5FF}(Tutorial: Did you catch that? Cadence can sense when someone isn't being truthful. What part of his words felt off?) {/color}"
     narrate "{color=#49D5FF}(Tutorial: in moments like these Cadence can {b}PRESS{/b} for more information. Not everyone appreciates being pressed, though.) {/color}"
     menu:
@@ -174,12 +168,7 @@ label rs_leave_press:
     narrate "He shifts his weight from foot to foot."
     crew "I don't report to him directly, Miss, so I can't help much. I'm just followin' orders. That's all I can say."
     crew "Just sit tight 'til the storm blows through, alright? We're all workin' hard to keep you folks safe."
-    
     play sound "audio/clue.mp3"
-
-    # CLUE GET: Captain's Whereabouts
-    $ player_clues["captains_whereabouts"] = clues.get_clue("captains_whereabouts")
-
     narrate "{color=#49D5FF}Clue Added: The crew member has been reporting to someone other than the captain. {/color}"
     narrate "{color=#49D5FF}(Tutorial: you can view your clues by clicking your {b}JOURNAL{/b} in the top right corner.){/color}"
     jump crew_leaving
@@ -194,7 +183,7 @@ label rs_thankyou:
     narrate "He pauses, eyes darting around briefly, before he sighs."
     crew "Yeah, we've been up to a lot... more than usual, that's for sure."
     play sound "audio/lying.wav"
-    crew "But you know, we're just doing our jobs — It's worth it in the end. {b}Coffee's gotta be served, after all.{/b}"
+    crew "But you know, we're just doing our jobs—It's worth it in the end. {b}Coffee's gotta be served, after all.{/b}"
     narrate "{color=#49D5FF}(Tutorial: Did you catch that? Cadence can sense when someone isn't being truthful. What part of his words felt off?) {/color}"
     narrate "{color=#49D5FF}(Tutorial: in moments like these Cadence can {b}PRESS{/b} for more information. Not everyone appreciates being pressed, though.) {/color}"
     menu:
@@ -210,12 +199,7 @@ label rs_thankyou_press:
     cadence "Is preparing the {b}Captain's prerecorded announcments{/b} part of your duties as well?"
     narrate "At the mention of the announcements, his eyes flicker with a hint of unease, and the lightheartedness from the compliment quickly fades."
     crew "Oh, I don't know nothin' 'bout that, sorry, Miss. I take my orders from someone else."
-
     play sound "audio/clue.mp3"
-
-    # CLUE GET: Captain's Whereabouts
-    $ player_clues["captains_whereabouts"] = clues.get_clue("captains_whereabouts")
-    
     narrate "{color=#49D5FF}Clue Added: The crew member has been reporting to someone other than the captain. {/color}"
     narrate "{color=#49D5FF}(Tutorial: you can view your clues by clicking your {b}JOURNAL{/b} in the top right corner.){/color}"
     jump crew_leaving

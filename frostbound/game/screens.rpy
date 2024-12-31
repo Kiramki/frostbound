@@ -1534,9 +1534,6 @@ define bubble.expand_area = {
 default current_clue = {"description":"", "name":""}
 
 screen clues():
-    # Press esc to close this screen.
-    key "game_menu" action Hide("clues")
-
     frame:
         # Put frame in the middle
         xpadding 10
@@ -1564,7 +1561,7 @@ screen clues():
             
             vbox:
                 xsize 500
-                text current_clue['name'] size 35
+                text current_clue['name'] size 40
                 text '' size 10
                 viewport:
                     scrollbars "vertical"

@@ -90,13 +90,8 @@ label crew_questions_2_press:
     narrate "His voice cracks with barely controlled anger. I recoil slightly, startled by the force of it."
     narrate "He takes a sharp breath, looking almost ashamed of himself, and runs a hand through his hair."
     crew "I'm sorry, miss. I'd rather not say. Just... please, don't ask about him again."
-
     play sound "audio/clue.mp3"
-
-    # CLUE GET: Missing Steward
-    $ player_clues['missing_steward'] = clues.get_clue('missing_steward')
     narrate "{color=#49D5FF}Clue Added: The steward's unexpected absence, along with the crew's reluctance to discuss him, may be linked to the ship's current state.{/color}"
-    
     $ questions_asked += 1
     $ crew_q2_asked = 1
     if questions_asked < 2:
