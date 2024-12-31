@@ -147,6 +147,7 @@ label sneak_1:
     narrate "If I can get past them, I'll be able to get to the upper gate - whatever might be over there. Assuming that it isn't locked."
 
     $ looked_around = 0
+    $ listen_count = 0
 
     menu sneak_menu:
         "Look around first" if looked_around == 0:
@@ -159,7 +160,14 @@ label sneak_1:
             jump sneak_1_door
 
         "Keep listening":
-            jump sneak_1_eavesdrop
+            if listen_count == 0:
+                jump sneak_1_eavesdrop
+            elif listen_count == 1:
+                jump sneak_1_eavesdrop2
+            elif listen_count == 2:
+                jump sneak_1_eavesdrop3
+            elif listen_count >= 3:
+                jump sneak_1_eavesdrop4
 
 label sneak_1_look:
     scene main_deck_right
@@ -226,7 +234,75 @@ label sneak_1_eavesdrop:
     watchman2 "Not here. Later, alright?"
     play sound "audio/clue.mp3"
     narrate "{color=#49D5FF}Clue Added: Sometime after breakfast—where I may have scared him off—the crew member, Mouse, vanished. It seems he's had a rough few days. {/color}"
+    $ listen_count +=1
     jump sneak_menu
+
+label sneak_1_eavesdrop2:
+    scene main_deck_cg
+    with Dissolve(1)
+    narrate "It seems like they'll be talking for a while. Surely it wouldn't hurt to listen some more."
+    watchman1 "-and then he dropped the whole wretched thing, guts and all, right into the day's gumbo!"
+    watchman2 "Hah! Does he also sprinkle rat droppings in the ale when your back's turned?"
+    watchman1 "Ellis! I'm telling straight. Gave me such a fright, I spent the a whole week eating nothing but hardtack."
+    narrate "His companion laughs at this, but not meanly."
+    watchman2 "You coulda told me, I'd have set aside some salt beef for you."
+    narrate "..."
+    narrate "Suddenly, I'm very thankful that father upgraded my cabin afterall."
+    $ listen_count +=1
+    jump sneak_menu
+
+label sneak_1_eavesdrop3:
+    scene main_deck_cg
+    with Dissolve(1)
+    narrate "... I'll admit - at this point I've been listening in for so long I don't know how to stop myself."
+    watchman1 "You don't think Mouse would've... you know?"
+    watchman2 "Jumped ship? No point when the whole sea's frozen over. Everything's gone to hell."
+    narrate "There's a long pause."
+    watchman1 "So the captain is gone, isnt he?"
+    narrate "A long sigh."
+    watchman2 "It's hard to say. But honestly, death might be a mercy in his case."
+    watchman2 "We're screwed too, if we don't get out of this blizzard soon."
+    narrate "For reasons unknown, this cues a chortle out of his companion. Soon, they're both laughing quietly."
+    watchman1 "You and I can't seem to catch a break, huh?"
+    watchman2 "Yeah well, call me a madman but I can't imagine it any other way with you."
+    narrate "Their conversation continues on in a low murmur, indecipherable to my ears."
+    play sound "audio/clue.mp3"
+    narrate "{color=#49D5FF}Clue Added: The captain's fate is uncertain, but he's not the same after the incident. Death may be a relief in his current state. {/color}"
+    $ listen_count +=1
+    jump sneak_menu
+
+label sneak_1_eavesdrop4:
+    scene main_deck_cg
+    with Dissolve(1)
+    narrate "I know I should retreat now, but an inexplicable force keeps me rooted in place."
+    watchman2 "Hey, you remember what I said about last night?"
+    narrate "It's the first time Ellis has initiated a conversation, and the sudden shift catches both me and his companion off guard."
+    watchman1 "Wh- you mean twenty minutes ago?"
+    narrate "Have I truly been eavesdropping on these two for that long?"
+    watchman2 "Yeah, didn't think this was the right place for it."
+    watchman2 "Imagined I'd do it just off shore, or somewhere that would really wow you but..."
+    narrate "There's a rustling of fabric. In the dim light, I can just make out Ellis pressing something small and flat into his companion's palm."
+    watchman2 "You're the best of me, Will. I'll be damned if something happens to us before I can tell you."
+    narrate "The tenderness in Ellis's voice makes me feel like an intruder in a deeply private moment. I shift uncomfortably."
+    watchman1 "Ellis, what..."
+    show main_deck_cg with vpunch
+    watchman1 "WHAT ARE YOU DOING OVER THERE?"
+    narrate "In an instant, both watchmen whirl around, their eyes locking onto me like searchlights."
+    narrate "I stand frozen, mortification washing over me in waves."
+    watchman2 "Goddamnit, how long have you been standing there?"
+    watchman2 "You know what, I don't want to know. Come with me."
+    narrate "Rough hands seize my arms, and I'm unceremoniously marched back to my quarters."
+    narrate "The air between us is thick with shared embarrassment."
+    scene black
+    with Dissolve(1)
+    play sound "audio/door_shut.mp3"
+    narrate "The door slams shut behind me, the lock clicking with grim finality. I'm not going anywhere tonight."
+    narrate "With nothing left to do, I crawl into my bunk, pulling the scratchy blanket up to my chin. As the ship rocks gently, I'm left alone with my thoughts and the lingering mystery of what I witnessed on deck."
+    jump bad_end_1
+
+
+
+
 
 
 
@@ -276,8 +352,8 @@ label sera_stairs_trust:
 
 label sera_stairs_distrust:
     narrate "There's one case my father never talks about."
-    narrate "The one where he came home covered in blood, trembling, and sheltered in his room for two days straight."
-    narrate "Now, standing in front of this witch, I can't let my guard down."
+    narrate "The one where he came home trembling, covered in blood, and sheltered in his room for two days straight."
+    narrate "Now, standing in front of this witch, I know I can't let my guard down."
     narrate "My face must betray my feelings because the witch lowers her hand, her expression darkening."
     stranger "What's that? {i}Oh, Seraphine! Thanks for risking your ass to get me down here tonight!{/i}"
     narrate "The witch - Seraphine - flips her braid behind her back, and scoffs."
@@ -286,11 +362,15 @@ label sera_stairs_distrust:
     narrate "It's a silent battle of wills, and for a moment, I almost feel like we're both waiting for the other to blink."
     narrate "Then, she lets out a long sigh."
     sera "Look, you don't have to trust me. You can even hold onto that oversized rod of yours if it makes you feel better."
-    narrate "Her eyes are like looking into a kaleidoscope held up to the sunlight."
+    narrate "Her eyes feel like looking into a kaleidoscope held up to the sunlight."
     sera "We're both on the same side here - stuck on this metal death trap... and I need your help."
     narrate "The last part seems to come out reluctantly, as if the words leave a bad taste in her mouth."
     narrate "Without waiting for my response, she swings the door open and steps through it, not checking to see if I'm following."
     narrate "Despite myself, I do."
+    play sound "audio/footsteps_soft.mp3"
+    stop music fadeout 1
+    scene black
+    with Dissolve(1)
 
 
 
