@@ -162,48 +162,18 @@ label sneak_1:
             jump sneak_1_eavesdrop
 
 label sneak_1_look:
-    narrate "My eyes adjust to the dim light as I squint, scanning the area."
-    narrate "Before the blizzard, this place was a bustling thoroughfare for passengers."
-    narrate "To the side, there's a humble wooden door. It's probably a storage closet, though I have no clue what's inside."
-    narrate "Then, there's the grand staircase. It spirals upwards, its once-pristine brass railing now draped in icicles."
-    narrate "At the foot of the stairs, something shiny catches my eye."
-    narrate "Wait a minute."
-    narrate "That's not the key {i}to{/i} the the upper deck, is it? That's... not a good security measure."
-    narrate "{color=#49D5FF}Item Added: Key to upper deck gate.{/color}"
+    narrate "My eyes have been slowly adjusting to the dim light. I squint, looking around."
+    narrate "(this is a part where i might describe my surroundings)"
+    narrate "When I look closely, I spot a key on the gate."
+    narrate "That's not the key {i}to{/i} the gate, is it? That's... not a good security measure."
     $ looked_around = 1
     jump sneak_menu
 
 label sneak_1_distract:
-    narrate "I grab the nearest thing around me and throw it into the room, trying to knock something over."
-    stop music
-    play sound "audio/slam.mp3"
-    show main_deck_cg with vpunch
-    watchman2 "Shit!"
-    narrate "Whatever I threw caused a cascade of icicles to fall around them with unintended destruction."
-    narrate "The watchman to the right throws his body protectively over the other, shielding him from the falling debris."
-    watchman1 "What was hell that?"
-    narrate "Their two hands find each other in the dark and hold on tightly."
-    narrate "Well. I'll have time to feel mortified about this later."
-    narrate "I bolt, rushing up the staircase."
-    play sound "audio/footsteps_near.mp3"
-    play music "audio/intense_theme.mp3"
-    scene main_deck_right
-    with Dissolve(.5)
-    watchman1 "Wait - I see someone. You there, stop!"
-    watchman2 "Damn it. I'll take care of this. Wait here."
-    play sound "audio/footsteps_near.mp3"
-    with Dissolve(1)
-    narrate "I scramble up the staircase, my heart pounding in my chest to the roaring song of a war drum in accelerando."
-    narrate "The gate at the top of the stairs is unguarded."
+    narrate "sh"
 
 label sneak_1_stairs:
-    play sound "audio/footsteps_near.mp3"
-    play music "audio/intense_theme.mp3"
-    scene main_deck_right
-    with Dissolve(1)
-    narrate "Without hesitation, I dart toward the stairs, keeping my steps as light as possible. My pulse races, but I focus, forcing myself to stay calm."
-    narrate "The gate at the top of the stairs is unguarded."
-    watchman1 "Hey, did you hear something?"
+    narrate "shhhhhh"
 
 label sneak_1_eavesdrop:
     scene main_deck_cg
@@ -224,7 +194,6 @@ label sneak_1_eavesdrop:
     watchman2 "Not here. Later, alright?"
     play sound "audio/clue.mp3"
     narrate "{color=#49D5FF}Clue Added: Sometime after breakfast—where I may have scared him off—the crew member, Mouse, vanished. It seems he's had a rough few days. {/color}"
-    jump sneak_menu
 
 
 
