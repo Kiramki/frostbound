@@ -342,7 +342,7 @@ label upper_deck:
     narrate "The cold hits me immediately. I search for somewhere to hide, but a gnawing unease settles over me."
     stop music
     narrate "Then I turn, and I see it."
-    scene infirmary_body
+    scene infirmary
     with Dissolve(1)
     play music "audio/its_snowing.mp3"
     narrate "The woman lies in the corner, her body encased in ice, frozen mid-motion, as though time itself had abandoned her."
