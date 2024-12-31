@@ -162,6 +162,7 @@ label sneak_1:
             jump sneak_1_eavesdrop
 
 label sneak_1_look:
+    scene main_deck_right
     narrate "My eyes adjust to the dim light as I squint, scanning the area."
     narrate "Before the blizzard, this place was a bustling thoroughfare for passengers."
     narrate "To the side, there's a humble wooden door. It's probably a storage closet, though I have no clue what's inside."
@@ -169,7 +170,8 @@ label sneak_1_look:
     narrate "At the foot of the stairs, something shiny catches my eye."
     narrate "Wait a minute."
     narrate "That's not the key {i}to{/i} the the upper deck, is it? That's... not a good security measure."
-    narrate "{color=#49D5FF}Item Added: Key to upper deck gate.{/color}"
+    play sound "audio/clue.mp3"
+    narrate "{color=#49D5FF}Item Acquired: Key to upper deck.{/color}"
     $ looked_around = 1
     jump sneak_menu
 
@@ -209,17 +211,17 @@ label sneak_1_eavesdrop:
     scene main_deck_cg
     with Dissolve(1)
     narrate "They seem engaged in their conversation. Perhaps I'll learn something about the state of the ship."
-    watchman1 "Seen Mouse lately? Kid's been missing since breakfast."
+    watchman1 "Did you run into Mouse during your rounds tonight? Heard he's been missing since breakfast."
     narrate "Mouse... is that the same crew member who replaced my steward this morning? I lean in a bit closer."
-    watchman2 "Probably hiding somewhere like he always does. Don't understand how he made it this far."
-    watchman1 "Hey, go easy on the kid. He's had a rough couple of days."
-    narrate "The other man laughs and looks out at the snowy wasteland."
+    watchman2 "Kid's gone. Probably went off and buried his head in some hole, hidin' like he always does. Don't know how he's made it this far."
+    narrate "The words are harsh, but there is a weary edge to them."
+    watchman1 "Take it easy on him, will you? He's had a rough couple of days."
     watchman2 "Rough? Everyone here's had it rough, but that kid... he cracks under the smallest pressure."
-    narrate "The words are harsh, but there is an edge to it that betrays a deeper weariness."
+    narrate "The watchman tilts his head back and looks out at the snowy wasteland."
     narrate "..."
     watchman1 "You alright?"
-    narrate "A sigh."
-    watchman2 "Fine. Just damn this cold. You?"
+    watchman2 "Fine. Just, damn this cold. You?"
+    narrate "There's a pause."
     watchman1 "Could be worse... Listen, about last night..."
     watchman2 "Not here. Later, alright?"
     play sound "audio/clue.mp3"
@@ -247,7 +249,7 @@ label sera_stairs:
     narrate "My eyes snap up at the sheer audacity of the comment and she smirks at my scandalized expression."
     stranger "I can explain what's happening. C'mon. You'll understand when you see it."
     narrate "My thoughts feel smothered by the sheer absurdity of this interaction."
-    narrate "She extends towards me expectantly."
+    narrate "She extends her hand towards me expectantly."
     menu:
         "Trust her":
             jump sera_stairs_trust
@@ -263,13 +265,32 @@ label sera_stairs_trust:
     narrate "She doesn't release my hand right away. Her touch lingers for a second too long before I pull back, tucking my hands behind me."
     sera "Right this way, Daycott."
     narrate "The insignia on her cloak glints unmistakably as she throws the door open and steps through."
-    narrate "I hesitate, steeling myself before steppingin after her."
-    narrate "When you spend your life hiding, it's easy to forget there's another way to exist."
+    narrate "I hesitate, steeling myself before stepping in after her."
+    narrate "When you've spent your life hiding, it's easy to forget there are other ways to exist."
     narrate "But seeing someone who wears it all so freely—it's almost jarring."
     narrate "It makes me wonder... what would it be like to stop pretending, even for a moment?"
+    play sound "audio/footsteps_soft.mp3"
+    stop music fadeout 1
+    scene black
+    with Dissolve(1)
 
-label sera_stairs_disstrust:
-    sera "Call me Seraphine."
-    narrate ""
+label sera_stairs_distrust:
+    narrate "There's one case my father never talks about."
+    narrate "The one where he came home covered in blood, trembling, and sheltered in his room for two days straight."
+    narrate "Now, standing in front of this witch, I can't let my guard down."
+    narrate "My face must betray my feelings because the witch lowers her hand, her expression darkening."
+    stranger "What's that? {i}Oh, Seraphine! Thanks for risking your ass to get me down here tonight!{/i}"
+    narrate "The witch - Seraphine - flips her braid behind her back, and scoffs."
+    sera "Or are you one of those phonies who can't stay loyal to your own kind?"
+    narrate "My lips press into a thin line, determined not to answer her."
+    narrate "It's a silent battle of wills, and for a moment, I almost feel like we're both waiting for the other to blink."
+    narrate "Then, she lets out a long sigh."
+    sera "Look, you don't have to trust me. You can even hold onto that oversized rod of yours if it makes you feel better."
+    narrate "Her eyes are like looking into a kaleidoscope held up to the sunlight."
+    sera "We're both on the same side here - stuck on this metal death trap... and I need your help."
+    narrate "The last part seems to come out reluctantly, as if the words leave a bad taste in her mouth."
+    narrate "Without waiting for my response, she swings the door open and steps through it, not checking to see if I'm following."
+    narrate "Despite myself, I do."
+
 
 

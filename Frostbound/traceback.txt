@@ -1,82 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 51, in script
-    narrate "{i}The crackling sound of an intercom coming to life fills the room.{/i}"
-  File "game/screens.rpy", line 1533, in execute
-    screen clues():
-  File "game/screens.rpy", line 1533, in execute
-    screen clues():
-  File "game/screens.rpy", line 1539, in execute
-    frame:
-  File "game/screens.rpy", line 1546, in execute
-    hbox:
-  File "game/screens.rpy", line 1547, in execute
-    viewport:
-  File "game/screens.rpy", line 1555, in execute
-    vbox:
-  File "game/screens.rpy", line 1561, in execute
-    $ print(f"The current clue is: {current_clue}")
-  File "game/screens.rpy", line 1561, in <module>
-    $ print(f"The current clue is: {current_clue}")
-NameError: name 'current_clue' is not defined
+  File "game/mys1.rpy", line 257, in script
+    jump sera_stairs_distrust
+ScriptError: could not find label 'sera_stairs_distrust'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 51, in script
-    narrate "{i}The crackling sound of an intercom coming to life fills the room.{/i}"
-  File "/Users/kiramki/Downloads/renpy/renpy/ast.py", line 2579, in execute
-    Say.execute(self)
-  File "/Users/kiramki/Downloads/renpy/renpy/ast.py", line 621, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "/Users/kiramki/Downloads/renpy/renpy/exports/sayexports.py", line 132, in say
-    who(what, *args, **kwargs)
-  File "/Users/kiramki/Downloads/renpy/renpy/character.py", line 1455, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "/Users/kiramki/Downloads/renpy/renpy/character.py", line 1106, in do_display
-    display_say(who,
-  File "/Users/kiramki/Downloads/renpy/renpy/character.py", line 803, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "/Users/kiramki/Downloads/renpy/renpy/ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/Users/kiramki/Downloads/renpy/renpy/display/core.py", line 2215, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "/Users/kiramki/Downloads/renpy/renpy/display/core.py", line 2745, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "/Users/kiramki/Downloads/renpy/renpy/display/displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/kiramki/Downloads/renpy/renpy/display/displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/kiramki/Downloads/renpy/renpy/display/displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/kiramki/Downloads/renpy/renpy/display/screen.py", line 480, in visit_all
-    callback(self)
-  File "/Users/kiramki/Downloads/renpy/renpy/display/core.py", line 2745, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "/Users/kiramki/Downloads/renpy/renpy/display/screen.py", line 491, in per_interact
-    self.update()
-  File "/Users/kiramki/Downloads/renpy/renpy/display/screen.py", line 697, in update
-    self.screen.function(**self.scope)
-  File "game/screens.rpy", line 1533, in execute
-    screen clues():
-  File "game/screens.rpy", line 1533, in execute
-    screen clues():
-  File "game/screens.rpy", line 1539, in execute
-    frame:
-  File "game/screens.rpy", line 1546, in execute
-    hbox:
-  File "game/screens.rpy", line 1547, in execute
-    viewport:
-  File "game/screens.rpy", line 1555, in execute
-    vbox:
-  File "game/screens.rpy", line 1561, in execute
-    $ print(f"The current clue is: {current_clue}")
-  File "game/screens.rpy", line 1561, in <module>
-    $ print(f"The current clue is: {current_clue}")
-NameError: name 'current_clue' is not defined
+  File "game/mys1.rpy", line 257, in script
+    jump sera_stairs_distrust
+  File "/Applications/renpy-8.3.4-sdk/renpy/ast.py", line 1705, in execute
+    rv = renpy.game.script.lookup(target)
+  File "/Applications/renpy-8.3.4-sdk/renpy/script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'sera_stairs_distrust'.
 
-macOS-15.2-arm64-arm-64bit arm64
+macOS-14.6.1-arm64-arm-64bit arm64
 Ren'Py 8.3.4.24120703
 frostbound 1.0
-Mon Dec 30 15:59:51 2024
+Tue Dec 31 01:54:18 2024
