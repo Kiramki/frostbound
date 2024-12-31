@@ -64,9 +64,8 @@ label introduction:
     stop music
     narrate "{i}Click...{/i}"
 
-    scene cadence_room_bed
+    scene cadence_room_main
     with Dissolve(1)
-
     pause(1)
     play music "audio/hope_chords.mp3" fadein 1.0
     narrate "..."
@@ -81,10 +80,12 @@ label introduction:
     narrate "Lies are easy to spot when you have spent your life around them. The most obvious ones dress in the mundane."
     narrate "Somewhere above me, the essential crew is putting on a show of monitoring the weather and preparing breakfast."
     narrate "Interacting with them feels like tightening a violin string on the verge of snapping."
-    scene cadence_room_bed
+    scene black
+    with Dissolve(.5)
     play sound "audio/door_knock.mp3"
     crew "Miss Cadence Daycott? I have your meal."
     narrate "Speak of the devil."
+    cadence "Come in!"
     play sound "audio/door_open.mp3"
     scene cadence_room_main
     with Dissolve(1)
@@ -289,17 +290,23 @@ label crew_questions_end2:
 
 label intro_note:
     play music "audio/hope_chords.mp3" fadein 1.0 fadeout 1.0
+    scene cadence_room_bed
+    with Dissolve(1)
     narrate "I return to my bed in the corner of the room and pull out my journal once more."
     ## !!!!! ##
     narrate "{color=#49D5FF}(Tutorial: solve the mystery alongside Cadence by viewing clues in your {b}JOURNAL{/b} in the top right corner.){/color}"
     narrate "{color=#49D5FF}(Not everyone is going to be as forthcoming with information so be sure to {b}PRESS{/b} strategically.){/color}"
     narrate "{color=#49D5FF}(If a character reacts poorly to your choices, it's not always a bad thing. Good luck.){/color}"
     ###########
+    scene black
+    with Dissolve(.5)
     play sound "audio/writing.wav"
     narrate "Time passes as I work. When I spare a moment to glance at the clock, I find that hours have passed."
-    
+    narrate "The crew member must have been shaken if he's this late with my supper."
     play sound "audio/door_knock.mp3"
-    narrate "A knock at the door. The crew member must have been shaken if he's this late with my supper."
+    narrate "A knock at the door."
+    scene cadence_room_main
+    with Dissolve(1)
     narrate "..."
     cadence "... Hello? You can come in."
     narrate "..."
@@ -355,7 +362,7 @@ label intro_stay_in:
     jump bad_end_1
 
 label bad_end_1:
-    scene cadence_room_bed
+    scene cadence_room_main
     play music "audio/its_snowing.mp3" fadein 3.0
     with Dissolve(1)
     narrate "When I wake the next day, a cold chill hangs in the air. The same placating announcement plays over the intercom."

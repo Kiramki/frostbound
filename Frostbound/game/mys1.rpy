@@ -368,22 +368,19 @@ label upper_deck:
     return
 
 
-
-
-
-
-
-
 label sera_stairs:
     scene stowaway_entrance
     with Dissolve(1)
-    narrate "At the bottom, I'm met with a single door. Is this the entrance the note mentioned?"
-    narrate "I'm about to knock when the door cracks open."
+    narrate "At the bottom, my breath fogs the air."
+    narrate "Crates are stacked high against the walls, leaning precariously, their shadows stretching long in the flickering light."
+    narrate "It smells of salt, damp wood, and something faintly metallic."
+    stranger "About time you showed up."
+    narrate "My head jerks up to a figure perched lazily atop a stack of crates, as if they'd been waiting for hours."
     narrate "And then I see them. Her eyes."
     narrate "Eyes I've avoided all my life."
     narrate "{b}The eyes of a witch.{/b}"
     play music "audio/meet_seraphine.mp3"
-    narrate "I reel back as she steps out, sharp and unyielding, like a needle threading through fabric."
+    narrate "I reel back as she as she glides down the stack of crates, her movement swift and seamless, like a needle threading fabric."
     stranger "You're Cadence?"
     narrate "Tiny golden stars dangle from her ears and tangle in her hair as if the night sky had bent to decorate her."
     narrate "I quickly avert my gaze, fixing on the stitching of her cloak instead."
