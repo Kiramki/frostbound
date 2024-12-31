@@ -1,22 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/mys1.rpy", line 257, in script
-    jump sera_stairs_distrust
-ScriptError: could not find label 'sera_stairs_distrust'.
+  File "game/mys1.rpy", line 160, in script
+    jump sneak_1_door
+ScriptError: could not find label 'sneak_1_door'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/mys1.rpy", line 257, in script
-    jump sera_stairs_distrust
+  File "game/mys1.rpy", line 160, in script
+    jump sneak_1_door
   File "/Applications/renpy-8.3.4-sdk/renpy/ast.py", line 1705, in execute
     rv = renpy.game.script.lookup(target)
   File "/Applications/renpy-8.3.4-sdk/renpy/script.py", line 1103, in lookup
     raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'sera_stairs_distrust'.
+ScriptError: could not find label 'sneak_1_door'.
 
 macOS-14.6.1-arm64-arm-64bit arm64
 Ren'Py 8.3.4.24120703
 frostbound 1.0
-Tue Dec 31 01:54:18 2024
+Tue Dec 31 03:17:21 2024

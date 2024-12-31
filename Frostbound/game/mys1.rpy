@@ -157,7 +157,7 @@ label sneak_1:
             jump sneak_1_distract
 
         "Make a break for the stairs":
-            jump sneak_1_door
+            jump sneak_1_stairs
 
         "Keep listening":
             if listen_count == 0:
@@ -197,23 +197,50 @@ label sneak_1_distract:
     narrate "I bolt, rushing up the staircase."
     play sound "audio/footsteps_near.mp3"
     play music "audio/intense_theme.mp3"
-    scene main_deck_right
-    with Dissolve(.5)
+    scene main_deck_right 
     watchman1 "Wait - I see someone. You there, stop!"
     watchman2 "Damn it. I'll take care of this. Wait here."
-    play sound "audio/footsteps_near.mp3"
-    with Dissolve(1)
     narrate "I scramble up the staircase, my heart pounding in my chest to the roaring song of a war drum in accelerando."
     narrate "The gate at the top of the stairs is unguarded."
+    jump sneak_1_gate
 
 label sneak_1_stairs:
     play sound "audio/footsteps_near.mp3"
     play music "audio/intense_theme.mp3"
     scene main_deck_right
     with Dissolve(1)
-    narrate "Without hesitation, I dart toward the stairs, keeping my steps as light as possible. My pulse races, but I focus, forcing myself to stay calm."
+    narrate "I dart toward the stairs, keeping my steps as light as possible. My pulse races, but I focus, forcing myself to stay calm."
     narrate "The gate at the top of the stairs is unguarded."
     watchman1 "Hey, did you hear something?"
+    watchman2 "... Someone's here."
+    jump sneak_1_gate
+
+label sneak_1_gate:
+        scene main_deck_right
+        play sound "audio/footsteps_soft.mp3"
+        narrate "Heavy footsteps echo from the bottom of the stairs, heading toward me."
+        if looked_around:
+            narrate "My heart leaps to my throat as I scramble for the key and jam it into the lock of the gate."
+            play sound "audio/door_open.mp3"
+            narrate "I press my body weight into the gate and slip into the upper deck - it shuts behind me with a clang."
+        else:
+            narrate "My heart pounds like a wardrum in my chest as I reach the gate and give it a violent shake. However, it doesn't budge."
+            narrate "The watchmen must have {b}locked{/b} it."
+            narrate "It must have been somewhere in the room below, it's too late to go back and check now."
+            stop music
+            play sound "audio/slam.mp3"
+            show main_deck_right with vpunch
+            watchman "Hey!"
+            narrate "A rough hand grabs my arm, yanking me backward. The sudden light of a lantern blinds me."
+            watchman "What are you doing out of your room? You're not supposed to be here."
+            narrate "I try to explain, but come up short. The watchman drags me back to my room."
+            scene black
+            with Dissolve(1)
+            narrate "I hear the door lock behind me. I'm not going anywhere tonight."
+            narrate "With nothing left to do, I crawl back into bed and pull the covers up to my chin."
+            jump bad_end_1
+
+
 
 label sneak_1_eavesdrop:
     scene main_deck_cg
@@ -243,9 +270,9 @@ label sneak_1_eavesdrop2:
     narrate "It seems like they'll be talking for a while. Surely it wouldn't hurt to listen some more."
     watchman1 "-and then he dropped the whole wretched thing, guts and all, right into the day's gumbo!"
     watchman2 "Hah! Does he also sprinkle rat droppings in the ale when your back's turned?"
-    watchman1 "Ellis! I'm telling straight. Gave me such a fright, I spent the a whole week eating nothing but hardtack."
-    narrate "His companion laughs at this, but not meanly."
-    watchman2 "You coulda told me, I'd have set aside some salt beef for you."
+    watchman1 "Ellis! I'm telling it straight. Gave me such a fright, I spent the a whole week eating nothing but hardtack."
+    narrate "His companion laughs at this, but not unkindly."
+    watchman2 "You coulda told me, I'd have set aside some of my salt beef for you."
     narrate "..."
     narrate "Suddenly, I'm very thankful that father upgraded my cabin afterall."
     $ listen_count +=1
@@ -282,13 +309,13 @@ label sneak_1_eavesdrop4:
     watchman2 "Yeah, didn't think this was the right place for it."
     watchman2 "Imagined I'd do it just off shore, or somewhere that would really wow you but..."
     narrate "There's a rustling of fabric. In the dim light, I can just make out Ellis pressing something small and flat into his companion's palm."
-    watchman2 "You're the best of me, Will. I'll be damned if something happens to us before I can tell you."
-    narrate "The tenderness in Ellis's voice makes me feel like an intruder in a deeply private moment. I shift uncomfortably."
+    watchman2 "You're the best of me, Will. I'll be damned if something happens to us before you know."
+    narrate "The tenderness in Ellis' voice makes me feel like an intruder in a deeply private moment. I shift uncomfortably."
     watchman1 "Ellis, what..."
     show main_deck_cg with vpunch
     watchman1 "WHAT ARE YOU DOING OVER THERE?"
     narrate "In an instant, both watchmen whirl around, their eyes locking onto me like searchlights."
-    narrate "I stand frozen, mortification washing over me in waves."
+    narrate "I stand frozen in mortification."
     watchman2 "Goddamnit, how long have you been standing there?"
     watchman2 "You know what, I don't want to know. Come with me."
     narrate "Rough hands seize my arms, and I'm unceremoniously marched back to my quarters."
@@ -297,13 +324,8 @@ label sneak_1_eavesdrop4:
     with Dissolve(1)
     play sound "audio/door_shut.mp3"
     narrate "The door slams shut behind me, the lock clicking with grim finality. I'm not going anywhere tonight."
-    narrate "With nothing left to do, I crawl into my bunk, pulling the scratchy blanket up to my chin. As the ship rocks gently, I'm left alone with my thoughts and the lingering mystery of what I witnessed on deck."
+    narrate "With nothing left to do, I crawl into my bed, pulling the blanket up to my chin. I'm left alone with my thoughts and the lingering mystery of what I witnessed on deck."
     jump bad_end_1
-
-
-
-
-
 
 
 label sera_stairs:
@@ -321,7 +343,7 @@ label sera_stairs:
     narrate "I quickly avert my gaze, fixing on the stitching of her cloak instead."
     narrate "There's an absurdity to it, though: aren't witches supposed to look away from us?"
     narrate "A tense silence follows, then, she snickers."
-    stranger "Hah! Nel wasn't kidding when she said you looked Detective Daycott—with tits."
+    stranger "Hah! Nel wasn't kidding when she said you looked Detective Daycott with tits."
     narrate "My eyes snap up at the sheer audacity of the comment and she smirks at my scandalized expression."
     stranger "I can explain what's happening. C'mon. You'll understand when you see it."
     narrate "My thoughts feel smothered by the sheer absurdity of this interaction."
@@ -335,10 +357,10 @@ label sera_stairs:
 label sera_stairs_trust:
     narrate "My fingers tremble just enough to betray my nerves as I clasp her hand."
     narrate "Something electric hums through the contact, curling around my chest and tightening my breath."
-    cadence "I'd prefer you call me Cadence. Do I get to know your name too?"
+    cadence "Please, call me Cadence. I'm guessing you were my midnight visitor?"
     narrate "Her pupils morph into smiling crescents akin to way watercolor bleeds across parchment."
-    sera "Call me Seraphine."
-    narrate "She doesn't release my hand right away. Her touch lingers for a second too long before I pull back, tucking my hands behind me."
+    sera "The name's Seraphine."
+    narrate "She doesn't release my hand right away. Her touch lingers for a second before I pull back, tucking my hands behind me."
     sera "Right this way, Daycott."
     narrate "The insignia on her cloak glints unmistakably as she throws the door open and steps through."
     narrate "I hesitate, steeling myself before stepping in after her."
@@ -357,7 +379,7 @@ label sera_stairs_distrust:
     narrate "My face must betray my feelings because the witch lowers her hand, her expression darkening."
     stranger "What's that? {i}Oh, Seraphine! Thanks for risking your ass to get me down here tonight!{/i}"
     narrate "The witch - Seraphine - flips her braid behind her back, and scoffs."
-    sera "Or are you one of those phonies who can't stay loyal to your own kind?"
+    sera "Or are you one of those phonies who can't stay loyal to her own kind?"
     narrate "My lips press into a thin line, determined not to answer her."
     narrate "It's a silent battle of wills, and for a moment, I almost feel like we're both waiting for the other to blink."
     narrate "Then, she lets out a long sigh."
