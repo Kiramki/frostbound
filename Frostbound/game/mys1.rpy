@@ -215,33 +215,6 @@ label sneak_1_stairs:
     watchman2 "... Someone's here."
     jump sneak_1_gate
 
-label sneak_1_gate:
-        scene main_deck_right
-        play sound "audio/footsteps_soft.mp3"
-        narrate "Heavy footsteps echo from the bottom of the stairs, heading toward me."
-        if looked_around:
-            narrate "My heart leaps to my throat as I scramble for the key and jam it into the lock of the gate."
-            play sound "audio/door_open.mp3"
-            narrate "I press my body weight into the gate and slip into the upper deck - it shuts behind me with a clang."
-        else:
-            narrate "My heart pounds like a wardrum in my chest as I reach the gate and give it a violent shake. However, it doesn't budge."
-            narrate "The watchmen must have {b}locked{/b} it."
-            narrate "It must have been somewhere in the room below, it's too late to go back and check now."
-            stop music
-            play sound "audio/slam.mp3"
-            show main_deck_right with vpunch
-            watchman "Hey!"
-            narrate "A rough hand grabs my arm, yanking me backward. The sudden light of a lantern blinds me."
-            watchman "What are you doing out of your room? You're not supposed to be here."
-            narrate "I try to explain, but come up short. The watchman drags me back to my room."
-            scene black
-            with Dissolve(1)
-            narrate "I hear the door lock behind me. I'm not going anywhere tonight."
-            narrate "With nothing left to do, I crawl back into bed and pull the covers up to my chin."
-            jump bad_end_1
-
-
-
 label sneak_1_eavesdrop:
     scene main_deck_cg
     with Dissolve(1)
@@ -326,6 +299,79 @@ label sneak_1_eavesdrop4:
     narrate "The door slams shut behind me, the lock clicking with grim finality. I'm not going anywhere tonight."
     narrate "With nothing left to do, I crawl into my bed, pulling the blanket up to my chin. I'm left alone with my thoughts and the lingering mystery of what I witnessed on deck."
     jump bad_end_1
+
+label sneak_1_gate:
+    scene main_deck_right
+    play sound "audio/footsteps_soft.mp3"
+    narrate "Heavy footsteps echo from the bottom of the stairs, heading toward me."
+    if looked_around:
+        narrate "My heart leaps to my throat as I scramble for the key and jam it into the lock of the gate."
+        play sound "audio/door_open.mp3"
+        narrate "I press my body weight into the gate and slip into the upper deck - it shuts behind me with a clang."
+        jump upper_deck
+    else:
+        narrate "My heart pounds like a wardrum in my chest as I reach the gate and give it a violent shake. However, it doesn't budge."
+        narrate "The watchmen must have {b}locked{/b} it."
+        narrate "It must have been somewhere in the room below, it's too late to go back and check now."
+        stop music
+        play sound "audio/slam.mp3"
+        show main_deck_right with vpunch
+        watchman "Hey!"
+        narrate "A rough hand grabs my arm, yanking me backward. The sudden light of a lantern blinds me."
+        watchman "What are you doing out of your room? You're not supposed to be here."
+        narrate "I try to explain, but come up short. The watchman drags me back to my room."
+        scene black
+        with Dissolve(1)
+        narrate "I hear the door lock behind me. I'm not going anywhere tonight."
+        narrate "With nothing left to do, I crawl back into bed and pull the covers up to my chin."
+        jump bad_end_1
+
+
+label upper_deck:
+    play sound "audio/door_rattle.mp3"
+    scene infirmary_entrance
+    narrate "I twist the lock into place just in time. The gate behind me rattles violently, sending a jolt of panic through my veins."
+    watchman2 "Who's in there? You're not allowed out of your rooms!"
+    watchman1 "One moment... I'm grabbing the spare."
+    narrate "Who do I think I am? My father, gallivanting around the streets of London at night? This was a terrible idea."
+    narrate "Time is running out. They'll figure out how to open the door any moment now."
+    narrate "My eyes scan the room, frantic, searching for any escape."
+    narrate "The infirmary door is the first thing I see, and I dart toward it, my breath quickening."
+    play sound "audio/door_open.mp3"
+    scene black
+    narrate "The cold hits me immediately. I search for somewhere to hide, but a gnawing unease settles over me."
+    stop music
+    narrate "Then I turn, and I see it."
+    scene infirmary_body
+    with Dissolve(1)
+    play music "audio/its_snowing.mp3"
+    narrate "The woman lies in the corner, her body encased in ice, frozen mid-motion, as though time itself had abandoned her."
+    narrate "Her hands are curled tightly around something, but the ice has distorted it, making it impossible to tell if it's a weapon or some forgotten trinket."
+    narrate "I step back, my mouth going dry. My mind spins in overdrive. What could possibly do this to a person?"
+    narrate "I think about the captain, the rumors I've heard, and my gut tightens. So this isn't just about one person."
+    narrate "Something horrible is happening to the passengers of this ship."
+    stop music
+    stranger "Nice going, detective."
+    narrate "I whip around, hands instinctively reaching for the rod at my back, prepared to defend myself."
+    narrate "And then I see them. Her eyes."
+    narrate "Eyes I've avoided all my life."
+    narrate "{b}The eyes of a witch.{/b}"
+    stop music fadeout 1
+    scene black
+    with Dissolve(1)
+    narrate "{color=#49D5FF}You have reached the end of the demo, thank you for playing Frostbound! Remember to leave a review and rate our game to support us!{/color}"
+    narrate "{color=#49D5FF}Our dream is to have our own studio one day and make many more games. We hope to see you again.{/color}"
+    narrate "{b}DEMO ENDING: NAH IMMA DO MY OWN THING{/b}"
+    stop music fadeout 1
+    scene black
+    with Dissolve(1)
+    return
+
+
+
+
+
+
 
 
 label sera_stairs:
@@ -445,7 +491,7 @@ label stowaway_hideout:
     with Dissolve(1)
     narrate "{color=#49D5FF}You have reached the end of the demo, thank you for playing Frostbound! Remember to leave a review and rate our game to support us!{/color}"
     narrate "{color=#49D5FF}Our dream is to have our own studio one day and make many more games. We hope to see you again.{/color}"
-    narrate "{b}DEMO FINISHED{/b}"
+    narrate "{b}DEMO ENDING: TRUE{/b}"
     stop music fadeout 1
     scene black
     with Dissolve(1)
