@@ -1,18 +1,19 @@
-2024-12-31 01:26:08 UTC
+2024-12-31 01:28:02 UTC
 macOS-14.6.1-arm64-arm-64bit
 Ren'Py 8.3.4.24120703
 
-Early init took 0.04s
-Loading error handling took 0.04s
-Loading script took 0.54s
-Loading save slot metadata took 0.03s
+Early init took 0.06s
+Loading error handling took 0.05s
+Loading script took 0.15s
+Loading save slot metadata took 0.04s
 Loading persistent took 0.00s
-Running init code took 0.05s
+Running init code took 0.04s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
+Reloading save slot metadata took 0.03s
 Index archives took 0.00s
-Dump and make backups took 0.03s
+Backing up script files to '/Users/emilylin/Library/RenPy/backups/Frostbound':
+Dump and make backups took 0.05s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc took 0.02s
@@ -21,14 +22,14 @@ Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.04s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
 Save pyanalysis. took 0.01s
 Save bytecode. took 0.02s
 Running _start took 0.00s
-Interface start took 0.24s
+Interface start took 0.31s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1470, 956)
@@ -38,9 +39,9 @@ Vendor: "b'Apple'"
 Renderer: b'Apple M2'
 Version: b'2.1 Metal - 88.1'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
+Screen sizes: virtual=(1920, 1080) physical=(1470, 814) drawable=(2940, 1628)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
+Screen sizes: virtual=(1920, 1080) physical=(1470, 814) drawable=(2940, 1628)
 Maximum texture size: 4096x4096
 The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}
@@ -48,7 +49,17 @@ The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}
-The current clue is: {'id': 'pre_recorded_announcements', 'name': 'Pre-recorded Announcements', 'description': "I've noticed something strange. About a day after the lockdown was put in place, all of the ship's announcements have been pre-recorded.\n\nI believe that something is amiss. The crew has been avoiding my questions about the captain. Why hasn't the captain been making the announcements? He seemed to take great joy in it."}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'id': 'missing_steward', 'name': 'Missing Steward', 'description': "The steward that usually serves my meals failed to show up this morning. Allegedly, he has been 'moved'. The crew is reluctant to discuss him."}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'id': 'captains_whereabouts', 'name': "Captain's Whereabouts", 'description': 'The crew member that served me breakfast this morning has been reporting to someone other than the captain.'}
 The current clue is: {'description': '', 'name': ''}
 The current clue is: {'id': 'pre_recorded_announcements', 'name': 'Pre-recorded Announcements', 'description': "I've noticed something strange. About a day after the lockdown was put in place, all of the ship's announcements have been pre-recorded.\n\nI believe that something is amiss. The crew has been avoiding my questions about the captain. Why hasn't the captain been making the announcements? He seemed to take great joy in it."}
 The current clue is: {'description': '', 'name': ''}
@@ -56,13 +67,66 @@ The current clue is: {'id': 'lockdown', 'name': 'Lockdown', 'description': "The 
 The current clue is: {'description': '', 'name': ''}
 The current clue is: {'id': 'severe_weather', 'name': 'Severe Weather', 'description': "The SS Nimbus has been experiencing severe weather conditions for the past few days.        This has caused the ship's journey to be delayed significantly.\n\nWhen I look out the window, I can see frost creeping up the glass. The ship has been getting colder by the day. This is highly unusual weather for the season."}
 The current clue is: {'description': '', 'name': ''}
-The current clue is: {'id': 'severe_weather', 'name': 'Severe Weather', 'description': "The SS Nimbus has been experiencing severe weather conditions for the past few days.        This has caused the ship's journey to be delayed significantly.\n\nWhen I look out the window, I can see frost creeping up the glass. The ship has been getting colder by the day. This is highly unusual weather for the season."}
 The current clue is: {'description': '', 'name': ''}
-The current clue is: {'id': 'severe_weather', 'name': 'Severe Weather', 'description': "The SS Nimbus has been experiencing severe weather conditions for the past few days.        This has caused the ship's journey to be delayed significantly.\n\nWhen I look out the window, I can see frost creeping up the glass. The ship has been getting colder by the day. This is highly unusual weather for the season."}
 The current clue is: {'description': '', 'name': ''}
-The current clue is: {'id': 'severe_weather', 'name': 'Severe Weather', 'description': "The SS Nimbus has been experiencing severe weather conditions for the past few days.        This has caused the ship's journey to be delayed significantly.\n\nWhen I look out the window, I can see frost creeping up the glass. The ship has been getting colder by the day. This is highly unusual weather for the season."}
-The current clue is: {'id': 'severe_weather', 'name': 'Severe Weather', 'description': "The SS Nimbus has been experiencing severe weather conditions for the past few days.        This has caused the ship's journey to be delayed significantly.\n\nWhen I look out the window, I can see frost creeping up the glass. The ship has been getting colder by the day. This is highly unusual weather for the season."}
-The current clue is: {'id': 'severe_weather', 'name': 'Severe Weather', 'description': "The SS Nimbus has been experiencing severe weather conditions for the past few days.        This has caused the ship's journey to be delayed significantly.\n\nWhen I look out the window, I can see frost creeping up the glass. The ship has been getting colder by the day. This is highly unusual weather for the season."}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}

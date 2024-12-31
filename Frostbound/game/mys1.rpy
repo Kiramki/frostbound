@@ -228,8 +228,16 @@ label sneak_1_eavesdrop:
 
 
 
-
 label sera_stairs:
     scene stowaway_entrance
     with Dissolve(1)
+    narrate "At the bottom, I'm met with a single door. Is this the entrance the note mentioned?"
+    narrate "I'm about to knock when the door cracks open."
+    narrate "And then I see them. Her eyes."
+    narrate "Eyes I've avoided all my life."
+    narrate "The eyes of a witch."
+    play music "audio/meet_seraphine.mp3"
     narrate "yo this is a problem for later me"
+    narrate "I jerk back as a figure steps out, quick and graceful—like a needle threading fabric. She looks me up and down with a sharp, assessing gaze."
+    stranger "You're Cadence?"
+    narrate "The insignia on her cloak glints unmistakably in the dim lighting."
