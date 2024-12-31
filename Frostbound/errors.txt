@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 1584: expected a keyword argument or child statement.
-    $ clues_open = True
-    ^
+The label sera_stairs_trust is defined twice, at File "game/mys1.rpy", line 258:
+label sera_stairs_trust:
+and File "game/mys1.rpy", line 266:
+label sera_stairs_trust:
+
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Mon Dec 30 16:29:23 2024
+Tue Dec 31 00:44:54 2024

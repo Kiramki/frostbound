@@ -235,9 +235,41 @@ label sera_stairs:
     narrate "I'm about to knock when the door cracks open."
     narrate "And then I see them. Her eyes."
     narrate "Eyes I've avoided all my life."
-    narrate "The eyes of a witch."
+    narrate "{b}The eyes of a witch.{/b}"
     play music "audio/meet_seraphine.mp3"
-    narrate "yo this is a problem for later me"
-    narrate "I jerk back as a figure steps out, quick and graceful—like a needle threading fabric. She looks me up and down with a sharp, assessing gaze."
+    narrate "I reel back as she steps out, sharp and unyielding, like a needle threading through fabric."
     stranger "You're Cadence?"
-    narrate "The insignia on her cloak glints unmistakably in the dim lighting."
+    narrate "Tiny golden stars dangle from her ears and tangle in her hair as if the night sky had bent to decorate her."
+    narrate "I quickly avert my gaze, fixing on the stitching of her cloak instead."
+    narrate "There's an absurdity to it, though: aren't witches supposed to look away from us?"
+    narrate "A tense silence follows, then, she snickers."
+    stranger "Hah! Nel wasn't kidding when she said you looked Detective Daycott—with tits."
+    narrate "My eyes snap up at the sheer audacity of the comment and she smirks at my scandalized expression."
+    stranger "I can explain what's happening. C'mon. You'll understand when you see it."
+    narrate "My thoughts feel smothered by the sheer absurdity of this interaction."
+    narrate "She extends towards me expectantly."
+    menu:
+        "Trust her":
+            jump sera_stairs_trust
+        "Don't trust her":
+            jump sera_stairs_distrust
+
+label sera_stairs_trust:
+    narrate "My fingers tremble just enough to betray my nerves as I clasp her hand."
+    narrate "Something electric hums through the contact, curling around my chest and tightening my breath."
+    cadence "I'd prefer you call me Cadence. Do I get to know your name too?"
+    narrate "Her pupils morph into smiling crescents akin to way watercolor bleeds across parchment."
+    sera "Call me Seraphine."
+    narrate "She doesn't release my hand right away. Her touch lingers for a second too long before I pull back, tucking my hands behind me."
+    sera "Right this way, Daycott."
+    narrate "The insignia on her cloak glints unmistakably as she throws the door open and steps through."
+    narrate "I hesitate, steeling myself before steppingin after her."
+    narrate "When you spend your life hiding, it's easy to forget there's another way to exist."
+    narrate "But seeing someone who wears it all so freely—it's almost jarring."
+    narrate "It makes me wonder... what would it be like to stop pretending, even for a moment?"
+
+label sera_stairs_disstrust:
+    sera "Call me Seraphine."
+    narrate ""
+
+
