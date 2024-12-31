@@ -371,12 +371,13 @@ label sera_stairs_trust:
     stop music fadeout 1
     scene black
     with Dissolve(1)
+    jump stowaway_hideout
 
 label sera_stairs_distrust:
     narrate "There's one case my father never talks about."
     narrate "The one where he came home trembling, covered in blood, and sheltered in his room for two days straight."
-    narrate "Now, standing in front of this witch, I know I can't let my guard down."
-    narrate "My face must betray my feelings because the witch lowers her hand, her expression darkening."
+    narrate "Now, standing in front of this witch, I can't let my guard down."
+    narrate "My face must betray my emotions because the witch lowers her hand, her expression darkening."
     stranger "What's that? {i}Oh, Seraphine! Thanks for risking your ass to get me down here tonight!{/i}"
     narrate "The witch - Seraphine - flips her braid behind her back, and scoffs."
     sera "Or are you one of those phonies who can't stay loyal to her own kind?"
@@ -384,7 +385,7 @@ label sera_stairs_distrust:
     narrate "It's a silent battle of wills, and for a moment, I almost feel like we're both waiting for the other to blink."
     narrate "Then, she lets out a long sigh."
     sera "Look, you don't have to trust me. You can even hold onto that oversized rod of yours if it makes you feel better."
-    narrate "Her eyes feel like looking into a kaleidoscope held up to the sunlight."
+    narrate "Her eyes are like peering into a kaleidoscope held up to the sun."
     sera "We're both on the same side here - stuck on this metal death trap... and I need your help."
     narrate "The last part seems to come out reluctantly, as if the words leave a bad taste in her mouth."
     narrate "Without waiting for my response, she swings the door open and steps through it, not checking to see if I'm following."
@@ -393,6 +394,64 @@ label sera_stairs_distrust:
     stop music fadeout 1
     scene black
     with Dissolve(1)
+    jump stowaway_hideout
+
+label stowaway_hideout:
+    play music "audio/emotional_theme.mp3"
+    scene stowaway_lower
+    with Dissolve(1)
+    narrate "I pause to take in the scene around me—soft golden light spills from strings of magical lanterns, casting a warm glow across the cramped hold."
+    narrate "Crates are stacked high, forming narrow paths like the aisles of an overstuffed library."
+    narrate "A young man lounges atop a stack while a few kids peek out shyly from behind the crates."
+    sera "We're all in the same boat down here. If the crew knew, they'd toss us into the ice without a second thought."
+    narrate "I don't have a response to that. I wonder how many of the faces I'm seeing are witches like Seraphine."
+    narrate "She tosses a wink in greeting at one of the children before motioning me deeper into the hold."
+    narrate "As we reach a secluded corner, I stop."
+    scene stowaway_body
+    with Dissolve(1)
+    play music "audio/its_snowing.mp3"
+    narrate "A single bed sits at the center, and on it lies a boy, his body encased in an unnatural shroud of frost and flowers."
+    narrate "Seraphine lowers herself beside him, her usual restless energy is replaced by something softer."
+    narrate "I struggle to process the sight before me."
+    sera "He was a crew member. Used to visit us often, before the blizzard. Snuck us food when he could."
+    sera "Couple nights ago he came down here and said he was tired. Went to sleep… and froze over like this."
+    cadence "How is that possible?"
+    narrate "Seraphine doesn't answer me. Instead, she closes her eyes, her head bowing slightly as if in prayer."
+    narrate "A pale bluebell blooms into existence in her palms, its delicate petals glowing faintly with magic."
+    narrate "With care, she places the flower onto the pile of icy flora already covering him."
+    sera "{i}Thank you.{/i}"
+    narrate "For a moment, I simply watch as Seraphine kneels in the light, the stars adorning her shimmer like pieces of stained glass."
+    narrate "..."
+    stop music
+    narrate "Beside the bed, something shifts."
+    scene stowaway_lower
+    play music "audio/intense_theme.mp3"
+    cadence "!!!"
+    narrate "It's the crew member from this morning. Our eyes meet, and panic floods his face."
+    narrate "He wriggles against his bindings, gag muffling his attempts to speak."
+    narrate "My thoughts race, questions colliding too fast to catch."
+    cadence "You... kidnapped my steward?"
+    sera "Kidnapped him?"
+    narrate "She lets out a sharp laugh, the gentleness of the last few minutes vanishing in an instant."
+    sera "In case you haven't realized, we have bigger things to worry about."
+    narrate "She gestures emphatically towards the frozen boy, as if the sight alone proves her point."
+    narrate "However, when I meet the crew member's terrified gaze, something twists in my stomach."
+    cadence "What are you planning to do with him?"
+    sera "God, Daycott. I'm not about to chop him up or toss him in my brew, if that's what you're worried about."
+    narrate "She shakes her head, a brief pause hanging in the air before she levels me with a smirk."
+    sera "You're the detective's daughter, aren't you? So, go on. Tell me why he's down here."
+    stop music fadeout 1
+    scene black
+    with Dissolve(1)
+    narrate "{color=#49D5FF}You have reached the end of the demo, thank you for playing Frostbound! Remember to leave a review and rate our game to support us!{/color}"
+    narrate "{color=#49D5FF}Our dream is to have our own studio one day and make many more games. We hope to see you again.{/color}"
+    narrate "{b}DEMO FINISHED{/b}"
+    stop music fadeout 1
+    scene black
+    with Dissolve(1)
+    return
+
+
 
 
 
