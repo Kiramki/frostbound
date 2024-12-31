@@ -5,15 +5,27 @@ clue_dict = {
         "id":"severe_weather",
         "name": "Severe Weather",
         "description": "The SS Nimbus has been experiencing severe weather conditions for the past few days.\
-        This has caused the ship's journey to be delayed significantly. \n \n\
+        This has caused the ship's journey to be delayed significantly.\n\n\
 When I look out the window, I can see frost creeping up the glass. The ship has been getting colder by the day. This is highly unusual weather for the season."
     },
 
     # Lockdown
-
+    "lockdown": {
+        "id":"lockdown",
+        "name": "Lockdown",
+        "description": "The SS Nimbus has been placed under a strict lockdown. No passengers are allowed to leave their cabins.\
+ It seems that the crew has been instructed to keep the passengers confined to their rooms. They claim that it is for our safety.\n \n\
+Three times a day, the crew delivers meals to the passengers' rooms. The food is good, as would be expected from a luxury experience, but the crew seems to be on edge. \
+\n\nIt's hardly any kind of social interaction, though - solation is taking its toll on the passengers. I can hear them arguing with the crew through the walls."
+    },
 
     # Pre-recorded Announcements
-
+    "pre_recorded_announcements": {
+        "id":"pre_recorded_announcements",
+        "name": "Pre-recorded Announcements",
+        "description": "I've noticed something strange. About a day after the lockdown was put in place, all of the ship's announcements have been pre-recorded.\
+\n\nI believe that something is amiss. The crew has been avoiding my questions about the captain. Why hasn't the captain been making the announcements? He seemed to take great joy in it."
+    },
 
     # Captain's Whereabouts
     "captains_whereabouts": {
