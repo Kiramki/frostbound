@@ -42,6 +42,20 @@ Three times a day, the crew delivers meals to the passengers' rooms. The food is
 
     },
 
+    # Mysterious Note
+    "mysterious_note": {
+        "id":"mysterious_note",
+        "name": "Mysterious Note",
+        "description": "\"I found a note slipped under my door this evening. It reads:\
+\n\nI know why they're locking people in their rooms. We don't have much time left.\
+\nWhen the big bell tolls at midnight and the night watch is gone, that's your chance.\
+\nCount five doors to your left—there's a hidden staircase there.\
+\nI'll be waiting for you at the bottom.\
+\nDon't get caught.\
+\n- S.\"\
+\n\nThe writing is hasty, words aggressively scribbled out - as if the person writing it were in a rush. The penmanship style does not match that of a crew member."
+    }
+
 
 
 }
@@ -50,7 +64,7 @@ Three times a day, the crew delivers meals to the passengers' rooms. The food is
 clue_updates = {
     # Captain's Whereabouts
     "captains_whereabouts": {
-        "first_mate": "The first mate of the ship has taken over command. The crew now reports to him, indicating a shift of leadership.",
+        "first_mate": "The first mate of the ship has taken over command. The crew of the SS Nimbus now reports to him, indicating a shift of leadership.",
     },
 }
 
@@ -69,7 +83,7 @@ def get_clue(clue, dict = clue_dict):
 
     return dict[clue].copy()
 
-def update_clue(clue, flag):
+def update_clue(clue, flag, id="description"):
     # Updates the given clue's description by consulting the flag in the clue_updates dictionary
 
     ### How to use this function to update player_clues: ########
@@ -81,5 +95,5 @@ def update_clue(clue, flag):
     #############################################################
 
 
-    clue["description"] = clue_updates[clue['id']][flag]
+    clue[id] = clue_updates[clue['id']][flag]
     return None

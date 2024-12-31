@@ -18,6 +18,7 @@ define stranger = Character("???")
 define watchman1= Character("Watchman 1")
 define watchman2= Character("Watchman 2")
 define watchman = Character("Watchman")
+define sera = Character("Seraphine")
 
 default looked_around = 0
 default watchman_eavesdrop = 0
@@ -215,7 +216,7 @@ label rs_thankyou_press:
 
     # CLUE GET: Captain's Whereabouts
     $ player_clues["captains_whereabouts"] = clues.get_clue("captains_whereabouts")
-    
+
     narrate "{color=#49D5FF}Clue Added: The crew member has been reporting to someone other than the captain. {/color}"
     narrate "{color=#49D5FF}(Tutorial: you can view your clues by clicking your {b}JOURNAL{/b} in the top right corner.){/color}"
     jump crew_leaving
@@ -313,6 +314,14 @@ label intro_note:
     narrate "{i}\"- S.\"{/i}"
     narrate "The words are aggressively scribbled out, whoever wrote this was in a rush."
     narrate "The penmanship style doesn't match that of a crew member."
+
+    play sound "audio/clue.mp3"
+
+    ## CLUE GET: Mysterious Note
+    $ player_clues["mysterious_note"] = clues.get_clue("mysterious_note")
+
+    narrate "{color=#49D5FF}Clue Added: A mysterious note slipped under your door.{/color}"
+
     narrate "...Could it be?"
     narrate "I grip the door handle, and my heart skips when it turns without resistance."
     cadence "Looks like my visitor unlocked the door for me."

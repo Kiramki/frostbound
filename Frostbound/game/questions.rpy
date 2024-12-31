@@ -96,7 +96,7 @@ label crew_questions_2_press:
     # CLUE GET: Missing Steward
     $ player_clues['missing_steward'] = clues.get_clue('missing_steward')
     narrate "{color=#49D5FF}Clue Added: The steward's unexpected absence, along with the crew's reluctance to discuss him, may be linked to the ship's current state.{/color}"
-    
+
     $ questions_asked += 1
     $ crew_q2_asked = 1
     if questions_asked < 2:
@@ -119,9 +119,6 @@ label crew_questions_3:
             jump crew_questions_3_press
         "Let it go":
             jump crew_questions_3_letgo
-        
-
-
 
 label crew_questions_3_letgo:
     narrate "I nod sagely and let the matter drop."
