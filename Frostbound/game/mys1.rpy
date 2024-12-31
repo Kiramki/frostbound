@@ -133,11 +133,17 @@ label sneak_1:
 
     scene main_deck_right
     with Dissolve(1)
-    narrate "I hear the conversation of two watchmen - I startle, but they haven't seen me yet."
+    narrate "I hear the murmur of two watchmen. My heart jumps to my throat, but it doesn't seem like they've heard me."
+    narrate "Holding my breath, I risk a glance into the room they're occupying."
+    play music "audio/emotional_theme.mp3"
+    scene main_deck_cg
+    with Dissolve(1)
+    narrate "For a moment, it feels like I've glimpsed something I wasn't meant to see. They seem... weary."
     watchman1 "Shit, man... I didn't dress for this weather."
     watchman2 "None of us did. Who dresses for a blizzard in the middle of the damn summer?"
-    narrate "It looks like they're taking a break. When I look, they seem weary."
     narrate "One of them takes a swig from something that seems suspiciously distinct from water."
+    scene main_deck_right
+    with Dissolve(1)
     narrate "If I can get past them, I'll be able to get to the upper gate - whatever might be over there. Assuming that it isn't locked."
 
     $ looked_around = 0
@@ -149,7 +155,7 @@ label sneak_1:
         "Try to distract them":
             jump sneak_1_distract
 
-        "Go straight for the door":
+        "Make a break for the stairs":
             jump sneak_1_door
 
         "Keep listening":
@@ -166,12 +172,33 @@ label sneak_1_look:
 label sneak_1_distract:
     narrate "sh"
 
-label sneak_1_door:
+label sneak_1_stairs:
     narrate "shhhhhh"
 
 label sneak_1_eavesdrop:
-    narrate "shshshshshhhhh"
+    scene main_deck_cg
+    with Dissolve(1)
+    narrate "They seem engaged in their conversation. Perhaps I'll learn something about the state of the ship."
+    watchman1 "Seen Mouse lately? Kid's been missing since breakfast."
+    narrate "Mouse... is that the same crew member who replaced my steward this morning? I lean in a bit closer."
+    watchman2 "Probably hiding somewhere like he always does. Don't understand how he made it this far."
+    watchman1 "Hey, go easy on the kid. He's had a rough couple of days."
+    narrate "The other man laughs and looks out at the snowy wasteland."
+    watchman2 "Rough? Everyone here's had it rough, but that kid... he cracks under the smallest pressure."
+    narrate "The words are harsh, but there is an edge to it that betrays a deeper weariness."
+    narrate "..."
+    watchman1 "You alright?"
+    narrate "A sigh."
+    watchman2 "Fine. Just damn this cold. You?"
+    watchman1 "Could be worse... Listen, about last night..."
+    watchman2 "Not here. Later, alright?"
+    play sound "audio/clue.mp3"
+    narrate "{color=#49D5FF}Clue Added: Sometime after breakfast—where I may have scared him off—the crew member, Mouse, vanished. It seems he's had a rough few days. {/color}"
+
+
 
 
 label sera_stairs:
+    scene stowaway_entrance
+    with Dissolve(1)
     narrate "yo this is a problem for later me"
