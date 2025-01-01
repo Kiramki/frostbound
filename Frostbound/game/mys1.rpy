@@ -273,7 +273,8 @@ label sneak_1_eavesdrop3:
     narrate "Their conversation continues on in a low murmur, indecipherable to my ears."
 
     play sound "audio/clue.mp3"
-    $ clues.update_clue("captains_whereabouts", "captains_fate")
+    
+    $ clues.update_clue(player_clues["captains_whereabouts"], "captains_fate")
     narrate "{color=#49D5FF}Clue Updated: The captain's fate is uncertain, but he's not the same after the incident. Death may be a relief in his current state. {/color}"
     $ listen_count +=1
     jump sneak_menu
