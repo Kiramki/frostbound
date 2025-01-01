@@ -440,12 +440,21 @@ label bad_end_1:
     narrate "I spend the rest of the day huddled beneath the blankets, trying to stave off the chill. "
     narrate "Meanwhile, my neighbors bang frantically against the walls like trapped creatures, pacing endlessly."
     play sound "audio/banging.mp3"
+
+    show man with Dissolve(0.5)
     man "Excuse me!? What's wrong with the heating in here? It's freezing!"
     man "This whole trip has been a disaster! Do you know who I am?"
     man "I'll have everyone on this ship fired when we dock, do you hear me!? {i}EVERYONE!{/i}"
     play sound "audio/banging.mp3"
+    show man at move_to_left
+    pause(0.5)
+    show woman at move_to_right
+    with Dissolve(0.5)
     woman "Can't you do something about the heating? My child's been shivering all night—please, some extra blankets!"
 
+    hide man
+    hide woman
+    with Dissolve(0.5)
     narrate "I think of my father's face the day I left home. The way he cradled me in his arms like a keepsake being cast to water."
     narrate "I close my eyes."
 
