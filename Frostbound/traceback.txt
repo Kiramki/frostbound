@@ -1,27 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/mys1.rpy", line 276, in script
-    $ clues.update_clue("captains_whereabouts", "captains_fate")
-  File "game/mys1.rpy", line 276, in <module>
-    $ clues.update_clue("captains_whereabouts", "captains_fate")
-TypeError: string indices must be integers
+  File "game/mys1.rpy", line 316, in script
+    if player_clues["key_to_upper_deck"]:
+  File "game/mys1.rpy", line 316, in <module>
+    if player_clues["key_to_upper_deck"]:
+KeyError: 'key_to_upper_deck'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/mys1.rpy", line 276, in script
-    $ clues.update_clue("captains_whereabouts", "captains_fate")
-  File "/Applications/renpy-8.3.4-sdk/renpy/ast.py", line 827, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/Applications/renpy-8.3.4-sdk/renpy/python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/mys1.rpy", line 276, in <module>
-    $ clues.update_clue("captains_whereabouts", "captains_fate")
-  File "clues.py", line 110, in update_clue
-TypeError: string indices must be integers
+  File "game/mys1.rpy", line 316, in script
+    if player_clues["key_to_upper_deck"]:
+  File "/Users/kiramki/Downloads/renpy/renpy/ast.py", line 1849, in execute
+    if renpy.python.py_eval(condition):
+  File "/Users/kiramki/Downloads/renpy/renpy/python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Users/kiramki/Downloads/renpy/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/mys1.rpy", line 316, in <module>
+    if player_clues["key_to_upper_deck"]:
+KeyError: 'key_to_upper_deck'
 
-macOS-14.6.1-arm64-arm-64bit arm64
+macOS-15.2-arm64-arm-64bit arm64
 Ren'Py 8.3.4.24120703
 frostbound 1.0
-Tue Dec 31 23:25:34 2024
+Tue Dec 31 23:45:58 2024

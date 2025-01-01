@@ -36,6 +36,7 @@ define watchman = Character("Watchman")
 define sera = Character("Seraphine")
 
 default watchman_eavesdrop = 0
+default has_key = False
 default player_clues = {}
 
 # Add transforms

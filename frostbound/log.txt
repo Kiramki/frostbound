@@ -1,46 +1,46 @@
-2025-01-01 04:14:57 UTC
-macOS-14.6.1-arm64-arm-64bit
+2025-01-01 04:44:39 UTC
+macOS-15.2-arm64-arm-64bit
 Ren'Py 8.3.4.24120703
 
-Early init took 0.05s
-Loading error handling took 0.05s
-Loading script took 0.78s
-Loading save slot metadata took 0.04s
+Early init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.07s
+Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
-Running init code took 0.06s
+Running init code took 0.03s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
 Index archives took 0.00s
-Dump and make backups took 0.04s
+Dump and make backups took 0.02s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.03s
+Initial gc took 0.02s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.02s
 Build styles took 0.00s
 Load screen analysis took 0.02s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.05s
+Prepare screens took 0.03s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.03s
+Save bytecode. took 0.00s
 Running _start took 0.00s
-Interface start took 0.35s
+Interface start took 0.23s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
+primary display bounds: (0, 0, 1512, 982)
 swap interval: 1 frames
 Windowed mode.
 Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
+Renderer: b'Apple M2 Pro'
+Version: b'2.1 Metal - 89.3'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
+Screen sizes: virtual=(1920, 1080) physical=(1512, 842) drawable=(3024, 1684)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
+Screen sizes: virtual=(1920, 1080) physical=(1512, 842) drawable=(3024, 1684)
 Maximum texture size: 4096x4096
 The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}
@@ -56,13 +56,6 @@ The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
 The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}
@@ -93,46 +86,245 @@ The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+The current clue is: {'description': '', 'name': ''}
+
+Full traceback:
+  File "game/mys1.rpy", line 316, in script
+    if player_clues["key_to_upper_deck"]:
+  File "/Users/kiramki/Downloads/renpy/renpy/ast.py", line 1849, in execute
+    if renpy.python.py_eval(condition):
+  File "/Users/kiramki/Downloads/renpy/renpy/python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Users/kiramki/Downloads/renpy/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/mys1.rpy", line 316, in <module>
+    if player_clues["key_to_upper_deck"]:
+KeyError: 'key_to_upper_deck'
+
+While running game code:
+  File "game/mys1.rpy", line 316, in script
+    if player_clues["key_to_upper_deck"]:
+  File "game/mys1.rpy", line 316, in <module>
+    if player_clues["key_to_upper_deck"]:
+KeyError: 'key_to_upper_deck'
 Resetting cache.
-Early init took 437.84s
-Loading error handling took 0.03s
-Loading script took 0.09s
-Loading save slot metadata took 0.03s
+Early init took 183.49s
+Loading error handling took 0.02s
+Loading script took 0.13s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/mys1.rpy", line 317: invalid syntax
+    try player_clues["key_to_upper_deck"]:
+         ^
+DPI scale factor: 1.000000
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2 Pro'
+Version: b'2.1 Metal - 89.3'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1512, 842) drawable=(3024, 1684)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1512, 842) drawable=(3024, 1684)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 196.73s
+Loading error handling took 0.02s
+Loading script took 0.08s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/mys1.rpy", line 317: invalid syntax
+    try(player_clues["key_to_upper_deck"]):
+        ^
+DPI scale factor: 1.000000
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2 Pro'
+Version: b'2.1 Metal - 89.3'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1512, 842) drawable=(3024, 1684)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1512, 842) drawable=(3024, 1684)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 197.39s
+Loading error handling took 0.02s
+Loading script took 0.05s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/mys1.rpy", line 317: invalid syntax
+    try(player_clues["key_to_upper_deck"]):
+        ^
+DPI scale factor: 1.000000
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2 Pro'
+Version: b'2.1 Metal - 89.3'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1512, 842) drawable=(3024, 1684)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1512, 842) drawable=(3024, 1684)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 228.55s
+Loading error handling took 0.02s
+Loading script took 0.11s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/mys1.rpy", line 319: invalid syntax
+            narrate "My heart leaps to my throat as I scramble for the key and jam it into the lock of the gate."
+                     ^
+DPI scale factor: 1.000000
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2 Pro'
+Version: b'2.1 Metal - 89.3'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1512, 842) drawable=(3024, 1684)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1512, 842) drawable=(3024, 1684)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 385.10s
+Loading error handling took 0.02s
+Loading script took 0.11s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/mys1.rpy", line 329: reached end of line when expecting ':'.
+    if has_key == False
+                       ^
+
+File "game/mys1.rpy", line 320: invalid syntax
+        except KeyError:
+         ^
+DPI scale factor: 1.000000
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2 Pro'
+Version: b'2.1 Metal - 89.3'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1512, 842) drawable=(3024, 1684)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1512, 842) drawable=(3024, 1684)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 398.62s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/mys1.rpy", line 320: invalid syntax
+        except KeyError:
+         ^
+DPI scale factor: 1.000000
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2 Pro'
+Version: b'2.1 Metal - 89.3'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1512, 842) drawable=(3024, 1684)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1512, 842) drawable=(3024, 1684)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 410.32s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
 Running init code took 0.02s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
 Index archives took 0.00s
+Backing up script files to '/Users/kiramki/Library/RenPy/backups/Frostbound':
 Dump and make backups took 0.03s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.04s
+Initial gc took 0.02s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.02s
 Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.04s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
 Running _start took 0.00s
-Interface start took 0.07s
+Interface start took 0.05s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
+primary display bounds: (0, 0, 1512, 982)
 swap interval: 1 frames
 Windowed mode.
 Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
+Renderer: b'Apple M2 Pro'
+Version: b'2.1 Metal - 89.3'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
+Screen sizes: virtual=(1920, 1080) physical=(1512, 842) drawable=(3024, 1684)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 811) drawable=(2940, 1622)
+Screen sizes: virtual=(1920, 1080) physical=(1512, 842) drawable=(3024, 1684)
 Maximum texture size: 4096x4096
 The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}
@@ -173,105 +365,3 @@ The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}
 The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-The current clue is: {'description': '', 'name': ''}
-
-Full traceback:
-  File "game/mys1.rpy", line 276, in script
-    $ clues.update_clue("captains_whereabouts", "captains_fate")
-  File "/Applications/renpy-8.3.4-sdk/renpy/ast.py", line 827, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/Applications/renpy-8.3.4-sdk/renpy/python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/mys1.rpy", line 276, in <module>
-    $ clues.update_clue("captains_whereabouts", "captains_fate")
-  File "clues.py", line 110, in update_clue
-TypeError: string indices must be integers
-
-While running game code:
-  File "game/mys1.rpy", line 276, in script
-    $ clues.update_clue("captains_whereabouts", "captains_fate")
-  File "game/mys1.rpy", line 276, in <module>
-    $ clues.update_clue("captains_whereabouts", "captains_fate")
-TypeError: string indices must be integers
-The current clue is: {'description': '', 'name': ''}
-
-Full traceback:
-  File "game/mys1.rpy", line 276, in script
-    $ clues.update_clue("captains_whereabouts", "captains_fate")
-  File "/Applications/renpy-8.3.4-sdk/renpy/ast.py", line 827, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/Applications/renpy-8.3.4-sdk/renpy/python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/mys1.rpy", line 276, in <module>
-    $ clues.update_clue("captains_whereabouts", "captains_fate")
-  File "clues.py", line 110, in update_clue
-TypeError: string indices must be integers
-
-While running game code:
-  File "game/mys1.rpy", line 276, in script
-    $ clues.update_clue("captains_whereabouts", "captains_fate")
-  File "game/mys1.rpy", line 276, in <module>
-    $ clues.update_clue("captains_whereabouts", "captains_fate")
-TypeError: string indices must be integers

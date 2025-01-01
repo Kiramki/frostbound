@@ -313,12 +313,20 @@ label sneak_1_gate:
     play sound "audio/footsteps_soft.mp3"
     narrate "Heavy footsteps echo from the bottom of the stairs, heading toward me."
     # If player has key clue:
-    if player_clues["key_to_upper_deck"]:
+    python:
+        try:
+            if player_clues["key_to_upper_deck"]:
+                has_key = True
+        except KeyError:
+            has_key = False
+    
+    if has_key:
         narrate "My heart leaps to my throat as I scramble for the key and jam it into the lock of the gate."
         play sound "audio/door_open.mp3"
         narrate "I press my body weight into the gate and slip into the upper deck - it shuts behind me with a clang."
         jump upper_deck
-    else:
+    
+    if has_key == False:
         narrate "My heart pounds like a wardrum in my chest as I reach the gate and give it a violent shake. However, it doesn't budge."
         narrate "The watchmen must have {b}locked{/b} it."
         narrate "It must have been somewhere in the room below, it's too late to go back and check now."
