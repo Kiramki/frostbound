@@ -7,22 +7,48 @@ init python:
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
+# Create images for the characters.
 
 define cadence = Character("Cadence")
 define narrate = Character(None)
 define intercom = Character("Intercom")
+
 define crew = Character("Crew Member")
+image crew neutral = "images/sprite/crew_neutral.png"
+image crew cold = "images/sprite/crew_cold.png"
+image crew scared = "images/sprite/crew_scared.png"
+image crew silhouette = "images/sprite/crew_silhouette.png"
+
 define man = Character("Man")
+image man = "images/sprite/man_outline.png"
+
 define woman = Character("Woman")
+image woman = "images/sprite/woman_outline2.png"
+
 define stranger = Character("???")
+image sera neutral = "images/sprite/sera_neutral.png"
+image sera talk = "images/sprite/sera_talk.png"
+image sera silhouette = "images/sprite/sera_silhouette.png"
+
 define watchman1= Character("Watchman 1")
 define watchman2= Character("Watchman 2")
 define watchman = Character("Watchman")
 define sera = Character("Seraphine")
 
-default looked_around = 0
 default watchman_eavesdrop = 0
 default player_clues = {}
+
+# Add transforms
+transform move_to_left:
+    xalign 0.5
+    linear 0.5 xalign 0.25
+
+transform move_to_right:
+    xalign 0.5
+    linear 0.5 xalign 0.75
+
+transform move_to_center:
+    linear 0.5 xalign 0.5
 
 
 # The game starts here.
@@ -64,7 +90,7 @@ label introduction:
     stop music
     narrate "{i}Click...{/i}"
 
-    scene cadence_room_main
+    scene cadence_room_bed
     with Dissolve(1)
     pause(1)
     play music "audio/hope_chords.mp3" fadein 1.0
@@ -83,12 +109,18 @@ label introduction:
     scene black
     with Dissolve(.5)
     play sound "audio/door_knock.mp3"
+
+    show crew silhouette
+    with Dissolve(1)
     crew "Miss Cadence Daycott? I have your meal."
     narrate "Speak of the devil."
     cadence "Come in!"
+
     play sound "audio/door_open.mp3"
     scene cadence_room_main
     with Dissolve(1)
+    show crew neutral
+    with Dissolve(0.5)
 
     narrate "A crew member I don't recognize steps in, awkwardly balancing a tray of food."
     narrate "This boy can't be older than 15; and he looks one wobble away from sending the expensive cutlery crashing to the floor."
@@ -133,6 +165,8 @@ label rs_captain_press:
     play sound "audio/press.wav"
     cadence "If the {b}captain's overseeing things{/b}, why have the announcements been prerecorded? Isn't he the one who usually makes them?"
     narrate "His eyes flicker with wary recognition at the mention of the announcements. He thinks for a moment."
+
+    show crew cold
     crew "I don't report to him directly, Miss, so I can't help much. I'm just following orders, that's all I can say."
     narrate "His tone is clipped now, clearly eager to close the conversation."
     crew "Look, just sit tight 'til the storm blows through, alright? We're all workin' hard to keep you folks safe."
@@ -174,6 +208,8 @@ label rs_leave_press:
     narrate "He nods slowly."
     cadence "I see. What has the captain told you about the situation so far?"
     narrate "He shifts his weight from foot to foot."
+
+    show crew cold
     crew "I don't report to him directly, Miss, so I can't help much. I'm just followin' orders. That's all I can say."
     crew "Just sit tight 'til the storm blows through, alright? We're all workin' hard to keep you folks safe."
     
@@ -210,6 +246,8 @@ label rs_thankyou_press:
     narrate "The crew member straightens at the sudden compliment."
     play sound "audio/press.wav"
     cadence "Is preparing the {b}Captain's prerecorded announcments{/b} part of your duties as well?"
+
+    show crew cold
     narrate "At the mention of the announcements, his eyes flicker with a hint of unease, and the lightheartedness from the compliment quickly fades."
     crew "Oh, I don't know nothin' 'bout that, sorry, Miss. I take my orders from someone else."
 
@@ -225,12 +263,18 @@ label rs_thankyou_press:
 
 label crew_leaving:
     narrate "The crew member hurries to my table and sets the tray down with a clang. He's eager to leave."
+
+    show crew neutral
     crew "Stay in your room for now, Miss. I'll bring your supper later."
     play sound "audio/door_open.mp3"
     narrate "A chill pushes in as he opens my door."
     cadence "Wait—!"
     narrate "I spring from my bed and rush to plant myself in front his path before he can exit."
     play sound "audio/clang.wav"
+
+    show crew scared
+    pause(0.1)
+    show crew cold
     narrate "The crew member jumps back. His arm knocks the tray, sending coffee spilling over my toast."
     narrate "He only just manages to stop the rest of it from splashing onto the floor."
     cadence "I have a few questions, if you could spare a moment."
@@ -239,6 +283,8 @@ label crew_leaving:
     narrate " I'm not going to let him get away that easily. If he leaves, I'll be stuck in this room with no leads."
     cadence "Please, just for a moment. I promise I won't keep you long."
     narrate " He's clearly in a rush. I'll only have time for a few questions before he's gone."
+
+    show crew neutral
     play music "audio/hope_in_the_cold.mp3" fadein 1.0
 
     $ questions_asked = 0
@@ -258,6 +304,8 @@ label crew_questions_end:
 label crew_questions_end2:
     cadence "Could you at least tell me what's truly going on?"
     cadence "None of this adds up, and you know it."
+
+    show crew scared
     narrate "I take a deliberate step forward, but falter as he shrinks back, his shoulders hunching like a cornered animal."
     crew "I... I don't know! Just — please, step back!"
     narrate "He buries his head in his hands, fingers clutching his hair as he breathes heavily."
@@ -272,17 +320,31 @@ label crew_questions_end2:
     stop music
     play sound "audio/slam.mp3"
     show cadence_room_main with vpunch
+
     crew "{i}GET OFF ME!{/i}"
     narrate "He shoves me aside with startling force. My body hits the wall, the breath knocked out of me."
     play sound "audio/door_shut.mp3"
+    hide crew scared
+    with Dissolve(0.5)
     narrate "The door locks with a sharp click as he bolts."
     narrate "My neighbors are not amused."
     play sound "audio/banging.mp3"
+
+    show woman with Dissolve(0.5)
     woman "Excuse me! You forgot our food! Oh, dear god, my baby needs food - she's starving! Please, we need it now!"
     play sound "audio/banging.mp3"
+
+    show woman at move_to_left
+    pause(0.5)
+    show man at move_to_right
+    with Dissolve(0.5)
     man "Those bastards! I'm kicking down this door! I'M KICKING DOWN THIS DOOR, YOU HEAR ME?!"
     narrate "... Is that all we can do? Just wait for the blizzard to pass?"
     narrate "I glance at my ruined meal and push the tray aside, my appetite gone."
+
+    hide woman
+    hide man
+    with Dissolve(0.5)
 
     menu:
         "Wait.":
@@ -313,12 +375,14 @@ label intro_note:
     narrate "I frown, setting my pen down."
     narrate "Then, I notice something, a note slid under the crack of my door."
 
+    show sera silhouette with Dissolve(0.5)
     narrate "{i}\"I know why they're locking people in their rooms. We don't have much time left.\"{/i}"
     narrate "{i}\"When the big bell tolls at midnight and the night watch is gone, that's your chance.\"{/i}"
     narrate "{i}\"Count five doors to your left—there's a hidden staircase there.\"{/i}"
     narrate "{i}\"I'll be waiting for you at the bottom.\"{/i}"
     narrate "{i}\"Don't get caught.\"{/i}"
     narrate "{i}\"- S.\"{/i}"
+    hide sera silhouette with Dissolve(0.5)
     narrate "The words are aggressively scribbled out, whoever wrote this was in a rush."
     narrate "The penmanship style doesn't match that of a crew member."
 

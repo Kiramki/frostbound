@@ -178,9 +178,11 @@ label sneak_1_look:
     narrate "At the foot of the stairs, something shiny catches my eye."
     narrate "Wait a minute."
     narrate "That's not the key {i}to{/i} the the upper deck, is it? That's... not a good security measure."
+
     play sound "audio/clue.mp3"
+
+    $ player_clues["key_to_upper_deck"] = clues.get_clue("key_to_upper_deck")
     narrate "{color=#49D5FF}Item Acquired: Key to upper deck.{/color}"
-    $ looked_around = 1
     jump sneak_menu
 
 label sneak_1_distract:
@@ -232,7 +234,10 @@ label sneak_1_eavesdrop:
     narrate "There's a pause."
     watchman1 "Could be worse... Listen, about last night..."
     watchman2 "Not here. Later, alright?"
+
     play sound "audio/clue.mp3"
+
+    $ player_clues["mouse"] = clues.get_clue("mouse")
     narrate "{color=#49D5FF}Clue Added: Sometime after breakfast—where I may have scared him off—the crew member, Mouse, vanished. It seems he's had a rough few days. {/color}"
     $ listen_count +=1
     jump sneak_menu
@@ -247,7 +252,7 @@ label sneak_1_eavesdrop2:
     narrate "His companion laughs at this, but not unkindly."
     watchman2 "You coulda told me, I'd have set aside some of my salt beef for you."
     narrate "..."
-    narrate "Suddenly, I'm very thankful that father upgraded my cabin afterall."
+    narrate "Suddenly, I'm very thankful that father upgraded my cabin after all."
     $ listen_count +=1
     jump sneak_menu
 
@@ -266,8 +271,10 @@ label sneak_1_eavesdrop3:
     watchman1 "You and I can't seem to catch a break, huh?"
     watchman2 "Yeah well, call me a madman but I can't imagine it any other way with you."
     narrate "Their conversation continues on in a low murmur, indecipherable to my ears."
+
     play sound "audio/clue.mp3"
-    narrate "{color=#49D5FF}Clue Added: The captain's fate is uncertain, but he's not the same after the incident. Death may be a relief in his current state. {/color}"
+    $ clues.update_clue("captains_whereabouts", "captains_fate")
+    narrate "{color=#49D5FF}Clue Updated: The captain's fate is uncertain, but he's not the same after the incident. Death may be a relief in his current state. {/color}"
     $ listen_count +=1
     jump sneak_menu
 
@@ -304,7 +311,8 @@ label sneak_1_gate:
     scene main_deck_right
     play sound "audio/footsteps_soft.mp3"
     narrate "Heavy footsteps echo from the bottom of the stairs, heading toward me."
-    if looked_around:
+    # If player has key clue:
+    if player_clues["key_to_upper_deck"]:
         narrate "My heart leaps to my throat as I scramble for the key and jam it into the lock of the gate."
         play sound "audio/door_open.mp3"
         narrate "I press my body weight into the gate and slip into the upper deck - it shuts behind me with a clang."
@@ -351,8 +359,11 @@ label upper_deck:
     narrate "I think about the captain, the rumors I've heard, and my gut tightens. So this isn't just about one person."
     narrate "Something horrible is happening to the passengers of this ship."
     stop music
+
+    show sera silhouette with Dissolve(0.5)
     stranger "Nice going, detective."
     narrate "I whip around, hands instinctively reaching for the rod at my back, prepared to defend myself."
+    show sera neutral with Dissolve(0.5)
     narrate "And then I see them. Her eyes."
     narrate "Eyes I've avoided all my life."
     narrate "{b}The eyes of a witch.{/b}"
@@ -361,7 +372,7 @@ label upper_deck:
     with Dissolve(1)
     narrate "{color=#49D5FF}You have reached the end of the demo, thank you for playing Frostbound! Remember to leave a review and rate our game to support us!{/color}"
     narrate "{color=#49D5FF}Our dream is to have our own studio one day and make many more games. We hope to see you again.{/color}"
-    narrate "{b}DEMO ENDING: NAH IMMA DO MY OWN THING{/b}"
+    narrate "{b}DEMO ENDING: TRAILBLAZER{/b}"
     stop music fadeout 1
     scene black
     with Dissolve(1)
@@ -374,21 +385,29 @@ label sera_stairs:
     narrate "At the bottom, my breath fogs the air."
     narrate "Crates are stacked high against the walls, leaning precariously, their shadows stretching long in the flickering light."
     narrate "It smells of salt, damp wood, and something faintly metallic."
+
+    show sera silhouette with Dissolve(0.5)
     stranger "About time you showed up."
+
+    show sera neutral with Dissolve(0.5)
     narrate "My head jerks up to a figure perched lazily atop a stack of crates, as if they'd been waiting for hours."
     narrate "And then I see them. Her eyes."
     narrate "Eyes I've avoided all my life."
     narrate "{b}The eyes of a witch.{/b}"
     play music "audio/meet_seraphine.mp3"
     narrate "I reel back as she as she glides down the stack of crates, her movement swift and seamless, like a needle threading fabric."
+    show sera talk
     stranger "You're Cadence?"
+    show sera neutral
     narrate "Tiny golden stars dangle from her ears and tangle in her hair as if the night sky had bent to decorate her."
     narrate "I quickly avert my gaze, fixing on the stitching of her cloak instead."
     narrate "There's an absurdity to it, though: aren't witches supposed to look away from us?"
     narrate "A tense silence follows, then, she snickers."
+    show sera talk
     stranger "Hah! Nel wasn't kidding when she said you looked Detective Daycott with tits."
     narrate "My eyes snap up at the sheer audacity of the comment and she smirks at my scandalized expression."
     stranger "I can explain what's happening. C'mon. You'll understand when you see it."
+    show sera neutral
     narrate "My thoughts feel smothered by the sheer absurdity of this interaction."
     narrate "She extends her hand towards me expectantly."
     menu:
@@ -402,9 +421,13 @@ label sera_stairs_trust:
     narrate "Something electric hums through the contact, curling around my chest and tightening my breath."
     cadence "Please, call me Cadence. I'm guessing you were my midnight visitor?"
     narrate "Her pupils morph into smiling crescents akin to way watercolor bleeds across parchment."
+    show sera talk
     sera "The name's Seraphine."
+    show sera neutral
     narrate "She doesn't release my hand right away. Her touch lingers for a second before I pull back, tucking my hands behind me."
+    show sera talk
     sera "Right this way, Daycott."
+    show sera neutral
     narrate "The insignia on her cloak glints unmistakably as she throws the door open and steps through."
     narrate "I hesitate, steeling myself before stepping in after her."
     narrate "When you've spent your life hiding, it's easy to forget there are other ways to exist."
@@ -421,15 +444,21 @@ label sera_stairs_distrust:
     narrate "The one where he came home trembling, covered in blood, and sheltered in his room for two days straight."
     narrate "Now, standing in front of this witch, I can't let my guard down."
     narrate "My face must betray my emotions because the witch lowers her hand, her expression darkening."
+    show sera talk
     stranger "What's that? {i}Oh, Seraphine! Thanks for risking your ass to get me down here tonight!{/i}"
+    show sera neutral
     narrate "The witch - Seraphine - flips her braid behind her back, and scoffs."
+    show sera talk
     sera "Or are you one of those phonies who can't stay loyal to her own kind?"
+    show sera neutral
     narrate "My lips press into a thin line, determined not to answer her."
     narrate "It's a silent battle of wills, and for a moment, I almost feel like we're both waiting for the other to blink."
     narrate "Then, she lets out a long sigh."
+    show sera talk
     sera "Look, you don't have to trust me. You can even hold onto that oversized rod of yours if it makes you feel better."
     narrate "Her eyes are like peering into a kaleidoscope held up to the sun."
     sera "We're both on the same side here - stuck on this metal death trap... and I need your help."
+    show sera neutral
     narrate "The last part seems to come out reluctantly, as if the words leave a bad taste in her mouth."
     narrate "Without waiting for my response, she swings the door open and steps through it, not checking to see if I'm following."
     narrate "Despite myself, I do."
@@ -446,10 +475,15 @@ label stowaway_hideout:
     narrate "I pause to take in the scene around me—soft golden light spills from strings of magical lanterns, casting a warm glow across the cramped hold."
     narrate "Crates are stacked high, forming narrow paths like the aisles of an overstuffed library."
     narrate "A young man lounges atop a stack while a few kids peek out shyly from behind the crates."
+    show sera neutral with Dissolve(0.5)
+    pause(0.5)
+    show sera talk
     sera "We're all in the same boat down here. If the crew knew, they'd toss us into the ice without a second thought."
+    show sera neutral
     narrate "I don't have a response to that. I wonder how many of the faces I'm seeing are witches like Seraphine."
     narrate "She tosses a wink in greeting at one of the children before motioning me deeper into the hold."
     narrate "As we reach a secluded corner, I stop."
+
     scene stowaway_body
     with Dissolve(1)
     play music "audio/its_snowing.mp3"
@@ -469,19 +503,25 @@ label stowaway_hideout:
     narrate "Beside the bed, something shifts."
     scene stowaway_lower
     play music "audio/intense_theme.mp3"
+    show sera neutral with Dissolve(0.5)
     cadence "!!!"
     narrate "It's the crew member from this morning. Our eyes meet, and panic floods his face."
     narrate "He wriggles against his bindings, gag muffling his attempts to speak."
     narrate "My thoughts race, questions colliding too fast to catch."
     cadence "You... kidnapped my steward?"
+    show sera talk
     sera "Kidnapped him?"
     narrate "She lets out a sharp laugh, the gentleness of the last few minutes vanishing in an instant."
     sera "In case you haven't realized, we have bigger things to worry about."
+    show sera neutral
     narrate "She gestures emphatically towards the frozen boy, as if the sight alone proves her point."
     narrate "However, when I meet the crew member's terrified gaze, something twists in my stomach."
     cadence "What are you planning to do with him?"
+    show sera talk
     sera "God, Daycott. I'm not about to chop him up or toss him in my brew, if that's what you're worried about."
+    show sera neutral
     narrate "She shakes her head, a brief pause hanging in the air before she levels me with a smirk."
+    show sera talk
     sera "You're the detective's daughter, aren't you? So, go on. Tell me why he's down here."
     stop music fadeout 1
     scene black

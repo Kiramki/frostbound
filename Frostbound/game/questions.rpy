@@ -1,5 +1,6 @@
 label crew_questions:
     if questions_asked == 0:
+        show crew neutral
         menu:
             narrate "The crew member shifts on his feet, glancing at the door."
 
@@ -16,6 +17,7 @@ label crew_questions:
                 jump crew_questions_4
 
     if questions_asked == 1:
+        show crew cold
         menu:
             narrate "The crew member looks increasingly uncomfortable. He's clearly eager to leave."
 
@@ -34,6 +36,7 @@ label crew_questions:
 label crew_questions_1:
     
     cadence "You're afraid of me. Why?"
+    show crew neutral
     narrate "The crew member's eyes widen, and he laughs nervously."
     crew "Sorry, Miss. It's just... I don't usually get the chance to talk to lasses while I'm on duty."
     cadence "That doesn't answer my question."
@@ -43,11 +46,20 @@ label crew_questions_1:
     
     play sound "audio/banging.mp3"
     narrate "The sound of banging on the wall startles us both. It's coming from the room next door."
+
+    show crew cold at move_to_left
+    pause(0.5)
+    show woman at move_to_right
+    with Dissolve(0.5)
     woman "Excuse me! Is that a crew member?"
     woman "Please, my child is suffering dreadfully from motion sickness! She's so pale, she can barely sit up!"
     woman "She needs fresh air - just let us out for a moment, please!"
     narrate "The frantic voice of my neighbor comes through the wall, muffled but clear."
+    show crew neutral
     crew "I best be getting back to my duties now. If you'd kindly step aside."
+
+    hide woman with Dissolve(0.5)
+    show crew cold at move_to_center
 
     $ questions_asked += 1
     $ crew_q1_asked = 1
@@ -61,7 +73,12 @@ label crew_questions_2:
     
     cadence "Where's the other person who brings our food?"
     narrate "I rather liked my steward. He had this windswept look about him, and always wore a smile."
+
+    show crew cold
+    pause(0.1)
+    show crew neutral
     narrate "For a split second, something dangerous flashes behind the crew member's eyes."
+
     play sound "audio/lying.wav"
     crew "{b}I've taken over his duties for the day, miss. It's just the usual shift rotation.{/b}"
     menu:
@@ -81,9 +98,15 @@ label crew_questions_2_press:
     narrate "A muscle in his jaw twitches. He's uncomfortable with this line of questioning."
     crew "He ain't on duty today, Miss. Looks like you'll have to put up with me. Sorry to disappoint."
     cadence "I see. Do crew members get to choose to be off duty? Or is it decided for them?"
+
+    show crew cold
     narrate "His expression is replaced with something unreadable."
     crew "I wouldn't know."
     cadence "But you said you're taking over for him. Surely you were told why."
+
+    show crew scared
+    pause(0.1)
+    show crew cold
     play sound "audio/slam.mp3"
     show cadence_room_main with vpunch
     crew "That's enough! I'm done talking about him, alright?"
@@ -124,10 +147,20 @@ label crew_questions_3_letgo:
     narrate "I nod sagely and let the matter drop."
     narrate "He seems adamant about not sharing the captain's current state. But why?"
     play sound "audio/banging.mp3"
+
+    show crew at move_to_left
+    pause(0.5)
+    show man at move_to_right
+    with Dissolve(0.5)
+
     man "Hey, bastard! Don't think I can't hear you through these walls!"
+    show crew cold
     man "I demand a refund, do you hear me!? This is unacceptable!"
     narrate "The angry voice of one of my neighbors comes through the wall, muffled but clear."
     crew "That's about all I can say, Miss. With all due respect, it would be best to leave this to the crew."
+
+    hide man with Dissolve(0.5)
+    show crew cold at move_to_center
 
     $ questions_asked += 1
     $ crew_q3_asked = 1
@@ -144,10 +177,20 @@ label crew_questions_3_press:
     crew "{b}Ship's upkeep. Been workin' with the engineers. That's all I know, miss.{/b}"
     narrate "He seems adamant about keeping the captain's current state a secret from me. But why?"
     play sound "audio/banging.mp3"
+
+    show crew at move_to_left
+    pause(0.5)
+    show man at move_to_right
+    with Dissolve(0.5)
+
     man "Hey, bastard! Don't think I can't hear you through these walls!"
+    show crew cold
     man "I demand a refund, do you hear me!? This is unacceptable!"
     narrate "The angry voice of one of my neighbors comes through the wall, muffled but clear."
     crew "That's about all I can say, Miss. With all due respect, it would be best to leave this to the crew."
+
+    hide man with Dissolve(0.5)
+    show crew cold at move_to_center
 
     $ questions_asked += 1
     $ crew_q3_asked = 1
@@ -165,15 +208,28 @@ label crew_questions_4:
     cadence "The weather? You expect me to believe this storm requires locking passengers in their rooms?"
     cadence "If news gets out about this, the entire crew could land themselves in serious trouble."
     narrate "His eyes widen and for a moment, it looks like he's about to say something, but then he swallows it down."
+
+    show crew cold
     play sound "audio/lying.wav"
     crew "{b}We ain't locking nobody in here, Miss.{/b} You're our passenger, we're doing what's best for everyone."
     play sound "audio/banging.mp3"
+
+    show crew at move_to_left
+    pause(0.5)
+    show man at move_to_right
+    with Dissolve(0.5)
+
     man "You're full of shit!! All of you!"
     narrate "The angry voice of my neighbor filters through the wall, abruptly cutting off our conversation."
     man "Three days — {i}THREE DAYS{/i} — you've kept us locked in our rooms like animals! What kind of treatment is this!? This is outrageous!"
 
     narrate "For a moment, the crew member looks incredibly tired. I feel a little bad."
+    
+    show crew neutral
     crew "That's all I can say, Miss. With all due respect, kindly step away from the door."
+
+    hide man with Dissolve(0.5)
+    show crew neutral at move_to_center
 
     $ questions_asked += 1
     $ crew_q4_asked = 1

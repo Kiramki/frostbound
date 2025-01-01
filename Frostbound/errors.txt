@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-The label sera_stairs_trust is defined twice, at File "game/mys1.rpy", line 258:
-label sera_stairs_trust:
-and File "game/mys1.rpy", line 266:
-label sera_stairs_trust:
-
+File "game/mys1.rpy", line 510: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+        cadence "You... kidnapped my steward?
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Tue Dec 31 00:44:54 2024
+Tue Dec 31 20:53:34 2024

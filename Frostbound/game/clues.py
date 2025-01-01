@@ -54,10 +54,20 @@ Three times a day, the crew delivers meals to the passengers' rooms. The food is
 \nDon't get caught.\
 \n- S.\"\
 \n\nThe writing is hasty, words aggressively scribbled out - as if the person writing it were in a rush. The penmanship style does not match that of a crew member."
+    },
+
+    # Key to Upper Deck
+    "key_to_upper_deck": {
+        "id":"key_to_upper_deck",
+        "name": "Key to Upper Deck",
+        "description": "I found this key at the foot of the stairs leading to the upper deck. Someone ought to get fired for leaving it there."},
+
+    # Mouse
+    "mouse": {
+        "id":"mouse",
+        "name": "Missing Mouse",
+        "description": "Sometime after breakfast, a crew member called Mouse went missing. I believe that he was the one who served me breakfast this morning - did I scare him off?"
     }
-
-
-
 }
 
 ## Dict of all possible updates for clues
@@ -65,6 +75,8 @@ clue_updates = {
     # Captain's Whereabouts
     "captains_whereabouts": {
         "first_mate": "The first mate of the ship has taken over command. The crew of the SS Nimbus now reports to him, indicating a shift of leadership.",
+        "captains_fate": "The crew member that served me breakfast this morning has been reporting to someone other than the captain.\
+\n\nAccording to the watchmen, the captain is gone - but it isn't certain that he is dead. They claim that \"Death might be a mercy\"."
     },
 }
 
